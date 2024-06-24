@@ -1,4 +1,3 @@
-import Footer from "./layouts/Footer"
 import Sidebar from "./layouts/Sidebar"
 import About from "./layouts/sections/About"
 import Experience from "./layouts/sections/Experience"
