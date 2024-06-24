@@ -27,6 +27,7 @@ export const UserOptionsProvider: React.FC<{ children: React.ReactNode }> = ({
         toggleTheme: () => setTheme(theme === "light" ? "dark" : "light"),
         lang,
         toggleLang: () => setLang(lang === "es" ? "en" : "es"),
+      }}
     >
       {children}
     </UserOptionsContext.Provider>
