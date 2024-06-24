@@ -1,10 +1,5 @@
 import {
   Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
 } from "react-scroll";
 
 export default function Sidebar() {
