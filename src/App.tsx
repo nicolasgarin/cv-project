@@ -11,7 +11,7 @@ function App() {
     <div className="app">
       <UserOptions />
       <Sidebar />
-      <div className="main">
+      <div className="main ml-80">
         <About />
         <Experience />
         <Projects />

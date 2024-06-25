@@ -1,10 +1,11 @@
 import { Link } from "react-scroll";
 
 export default function NavList() {
+  
   return (
-    <div className="nav-bar">
+    <div className="nav-bar flex flex-col">
       <Link
-        className="nav-link"
+        className="nav-link hover:cursor-pointer"
         activeClass="active"
         to="about"
         spy={true}
