@@ -8,7 +8,7 @@ export default function UserOptions() {
   const { lang, toggleLang, theme, toggleTheme } = useUserOptions();
   return (
     <div id="user-options">
-      <div className="button-container d-flex align-items-center justify-content-between g-15">
+      <div className="button-container flex items-center justify-between gap-3">
         <div className="lang-container" onClick={toggleLang}>
           <img
             className="lang-logo"
@@ -17,7 +17,7 @@ export default function UserOptions() {
           />
         </div>
         <div
-          className="theme-container d-flex align-items-center justify-content-center"
+          className="theme-container flex items-center justify-center"
           onClick={toggleTheme}
         >
           {theme === "light" ? <IoMoon /> : <IoSunny />}
