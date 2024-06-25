@@ -9,13 +9,15 @@ function App() {
 
   return (
     <div className="app">
+      <div className="container">
       <UserOptions />
       <Sidebar />
-      <div className="main ml-80">
+      <div className="main ml-96">
         <About />
         <Experience />
         <Projects />
         <Techs />
+      </div>
       </div>
     </div>
   )

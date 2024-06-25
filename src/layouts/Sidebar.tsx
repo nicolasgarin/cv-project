@@ -1,13 +1,60 @@
 import NavList from "../components/NavList/NavList";
-
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { MdOutlineContactPage } from "react-icons/md";
+import { MdMailOutline } from "react-icons/md";
+import useUserOptions from "../context/UserOptionsContext";
 export default function Sidebar() {
+  const { lang } = useUserOptions();
+
   return (
-    <div id="sidebar" className="fixed h-screen w-80 bg-cyan-300">
-      <div className="info-container p-5 flex flex-col h-screen">
-        <div className="info">
-          Hola, mi nombre es Nicolás
-          Soy un deasarrollador de front-end apasionado por la tecnología y el aprendizaje.
-          Siempre al tanto de las nuevas tendencias en el mundo del desarrollo.
+    <div id="sidebar" className="fixed h-screen w-96">
+      <div className="info-container pt-36 pr-24 flex flex-col h-screen">
+        <div className="info mb-28">
+          <h1 className="text-4xl">Nicolás Garin</h1>
+          <h2>Desarrollador Front-end</h2>
+          <div className="flex gap-10">
+            <a
+              href="https://github.com/nicolasgarin"
+              aria-label={
+                lang == "es"
+                  ? "Enlace a cuenta de Github"
+                  : "Github account link"
+              }
+            >
+              <FaGithub className="h-6 w-6 fill-gray" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/nicol%C3%A1s-gar%C3%ADn-a90b55202/"
+              aria-label={
+                lang == "es"
+                  ? "Enlace a cuenta de Linkedin"
+                  : "Linkedin account link"
+              }
+            >
+              <FaLinkedin className="h-6 w-6 fill-gray" />
+            </a>
+            <a
+              href="#"
+              aria-label={
+                lang == "es"
+                  ? "Descargar Curriculum Vitae"
+                  : "Download Curriculum Vitae"
+              }
+            >
+              <MdOutlineContactPage className="h-6 w-6 fill-gray" />
+            </a>
+            <a
+              href="mailto:nicolas.garin11@gmail.com"
+              aria-label={
+                lang == "es"
+                  ? "Descargar Curriculum Vitae"
+                  : "Download Curriculum Vitae"
+              }
+            >
+              <MdMailOutline className="h-6 w-6 fill-gray" />
+            </a>
+          </div>
         </div>
         <NavList />
       </div>

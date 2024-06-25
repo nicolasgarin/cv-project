@@ -66,23 +66,34 @@
   }
 }
 
+@font-face {
+  font-family: "Raleway";
+  src: local("Raleway"), url("./assets/fonts/Raleway-Regular.ttf");
+}
+
+* {
+  font-family: Raleway;
+  color: white;
+}
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+    background-image: url("./assets/bg.png");
+    background-attachment: fixed;
+    background-size: cover;
   }
 
   section {
     height: 100vh;
-  }
-  section:nth-child(odd) {
-    background-color: lightblue;
+    border-bottom: 3px solid white;
   }
 }
 
 #sidebar .nav-bar .active {
   color: red;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid skyblue;
 }
