@@ -1,3 +1,4 @@
+import UserOptions from "./components/UserOptions/UserOptions"
 import Sidebar from "./layouts/Sidebar"
 import About from "./layouts/sections/About"
 import Experience from "./layouts/sections/Experience"
@@ -8,6 +9,7 @@ function App() {
 
   return (
     <div className="app">
+      <UserOptions />
       <Sidebar />
       <div className="main">
         <About />

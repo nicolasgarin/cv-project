@@ -1,58 +1,16 @@
-import {
-  Link,
-} from "react-scroll";
+import NavList from "../components/NavList/NavList";
 
 export default function Sidebar() {
   return (
     <div id="sidebar">
-      <div className="container">Hola
-      <div className="nav-bar">
-        <Link
-          className="nav-item"
-          activeClass="active"
-          to="about"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
-          About
-        </Link>
-        <Link
-          className="nav-item"
-          activeClass="active"
-          to="experience"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
-          Experience
-        </Link>
-        <Link
-          className="nav-item"
-          activeClass="active"
-          to="projects"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
-          Projects
-        </Link>
-        <Link
-          className="nav-item"
-          activeClass="active"
-          to="techs"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
-          Techs
-        </Link>
+      <div className="info-container">
+        <div className="info">
+          Hola, mi nombre es Nicolás
+          Soy un deasarrollador de front-end apasionado por la tecnología y el aprendizaje.
+          Siempre al tanto de las nuevas tendencias en el mundo del desarrollo.
+        </div>
+        <NavList />
       </div>
-    </div>
     </div>
   );
 }
