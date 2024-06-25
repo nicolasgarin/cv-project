@@ -2,7 +2,7 @@ import { Link } from "react-scroll";
 
 export default function NavList() {
   return (
-    <div className="nav-bar flex flex-col">
+    <div className="nav-bar flex flex-col  pr-20">
       <Link
         className="nav-link hover:cursor-pointer"
         activeClass="active"

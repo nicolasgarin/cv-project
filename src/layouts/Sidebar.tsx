@@ -9,11 +9,11 @@ export default function Sidebar() {
 
   return (
     <div id="sidebar" className="fixed h-screen w-96">
-      <div className="info-container pt-36 pr-24 flex flex-col h-screen">
+      <div className="info-container pt-36 flex flex-col h-screen">
         <div className="info mb-28">
-          <h1 className="text-4xl">Nicolás Garin</h1>
-          <h2>Desarrollador Front-end</h2>
-          <div className="flex gap-10">
+          <h1 className="text-5xl">Nicolás Garin</h1>
+          <h2 className="text-lg mt-2">Desarrollador Front-end</h2>
+          <div className="flex gap-10 mt-5">
             <a
               href="https://github.com/nicolasgarin"
               aria-label={
