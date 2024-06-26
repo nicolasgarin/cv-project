@@ -93,8 +93,9 @@
   }
 }
 
-#sidebar .nav-bar .active {
+#sidebar .nav-bar .active .nav-item {
   color: skyblue;
+  font-weight: 600;
 }
 
 #sidebar .nav-bar .active .nav-item::before {
