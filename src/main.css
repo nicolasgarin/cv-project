@@ -112,7 +112,7 @@
   content: "";
   border-top: 2px solid skyblue;
   width: 50px;
-  margin: 0 1rem;
+  margin: 0 1rem 0 0;
   transform: translateY(-4px);
   transition: .5s;
 }

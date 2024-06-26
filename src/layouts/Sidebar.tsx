@@ -9,10 +9,10 @@ export default function Sidebar() {
 
   return (
     <div id="sidebar" className="fixed h-screen w-96">
-      <div className="info-container pt-36 flex flex-col h-screen">
+      <div className="info-container flex flex-col justify-center h-screen">
         <div className="info mb-28">
-          <h1 className="text-5xl">Nicolás Garin</h1>
-          <h2 className="text-lg mt-2">Desarrollador Front-end</h2>
+          <h1 className="text-5xl"><span className="text-sky-300 font-bold">N</span>icolás Garín</h1>
+          <h2 className="text-lg mt-2">Desarrollador <span className="text-sky-300 font-bold">Front-end</span></h2>
           <div className="flex gap-10 mt-5">
             <a
               href="https://github.com/nicolasgarin"
