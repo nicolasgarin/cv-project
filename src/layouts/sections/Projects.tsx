@@ -6,6 +6,10 @@ const proyectos: IProyectos = [
     anio: 2021
   },
   {
+    nombre: "Jap Landing page",
+    anio: 2021
+  },
+  {
     nombre: "Flashcard App",
     anio: 2023
   },
