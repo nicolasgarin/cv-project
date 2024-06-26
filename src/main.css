@@ -98,11 +98,11 @@
   border-bottom: 2px solid skyblue;
 }
 
-#sidebar .nav-item::after {
+#sidebar .nav-item::before {
   display: inline-block;
   content: "";
   border-top: 2px solid skyblue;
-  width: 4rem;
+  width: 30px;
   margin: 0 1rem;
-  transform: translateY(-1rem);
+  transform: translateY(-4px);
 }
