@@ -100,6 +100,7 @@
 
 #sidebar .nav-link:hover .nav-item {
   color: skyblue;
+}
 
 #sidebar .nav-bar .active .nav-item::before {
   width: 100px !important;
