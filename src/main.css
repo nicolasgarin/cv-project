@@ -97,3 +97,12 @@
   color: red;
   border-bottom: 2px solid skyblue;
 }
+
+#sidebar .nav-item::after {
+  display: inline-block;
+  content: "";
+  border-top: 2px solid skyblue;
+  width: 4rem;
+  margin: 0 1rem;
+  transform: translateY(-1rem);
+}
