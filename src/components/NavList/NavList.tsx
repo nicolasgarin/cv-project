@@ -7,7 +7,7 @@ export default function NavList() {
   return (
     <div className="nav-bar flex flex-col gap-3 pr-20">
       <Link
-        className="nav-link hover:cursor-pointer hover:text-cyan-300"
+        className="nav-link hover:cursor-pointer"
         activeClass="active"
         to="about"
         spy={true}
