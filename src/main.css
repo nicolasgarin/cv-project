@@ -94,7 +94,7 @@
 }
 
 #sidebar .nav-bar .active {
-  color: celeste !important;
+  color: skyblue;
 }
 
 #sidebar .nav-bar .active .nav-item::before {
