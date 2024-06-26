@@ -1,6 +1,9 @@
 import { Link } from "react-scroll";
+import useUserOptions from "../../context/UserOptionsContext";
 
 export default function NavList() {
+  const { lang } = useUserOptions();
+
   return (
     <div className="nav-bar flex flex-col gap-3 pr-20">
       <Link
@@ -12,7 +15,7 @@ export default function NavList() {
         offset={0}
         duration={500}
       >
-        <div className="nav-item">Sobre mi</div>
+        <div className="nav-item">{lang == "es" ? "Sobre mi" : "About"}</div>
       </Link>
       <Link
         className="nav-link hover:cursor-pointer"
@@ -23,7 +26,9 @@ export default function NavList() {
         offset={0}
         duration={500}
       >
-        <div className="nav-item">Experiencia</div>
+        <div className="nav-item">
+          {lang == "es" ? "Experiencia" : "Experience"}
+        </div>
       </Link>
       <Link
         className="nav-link hover:cursor-pointer"
@@ -34,7 +39,9 @@ export default function NavList() {
         offset={0}
         duration={500}
       >
-        <div className="nav-item">Proyectos</div>
+        <div className="nav-item">
+          {lang == "es" ? "Proyectos" : "Projects"}
+        </div>
       </Link>
       <Link
         className="nav-link hover:cursor-pointer"
@@ -45,7 +52,9 @@ export default function NavList() {
         offset={0}
         duration={500}
       >
-        <div className="nav-item">Tecnologías</div>
+        <div className="nav-item">
+          {lang == "es" ? "Tecnologías" : "Technologies"}
+        </div>
       </Link>
     </div>
   );
