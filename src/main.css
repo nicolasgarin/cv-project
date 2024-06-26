@@ -99,6 +99,7 @@
 
 #sidebar .nav-bar .active .nav-item::before {
   width: 100px !important;
+  transition: .5s;
 }
 
 #sidebar .nav-item::before {
@@ -108,4 +109,5 @@
   width: 50px;
   margin: 0 1rem;
   transform: translateY(-4px);
+  transition: .5s;
 }
