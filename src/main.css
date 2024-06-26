@@ -94,15 +94,18 @@
 }
 
 #sidebar .nav-bar .active {
-  color: red;
-  border-bottom: 2px solid skyblue;
+  color: celeste !important;
+}
+
+#sidebar .nav-bar .active .nav-item::before {
+  width: 100px !important;
 }
 
 #sidebar .nav-item::before {
   display: inline-block;
   content: "";
   border-top: 2px solid skyblue;
-  width: 30px;
+  width: 50px;
   margin: 0 1rem;
   transform: translateY(-4px);
 }
