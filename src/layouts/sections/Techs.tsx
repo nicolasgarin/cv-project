@@ -21,6 +21,7 @@ import vitest from "../../assets/logos/vitest.svg";
 import bootswatch from "../../assets/logos/bootswatch.svg";
 import daisy from "../../assets/logos/daisyui.svg";
 import shadcn from "../../assets/logos/shadcn-ui.svg";
+import radix from "../../assets/logos/radix.svg";
 
 export default function Techs() {
   return (
@@ -29,6 +30,10 @@ export default function Techs() {
       <h4>Tecnologías</h4>
       <div className="flex flex-col">
         <div className="nivel-1 flex justify-around">
+		<div className="ic flex flex-col">
+            <img className="h-12" src={git} />
+            <div>Git</div>
+          </div>
           <div className="ic flex flex-col">
             <img className="h-12" src={html} />
             <div>HTML 5</div>
@@ -49,11 +54,15 @@ export default function Techs() {
             <img className="h-12" src={java} />
             <div>Java</div>
           </div>
+		  <div className="ic flex flex-col">
+            <img className="h-12" src={mysql} />
+            <div>Mysql</div>
+          </div>
         </div>
         <div className="nivel-2 flex justify-around">
-          <div className="ic flex flex-col">
-            <img className="h-12" src={git} />
-            <div>Git</div>
+		<div className="ic flex flex-col">
+            <img className="h-12" src={github} />
+            <div>Github</div>
           </div>
           <div className="ic flex flex-col">
             <img className="h-12" src={figma} />
@@ -86,10 +95,6 @@ export default function Techs() {
         </div>
         <div className="nivel-3 flex justify-around">
           <div className="ic flex flex-col">
-            <img className="h-12" src={github} />
-            <div>Github</div>
-          </div>
-          <div className="ic flex flex-col">
             <img className="h-12" src={vite} />
             <div>Vite</div>
           </div>
@@ -101,16 +106,16 @@ export default function Techs() {
             <img className="h-12" src={tailwind} />
             <div>Tailwind CSS</div>
           </div>
+		  <div className="ic flex flex-col">
+            <img className="h-12" src={radix} />
+            <div>Radix</div>
+          </div>
           <div className="ic flex flex-col">
             <img className="h-12" src={liferay} />
             <div>Liferay</div>
           </div>
         </div>
         <div className="nivel-4 flex justify-around">
-          <div className="ic flex flex-col">
-            <img className="h-12" src={mysql} />
-            <div>Mysql</div>
-          </div>
           <div className="ic flex flex-col">
             <img className="h-12" src={vitest} />
             <div>Vitest</div>
