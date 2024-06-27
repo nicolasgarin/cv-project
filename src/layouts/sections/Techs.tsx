@@ -4,7 +4,7 @@ import css from "../../assets/logos/css-3.svg";
 import js from "../../assets/logos/javascript.svg";
 import python from "../../assets/logos/python.svg";
 import java from "../../assets/logos/java.svg";
-import bootstrap from "../../assets/logos/bootstrap.svg";
+//import bootstrap from "../../assets/logos/bootstrap.svg";
 
 export default function Techs() {
     return (
