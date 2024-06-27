@@ -5,8 +5,8 @@ export default function Techs() {
       <section id='techs'>
         <h3>Tecnologías y habilidades</h3>
         <h4>Tecnologías</h4>
-        <div className="flex justify-center">
-            <div>
+        <div className="flex">
+            <div className="flex justify-center">
                 <img className="h-12" src={bootstrap} />
                 <div>Bootstrap</div>
             </div>
