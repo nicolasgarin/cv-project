@@ -6,10 +6,8 @@ export default function About() {
         <div className="text">
           <p>
             Tras casi 10 años trabajando en empleos donde desarrollé fuertes
-            sentidos de responsabilidad, trbajo en equipo y resolución de
-            problemas, en 2020 encontré el campo donde mezclar estas habilidades
-            con mi pasión por aprendizaje continuo, idiomas y desarrollo de
-            ideas creativas
+            sentidos de responsabilidad, trbajo en equipo y adaptación constante, en 2020 encontré el campo donde mezclar estas habilidades
+            con mi pasión por el aprendizaje continuo, la resolución creativa de problemas y los idiomas.
           </p>
           <p>
             Al día de hoy llevo más de 2 años trabajando profesionalmente como
