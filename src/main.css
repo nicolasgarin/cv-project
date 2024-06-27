@@ -116,3 +116,8 @@
   transform: translateY(-4px);
   transition: .5s;
 }
+
+svg {
+  height:3rem;
+  width: 3rem;
+}

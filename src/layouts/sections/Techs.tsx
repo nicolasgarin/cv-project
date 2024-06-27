@@ -1,5 +1,5 @@
-import git from "../../assets/logos/git.svg";
-import html from "../../assets/logos/html-5.svg";
+import git from "/git.svg";
+import html from "/html-5.svg";
 import css from "../../assets/logos/css-3.svg";
 import js from "../../assets/logos/javascript.svg";
 import python from "../../assets/logos/python.svg";
@@ -23,6 +23,7 @@ import daisy from "../../assets/logos/daisyui.svg";
 import shadcn from "../../assets/logos/shadcn-ui.svg";
 import radix from "../../assets/logos/radix.svg";
 import nextjs from "../../assets/logos/next-js.svg";
+import { ReactSVG } from 'react-svg';
 
 export default function Techs() {
   return (
@@ -32,15 +33,16 @@ export default function Techs() {
       <div className="flex flex-col gap-6">
         <div className="nivel-1 flex justify-around">
 		<div className="ic flex flex-col">
-            <img className="h-12" src={git} />
+            <ReactSVG src={git} />
             <div>Git</div>
           </div>
           <div className="ic flex flex-col">
-            <img className="h-12" src={html} />
+            <ReactSVG src={html} />
             <div>HTML 5</div>
+
           </div>
           <div className="ic flex flex-col">
-            <img className="h-12" src={css} />
+          <ReactSVG src={css} />
             <div>Css 3</div>
           </div>
           <div className="ic flex flex-col">
