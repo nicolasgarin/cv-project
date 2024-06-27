@@ -30,10 +30,6 @@ export default function Techs() {
       <div className="flex flex-col">
         <div className="nivel-1 flex justify-around">
           <div className="ic flex flex-col">
-            <img className="h-12" src={git} />
-            <div>Git</div>
-          </div>
-          <div className="ic flex flex-col">
             <img className="h-12" src={html} />
             <div>HTML 5</div>
           </div>
@@ -54,10 +50,10 @@ export default function Techs() {
             <div>Java</div>
           </div>
         </div>
-        <div className="nivel-2 flex justify-between">
+        <div className="nivel-2 flex justify-around">
           <div className="ic flex flex-col">
-            <img className="h-12" src={github} />
-            <div>Github</div>
+            <img className="h-12" src={git} />
+            <div>Git</div>
           </div>
           <div className="ic flex flex-col">
             <img className="h-12" src={figma} />
@@ -90,8 +86,8 @@ export default function Techs() {
         </div>
         <div className="nivel-3 flex justify-around">
           <div className="ic flex flex-col">
-            <img className="h-12" src={mysql} />
-            <div>Mysql</div>
+            <img className="h-12" src={github} />
+            <div>Github</div>
           </div>
           <div className="ic flex flex-col">
             <img className="h-12" src={vite} />
@@ -111,6 +107,10 @@ export default function Techs() {
           </div>
         </div>
         <div className="nivel-4 flex justify-around">
+          <div className="ic flex flex-col">
+            <img className="h-12" src={mysql} />
+            <div>Mysql</div>
+          </div>
           <div className="ic flex flex-col">
             <img className="h-12" src={vitest} />
             <div>Vitest</div>
