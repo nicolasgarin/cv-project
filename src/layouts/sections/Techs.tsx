@@ -7,7 +7,7 @@ export default function Techs() {
         <h4>Tecnologías</h4>
         <div className="flex">
             <div>
-                <img src={bootstrap} />
+                <img className="h-3" src={bootstrap} />
                 <div>Bootstrap</div>
             </div>
         </div>
