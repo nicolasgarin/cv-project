@@ -1,4 +1,4 @@
-import foto from "../../assets/foto.jpg";
+import foto from "../../assets/placeholder.svg";
 export default function About() {
   return (
     <section id="about" className="flex align-center">
