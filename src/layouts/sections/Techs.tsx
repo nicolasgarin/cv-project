@@ -12,7 +12,15 @@ import react from "../../assets/logos/react.svg";
 import jq from "../../assets/logos/jquery.svg";
 import freemarker from "../../assets/logos/freemarker.svg";
 import clay from "../../assets/logos/clay.svg";
-//import bootstrap from "../../assets/logos/bootstrap.svg";
+import mysql from "../../assets/logos/mysql.svg";
+import vite from "../../assets/logos/vite.svg";
+import bootstrap from "../../assets/logos/bootstrap.svg";
+import tailwind from "../../assets/logos/tailwind.svg";
+import liferay from "../../assets/logos/liferay.svg";
+import vitest from "../../assets/logos/vitest.svg";
+import bootswatch from "../../assets/logos/bootswatch.svg";
+import daisy from "../../assets/logos/daisyui.svg";
+import shadcn from "../../assets/logos/shadcn-ui.svg";
 
 export default function Techs() {
     return (
@@ -80,8 +88,46 @@ export default function Techs() {
                 <div>Clay UI</div>
             </div>
           </div>
-          <div className="nivel-3"></div>
-          <div className="nivel-4"></div>
+          <div className="nivel-3 flex justify-around">
+            <div className="flex flex-col">
+                  <img className="h-12" src={mysql} />
+                  <div>Mysql</div>
+              </div>
+              <div className="flex flex-col">
+                  <img className="h-12" src={vite} />
+                  <div>Vite</div>
+              </div>
+              <div className="flex flex-col">
+                  <img className="h-12" src={bootstrap} />
+                  <div>Bootstrap</div>
+              </div>
+              <div className="flex flex-col">
+                <img className="h-12" src={tailwind} />
+                <div>Tailwind</div>
+            </div>
+            <div className="flex flex-col">
+                <img className="h-12" src={liferay} />
+                <div>Liferay</div>
+            </div>
+          </div>
+          <div className="nivel-4 flex justify-around">
+          <div className="flex flex-col">
+                <img className="h-12" src={vitest} />
+                <div>Vitest</div>
+            </div>
+            <div className="flex flex-col">
+                <img className="h-12" src={bootswatch} />
+                <div>Bootswatch</div>
+            </div>
+            <div className="flex flex-col">
+                <img className="h-12" src={daisy} />
+                <div>DaisyUI</div>
+            </div>
+            <div className="flex flex-col">
+                <img className="h-12" src={shadcn} />
+                <div>Shadcn/ui</div>
+            </div>
+          </div>
         </div>
         </section>
     )
