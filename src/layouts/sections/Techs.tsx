@@ -27,9 +27,9 @@ import nextjs from "../../assets/logos/next-js.svg";
 export default function Techs() {
   return (
     <section id="techs">
-      <h3>Tecnologías y habilidades</h3>
-      <h4>Tecnologías</h4>
-      <div className="flex flex-col">
+      <div className="flex flex-col justify-center h-full">
+      <h3>Tecnologías</h3>
+      <div className="flex flex-col gap-6">
         <div className="nivel-1 flex justify-around">
 		<div className="ic flex flex-col">
             <img className="h-12" src={git} />
@@ -138,6 +138,7 @@ export default function Techs() {
             <div>Shadcn/ui</div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
