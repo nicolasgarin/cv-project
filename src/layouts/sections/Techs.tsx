@@ -54,7 +54,7 @@ export default function Techs() {
             <div>Java</div>
           </div>
         </div>
-        <div className="nivel-2 flex justify-around">
+        <div className="nivel-2 flex justify-between">
           <div className="ic flex flex-col">
             <img className="h-12" src={github} />
             <div>Github</div>
