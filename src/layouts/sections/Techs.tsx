@@ -19,7 +19,7 @@ export default function Techs() {
       <section id='techs'>
         <h3>Tecnologías y habilidades</h3>
         <h4>Tecnologías</h4>
-        <div className="flex">
+        <div className="flex flex-col">
           <div className="nivel-1 flex justify-around">
             <div className="flex flex-col">
                 <img className="h-12" src={git} />
@@ -46,7 +46,7 @@ export default function Techs() {
                 <div>Java</div>
             </div>
           </div>
-          <div className="nivel-2">
+          <div className="nivel-2 flex justify-around">
           <div className="flex flex-col">
                 <img className="h-12" src={github} />
                 <div>Github</div>
