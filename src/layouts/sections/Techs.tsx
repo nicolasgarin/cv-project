@@ -6,7 +6,7 @@ export default function Techs() {
         <h3>Tecnologías y habilidades</h3>
         <h4>Tecnologías</h4>
         <div className="flex">
-            <div className="flex justify-center">
+            <div className="flex flex-column justify-center">
                 <img className="h-12" src={bootstrap} />
                 <div>Bootstrap</div>
             </div>
