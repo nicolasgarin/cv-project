@@ -22,6 +22,7 @@ import bootswatch from "../../assets/logos/bootswatch.svg";
 import daisy from "../../assets/logos/daisyui.svg";
 import shadcn from "../../assets/logos/shadcn-ui.svg";
 import radix from "../../assets/logos/radix.svg";
+import nextjs from "../../assets/logos/next-js.svg";
 
 export default function Techs() {
   return (
@@ -109,6 +110,10 @@ export default function Techs() {
 		  <div className="ic flex flex-col">
             <img className="h-12" src={radix} />
             <div>Radix</div>
+          </div>
+		  <div className="ic flex flex-col">
+            <img className="h-12" src={nextjs} />
+            <div>Next.js</div>
           </div>
           <div className="ic flex flex-col">
             <img className="h-12" src={liferay} />
