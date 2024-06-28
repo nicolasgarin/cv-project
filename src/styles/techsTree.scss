@@ -22,13 +22,11 @@
   }
 }
 
-#github:hover {
-  #git {
+#github:hover ~ #git {
     svg {
       filter: drop-shadow(0px 0px 4px #7DD3FC);
       transition: 0.5s;
     }
-  }
 }
 
 #bootst:hover {
