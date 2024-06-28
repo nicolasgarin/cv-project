@@ -41,7 +41,7 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div className="ic flex flex-col">
+                  <div id="git" className="ic flex flex-col">
                     <ReactSVG src={git} />
                     <div className="text-center">Git</div>
                   </div>
@@ -52,26 +52,27 @@ export default function Techs() {
               </Tooltip>
             </TooltipProvider>
             <TooltipProvider>
-  <Tooltip>
-    <TooltipTrigger>            <div className="ic flex flex-col">
-              <ReactSVG src={html} />
-              <div className="text-center">HTML 5</div>
-            </div></TooltipTrigger>
-    <TooltipContent className="bg-slate-500">
-      <p className="text-black">eto es html</p>
-      <p className="text-black">eto es html</p>
-      <p className="text-black">eto es html</p>
-      <p className="text-black">eto es html</p>
-    </TooltipContent>
-  </Tooltip>
-</TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div id="html" className="ic flex flex-col">
+                    <ReactSVG src={html} />
+                    <div className="text-center">HTML 5</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent className="bg-slate-500">
+                  <p className="text-black">eto es html</p>
+                  <p className="text-black">eto es html</p>
+                  <p className="text-black">eto es html</p>
+                  <p className="text-black">eto es html</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
 
-
-            <div className="ic flex flex-col">
+            <div id="css" className="ic flex flex-col">
               <ReactSVG src={css} />
               <div className="text-center">Css 3</div>
             </div>
-            <div className="ic flex flex-col">
+            <div id="js" className="ic flex flex-col">
               <ReactSVG src={js} />
               <div className="text-center">Javascript</div>
             </div>
@@ -88,7 +89,7 @@ export default function Techs() {
               <div className="text-center">Mysql</div>
             </div>
           </div>
-          <div className="nivel-2 flex justify-around">
+          <div id="github" className="nivel-2 flex justify-around">
             <div className="ic flex flex-col">
               <ReactSVG src={github} />
               <div className="text-center">Github</div>
@@ -127,7 +128,7 @@ export default function Techs() {
               <ReactSVG src={vite} />
               <div className="text-center">Vite</div>
             </div>
-            <div className="ic flex flex-col">
+            <div id="bootst" className="ic flex flex-col">
               <ReactSVG src={bootstrap} />
               <div className="text-center">Bootstrap</div>
             </div>
