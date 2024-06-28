@@ -32,7 +32,6 @@ import {
 } from "../../components/ui/tooltip";
 
 export default function Techs() {
-
   /*
   function addHoverEffect(elements: string[]) {
     for (var e in elements) {
@@ -77,104 +76,313 @@ export default function Techs() {
               </Tooltip>
             </TooltipProvider>
 
-            <div id="css" className="ic flex flex-col">
-              <ReactSVG src={css} />
-              <div className="text-center">Css 3</div>
-            </div>
-            <div id="js" className="ic flex flex-col">
-              <ReactSVG src={js} />
-              <div className="text-center">Javascript</div>
-            </div>
-            <div className="ic flex flex-col">
-              <ReactSVG src={python} />
-              <div className="text-center">Python</div>
-            </div>
-            <div id="java" className="ic flex flex-col">
-              <ReactSVG src={java} />
-              <div className="text-center">Java</div>
-            </div>
-            <div className="ic flex flex-col">
-              <ReactSVG src={mysql} />
-              <div className="text-center">Mysql</div>
-            </div>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div id="css" className="ic flex flex-col">
+                    <ReactSVG src={css} />
+                    <div className="text-center">Css 3</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div id="js" className="ic flex flex-col">
+                    <ReactSVG src={js} />
+                    <div className="text-center">Javascript</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="ic flex flex-col">
+                    <ReactSVG src={python} />
+                    <div className="text-center">Python</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div id="java" className="ic flex flex-col">
+                    <ReactSVG src={java} />
+                    <div className="text-center">Java</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="ic flex flex-col">
+                    <ReactSVG src={mysql} />
+                    <div className="text-center">Mysql</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
-          <div id="github" className="nivel-2 flex justify-around">
-            <div className="ic flex flex-col">
-              <ReactSVG src={github} />
-              <div className="text-center">Github</div>
-            </div>
-            <div className="ic flex flex-col">
-              <ReactSVG src={figma} />
-              <div className="text-center">Figma</div>
-            </div>
-            <div className="ic flex flex-col">
-              <ReactSVG src={sass} />
-              <div className="text-center">Sass</div>
-            </div>
-            <div className="ic flex flex-col">
-              <ReactSVG src={react} />
-              <div className="text-center">React</div>
-            </div>
-            <div className="ic flex flex-col">
-              <ReactSVG src={ts} />
-              <div className="text-center">Typescript</div>
-            </div>
-            <div className="ic flex flex-col">
-              <ReactSVG src={jq} />
-              <div className="text-center">Jquery</div>
-            </div>
-            <div id="freemarker" className="ic flex flex-col">
-              <ReactSVG src={freemarker} />
-              <div className="text-center">Freemarker</div>
-            </div>
-            <div id="clay" className="ic flex flex-col">
-              <ReactSVG src={clay} />
-              <div className="text-center">Clay UI</div>
-            </div>
+          <div className="nivel-2 flex justify-around">
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div id="github" className="ic flex flex-col">
+                    <ReactSVG src={github} />
+                    <div className="text-center">Github</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="ic flex flex-col">
+                    <ReactSVG src={figma} />
+                    <div className="text-center">Figma</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="ic flex flex-col">
+                    <ReactSVG src={sass} />
+                    <div className="text-center">Sass</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="ic flex flex-col">
+                    <ReactSVG src={react} />
+                    <div className="text-center">React</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="ic flex flex-col">
+                    <ReactSVG src={ts} />
+                    <div className="text-center">Typescript</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="ic flex flex-col">
+                    <ReactSVG src={jq} />
+                    <div className="text-center">Jquery</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div id="freemarker" className="ic flex flex-col">
+                    <ReactSVG src={freemarker} />
+                    <div className="text-center">Freemarker</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div id="clay" className="ic flex flex-col">
+                    <ReactSVG src={clay} />
+                    <div className="text-center">Clay UI</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
           <div className="nivel-3 flex justify-around">
-            <div className="ic flex flex-col">
-              <ReactSVG src={vite} />
-              <div className="text-center">Vite</div>
-            </div>
-            <div id="bootst" className="ic flex flex-col">
-              <ReactSVG src={bootstrap} />
-              <div className="text-center">Bootstrap</div>
-            </div>
-            <div className="ic flex flex-col">
-              <ReactSVG src={tailwind} />
-              <div className="text-center">Tailwind CSS</div>
-            </div>
-            <div className="ic flex flex-col">
-              <ReactSVG src={radix} />
-              <div className="text-center">Radix</div>
-            </div>
-            <div className="ic flex flex-col">
-              <ReactSVG src={nextjs} />
-              <div className="text-center">Next.js</div>
-            </div>
-            <div id="liferay" className="ic flex flex-col">
-              <ReactSVG src={liferay} />
-              <div className="text-center">Liferay</div>
-            </div>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="ic flex flex-col">
+                    <ReactSVG src={vite} />
+                    <div className="text-center">Vite</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div id="bootst" className="ic flex flex-col">
+                    <ReactSVG src={bootstrap} />
+                    <div className="text-center">Bootstrap</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="ic flex flex-col">
+                    <ReactSVG src={tailwind} />
+                    <div className="text-center">Tailwind CSS</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="ic flex flex-col">
+                    <ReactSVG src={radix} />
+                    <div className="text-center">Radix</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="ic flex flex-col">
+                    <ReactSVG src={nextjs} />
+                    <div className="text-center">Next.js</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div id="liferay" className="ic flex flex-col">
+                    <ReactSVG src={liferay} />
+                    <div className="text-center">Liferay</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
           <div className="nivel-4 flex justify-around">
-            <div className="ic flex flex-col">
-              <ReactSVG src={vitest} />
-              <div className="text-center">Vitest</div>
-            </div>
-            <div className="ic flex flex-col">
-              <ReactSVG src={bootswatch} />
-              <div className="text-center">Bootswatch</div>
-            </div>
-            <div className="ic flex flex-col">
-              <ReactSVG src={daisy} />
-              <div className="text-center">DaisyUI</div>
-            </div>
-            <div className="ic flex flex-col">
-              <ReactSVG src={shadcn} />
-              <div className="text-center">Shadcn/ui</div>
-            </div>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="ic flex flex-col">
+                    <ReactSVG src={vitest} />
+                    <div className="text-center">Vitest</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="ic flex flex-col">
+                    <ReactSVG src={bootswatch} />
+                    <div className="text-center">Bootswatch</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="ic flex flex-col">
+                    <ReactSVG src={daisy} />
+                    <div className="text-center">DaisyUI</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="ic flex flex-col">
+                    <ReactSVG src={shadcn} />
+                    <div className="text-center">Shadcn/ui</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-cyan-400">Esto es git</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
         </div>
       </div>
