@@ -32,6 +32,15 @@ import {
 } from "../../components/ui/tooltip";
 
 export default function Techs() {
+
+  /*
+  function addHoverEffect(elements: string[]) {
+    for (var e in elements) {
+      document.getElementById('#' + e).classList.add('effect')
+    }
+  }
+  */
+
   return (
     <section id="techs">
       <div className="flex flex-col justify-center h-full">
@@ -80,7 +89,7 @@ export default function Techs() {
               <ReactSVG src={python} />
               <div className="text-center">Python</div>
             </div>
-            <div className="ic flex flex-col">
+            <div id="java" className="ic flex flex-col">
               <ReactSVG src={java} />
               <div className="text-center">Java</div>
             </div>
@@ -114,11 +123,11 @@ export default function Techs() {
               <ReactSVG src={jq} />
               <div className="text-center">Jquery</div>
             </div>
-            <div className="ic flex flex-col">
+            <div id="freemarker" className="ic flex flex-col">
               <ReactSVG src={freemarker} />
               <div className="text-center">Freemarker</div>
             </div>
-            <div className="ic flex flex-col">
+            <div id="clay" className="ic flex flex-col">
               <ReactSVG src={clay} />
               <div className="text-center">Clay UI</div>
             </div>
@@ -144,7 +153,7 @@ export default function Techs() {
               <ReactSVG src={nextjs} />
               <div className="text-center">Next.js</div>
             </div>
-            <div className="ic flex flex-col">
+            <div id="liferay" className="ic flex flex-col">
               <ReactSVG src={liferay} />
               <div className="text-center">Liferay</div>
             </div>
