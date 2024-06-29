@@ -41,8 +41,8 @@ export default function Techs() {
   */
 
   return (
-    <section id="techs">
-      <div className="flex flex-col justify-center h-full">
+    <section id="techs" className="flex items-center">
+      <div className="flex flex-col justify-center w-full">
         <h3>Tecnologías</h3>
         <div className="flex flex-col gap-6">
           <div className="nivel-1 flex justify-around">
@@ -55,7 +55,17 @@ export default function Techs() {
                   </div>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p className="text-cyan-400">Esto es git</p>
+                  <p className="text-cyan-400">
+                    <div
+                      className="radial-progress text-primary"
+                      style={{
+                        "--value": 70,
+                        "--size": "12rem",
+                        "--thickness": "2px",
+                      }}
+                      role="progressbar"
+                    ></div>
+                  </p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>

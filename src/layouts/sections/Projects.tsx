@@ -1,4 +1,6 @@
 import { IProyectos } from "../../@types/data";
+import imgPokedex from "./../../assets/project-img/pokedex.png";
+import { ScrollArea, ScrollBar } from "../../components/ui/scroll-area";
 
 const proyectos: IProyectos = [
   {
@@ -29,8 +31,8 @@ const proyectos: IProyectos = [
 
 export default function Projects() {
   return (
-    <section id="projects">
-      <div className="flex flex-col justify-center h-full">
+    <section id="projects" className="flex items-center">
+      <div className="flex flex-col">
         <h3 className="mb-3">Proyectos personales</h3>
         <p className="mb-4">
           Paralelamente a mi crecimiento y desarrollo profesional de manera
@@ -39,14 +41,25 @@ export default function Projects() {
           experiencia en la herramienta que más me gusta y anhelo trabajar de
           manera profesional, React.
         </p>
-        <div className="grid grid-cols-4 gap-4">
-          {proyectos.map((proyecto) => (
-            <div>
-              <div>{proyecto.nombre}</div>
-              <div>{proyecto.anio}</div>
-            </div>
-          ))}
-        </div>
+        <ScrollArea className="w-[51rem] whitespace-nowrap">
+          <div className="flex w-max space-x-4 pb-8">
+            {proyectos.map((proyecto) => (
+              <div className="card glass">
+                <figure>
+                  <img className="h-32" src={imgPokedex} alt="car!" />
+                </figure>
+                <div className="card-body p-4">
+                  <h2 className="card-title">{proyecto.nombre}</h2>
+                  <p>Pokedex desarrollada con React</p>
+                  <div className="card-actions justify-end">
+                    <button className="btn btn-primary">Learn now!</button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <ScrollBar orientation="horizontal" />
+        </ScrollArea>
       </div>
     </section>
   );

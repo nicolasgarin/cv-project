@@ -1,9 +1,9 @@
-import foto from "../../assets/placeholder.svg";
+import foto from "../../assets/foto.jpg";
 export default function About() {
   return (
-    <section id="about" className="flex align-center">
+    <section id="about" className="flex items-center">
       <div className="flex gap-20">
-        <div className="text">
+        <div className="text flex flex-col gap-4">
           <p>
             Tras casi 10 años trabajando en empleos donde desarrollé fuertes
             sentidos de responsabilidad, trbajo en equipo y adaptación constante, en 2020 encontré el campo donde mezclar estas habilidades
