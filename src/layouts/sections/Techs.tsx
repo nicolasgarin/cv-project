@@ -59,8 +59,7 @@ export default function Techs() {
                 </TooltipTrigger>
                 <TooltipContent>
                   <div className="text-cyan-400">
-                    
-                    
+                    Git
                   </div>
                 </TooltipContent>
               </Tooltip>
