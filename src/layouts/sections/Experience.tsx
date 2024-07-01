@@ -18,12 +18,12 @@ export default function Experience() {
       </svg>
     </div>
     <div className="timeline-end mb-10">
-      <time className="font-mono italic">2023</time>
+      <time className="font-mono italic">2024</time>
       <div className="text-lg font-black"></div>
       <ul>
-        <li>Mar - Flashcard App</li>
-        <li>Jul - Train the trainee Liferay experience - Sao Paulo, Brasil</li>
-        <li>Oct - Proyecto X</li>
+        <li>Mar - Meta Front End Developer Certification</li>
+        <li>May - Project Tracker App</li>
+        <li>Jun - CV Project</li>
       </ul>
     </div>
     <hr />
@@ -43,13 +43,12 @@ export default function Experience() {
       </svg>
     </div>
     <div className="timeline-start mb-10 md:text-end">
-    <time className="font-mono italic">2022</time>
+    <time className="font-mono italic">2023</time>
       <div className="text-lg font-black"></div>
       <ul>
-        <li>Ene - Pokedex React App</li>
-        <li>Feb - Trainee en Isa Software</li>
-        <li>Jun - Entrada a proyecto Portal Antel</li>
-        <li>Oct - Hangman App</li>
+        <li>Mar - Flashcard App</li>
+        <li>Jul - Liferay Cloud Certification - Sao Paulo, Brasil</li>
+        <li>Oct - Proyecto X</li>
       </ul>
     </div>
     <hr />
@@ -69,8 +68,14 @@ export default function Experience() {
       </svg>
     </div>
     <div className="timeline-end mb-10">
-    <time className="font-mono italic">Feb 2022 - Actualidad</time>
+    <time className="font-mono italic">2022 - Actualidad</time>
       <div className="text-lg font-black">Frontend Developer - Isa Software</div>
+      <ul>
+        <li>Ene - Pokedex React App</li>
+        <li>Feb - Trainee en Isa Software</li>
+        <li>Jun - Entrada a proyecto Portal Antel</li>
+        <li>Oct - Hangman App</li>
+      </ul>
     </div>
     <hr />
   </li>
