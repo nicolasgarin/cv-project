@@ -17,17 +17,64 @@ export default function Experience() {
           clipRule="evenodd" />
       </svg>
     </div>
-    <div className="timeline-end mb-10 md:text-end">
-      <time className="font-mono italic">Feb 2022</time>
-      <div className="text-lg font-black">Frontend Developer - Isa Software</div>
+    <div className="timeline-end mb-10">
+      <time className="font-mono italic">2023</time>
+      <div className="text-lg font-black"></div>
       <ul>
-        <li>Jun 2022 - Antel</li>
-        <li>Jul 2023 - San Pablo</li>
+        <li>Mar - Flashcard App</li>
+        <li>Jul - Train the trainee Liferay experience - Sao Paulo, Brasil</li>
+        <li>Oct - Proyecto X</li>
       </ul>
     </div>
     <hr />
   </li>
    <li>
+    <hr />
+    <div className="timeline-middle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        className="h-5 w-5">
+        <path
+          fillRule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+          clipRule="evenodd" />
+      </svg>
+    </div>
+    <div className="timeline-start mb-10 md:text-end">
+    <time className="font-mono italic">2022</time>
+      <div className="text-lg font-black"></div>
+      <ul>
+        <li>Ene - Pokedex React App</li>
+        <li>Feb - Trainee en Isa Software</li>
+        <li>Jun - Entrada a proyecto Portal Antel</li>
+        <li>Oct - Hangman App</li>
+      </ul>
+    </div>
+    <hr />
+  </li>
+  <li>
+    <hr />
+    <div className="timeline-middle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        className="h-5 w-5">
+        <path
+          fillRule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+          clipRule="evenodd" />
+      </svg>
+    </div>
+    <div className="timeline-end mb-10">
+    <time className="font-mono italic">Feb 2022 - Actualidad</time>
+      <div className="text-lg font-black">Frontend Developer - Isa Software</div>
+    </div>
+    <hr />
+  </li>
+  <li>
     <hr />
     <div className="timeline-middle">
       <svg
@@ -61,7 +108,7 @@ export default function Experience() {
           clipRule="evenodd" />
       </svg>
     </div>
-    <div className="timeline-end mb-10">
+    <div className="timeline-end">
       <time className="font-mono italic">2018 - 2022</time>
       <div className="text-lg font-black">Subencargado en casa cambiaria - Avenida Servicios Financieros</div>
     </div>
@@ -81,7 +128,7 @@ export default function Experience() {
           clipRule="evenodd" />
       </svg>
     </div>
-    <div className="timeline-start mb-10 md:text-end">
+    <div className="timeline-start md:text-end">
       <time className="font-mono italic">2014 - 2016</time>
       <div className="text-lg font-black">Operador en casa cambiaria - Global Exchange</div>
     </div>
