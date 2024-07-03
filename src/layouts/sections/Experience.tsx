@@ -23,7 +23,7 @@ export default function Experience() {
       <ul>
         <li>Mar - Meta Front End Developer Certification</li>
         <li>May - Project Tracker App</li>
-        <li>Jun - CV Project</li>
+        <li>Jul - Desarrollador Front End Semi Senior</li>
       </ul>
     </div>
     <hr />
