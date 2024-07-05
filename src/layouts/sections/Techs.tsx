@@ -32,22 +32,22 @@ import {
 } from "../../components/ui/tooltip";
 
 export default function Techs() {
-  
   function toggleHoverEffect(elements: string[]) {
     console.log(elements);
     for (var e in elements) {
-      console.log(document.getElementById(elements[e])!.classList)
+      console.log(document.getElementById(elements[e])!.classList);
 
-      document.getElementById(elements[e])!.classList.toggle('effect')
+      document.getElementById(elements[e])!.classList.toggle("effect");
     }
   }
-  
 
   return (
     <section id="techs" className="flex items-center">
       <div className="flex flex-col justify-center w-full">
-        <h3>Tecnologías</h3>
-        <div className="flex flex-col gap-6">
+        <h2 className="text-center text-3xl text-sky-300 font-bold mb-10">
+          Habilidades
+        </h2>
+        <div className="flex flex-col gap-10">
           <div className="nivel-1 flex justify-around">
             <TooltipProvider>
               <Tooltip>
@@ -58,9 +58,7 @@ export default function Techs() {
                   </div>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <div className="text-cyan-400">
-                    Git
-                  </div>
+                  <div className="text-cyan-400">Git</div>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -153,7 +151,12 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="github" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['git'])} onMouseLeave={() => toggleHoverEffect(['git'])} >
+                  <div
+                    id="github"
+                    className="ic flex flex-col"
+                    onMouseEnter={() => toggleHoverEffect(["git"])}
+                    onMouseLeave={() => toggleHoverEffect(["git"])}
+                  >
                     <ReactSVG src={github} />
                     <div className="text-center">Github</div>
                   </div>
@@ -179,7 +182,12 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="sass" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['css'])} onMouseLeave={() => toggleHoverEffect(['css'])} >
+                  <div
+                    id="sass"
+                    className="ic flex flex-col"
+                    onMouseEnter={() => toggleHoverEffect(["css"])}
+                    onMouseLeave={() => toggleHoverEffect(["css"])}
+                  >
                     <ReactSVG src={sass} />
                     <div className="text-center">Sass</div>
                   </div>
@@ -192,7 +200,12 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="react" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['js', 'html'])} onMouseLeave={() => toggleHoverEffect(['js', 'html'])}>
+                  <div
+                    id="react"
+                    className="ic flex flex-col"
+                    onMouseEnter={() => toggleHoverEffect(["js", "html"])}
+                    onMouseLeave={() => toggleHoverEffect(["js", "html"])}
+                  >
                     <ReactSVG src={react} />
                     <div className="text-center">React</div>
                   </div>
@@ -205,7 +218,12 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="ts" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['js'])} onMouseLeave={() => toggleHoverEffect(['js'])}>
+                  <div
+                    id="ts"
+                    className="ic flex flex-col"
+                    onMouseEnter={() => toggleHoverEffect(["js"])}
+                    onMouseLeave={() => toggleHoverEffect(["js"])}
+                  >
                     <ReactSVG src={ts} />
                     <div className="text-center">Typescript</div>
                   </div>
@@ -218,7 +236,12 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="jq" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['js'])} onMouseLeave={() => toggleHoverEffect(['js'])}>
+                  <div
+                    id="jq"
+                    className="ic flex flex-col"
+                    onMouseEnter={() => toggleHoverEffect(["js"])}
+                    onMouseLeave={() => toggleHoverEffect(["js"])}
+                  >
                     <ReactSVG src={jq} />
                     <div className="text-center">Jquery</div>
                   </div>
@@ -231,7 +254,12 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="freemarker" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['java'])} onMouseLeave={() => toggleHoverEffect(['java'])}>
+                  <div
+                    id="freemarker"
+                    className="ic flex flex-col"
+                    onMouseEnter={() => toggleHoverEffect(["java"])}
+                    onMouseLeave={() => toggleHoverEffect(["java"])}
+                  >
                     <ReactSVG src={freemarker} />
                     <div className="text-center">Freemarker</div>
                   </div>
@@ -244,7 +272,12 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="clay" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['java'])} onMouseLeave={() => toggleHoverEffect(['java'])}>
+                  <div
+                    id="clay"
+                    className="ic flex flex-col"
+                    onMouseEnter={() => toggleHoverEffect(["java"])}
+                    onMouseLeave={() => toggleHoverEffect(["java"])}
+                  >
                     <ReactSVG src={clay} />
                     <div className="text-center">Clay UI</div>
                   </div>
@@ -259,7 +292,16 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="vite" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['js', 'html', 'react'])} onMouseLeave={() => toggleHoverEffect(['js', 'html', 'react'])}>
+                  <div
+                    id="vite"
+                    className="ic flex flex-col"
+                    onMouseEnter={() =>
+                      toggleHoverEffect(["js", "html", "react"])
+                    }
+                    onMouseLeave={() =>
+                      toggleHoverEffect(["js", "html", "react"])
+                    }
+                  >
                     <ReactSVG src={vite} />
                     <div className="text-center">Vite</div>
                   </div>
@@ -272,7 +314,12 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="bootst" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['css', 'html'])} onMouseLeave={() => toggleHoverEffect(['css', 'html'])}>
+                  <div
+                    id="bootst"
+                    className="ic flex flex-col"
+                    onMouseEnter={() => toggleHoverEffect(["css", "html"])}
+                    onMouseLeave={() => toggleHoverEffect(["css", "html"])}
+                  >
                     <ReactSVG src={bootstrap} />
                     <div className="text-center">Bootstrap</div>
                   </div>
@@ -285,7 +332,16 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="tailwind" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['css', 'html', 'js', 'react'])} onMouseLeave={() => toggleHoverEffect(['css', 'html', 'js', 'react'])}>
+                  <div
+                    id="tailwind"
+                    className="ic flex flex-col"
+                    onMouseEnter={() =>
+                      toggleHoverEffect(["css", "html", "js", "react"])
+                    }
+                    onMouseLeave={() =>
+                      toggleHoverEffect(["css", "html", "js", "react"])
+                    }
+                  >
                     <ReactSVG src={tailwind} />
                     <div className="text-center">Tailwind CSS</div>
                   </div>
@@ -298,7 +354,16 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="radix" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['css', 'html', 'js', 'react'])} onMouseLeave={() => toggleHoverEffect(['css', 'html', 'js', 'react'])} >
+                  <div
+                    id="radix"
+                    className="ic flex flex-col"
+                    onMouseEnter={() =>
+                      toggleHoverEffect(["css", "html", "js", "react"])
+                    }
+                    onMouseLeave={() =>
+                      toggleHoverEffect(["css", "html", "js", "react"])
+                    }
+                  >
                     <ReactSVG src={radix} />
                     <div className="text-center">Radix</div>
                   </div>
@@ -311,7 +376,16 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="next" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['js', 'html', 'react'])} onMouseLeave={() => toggleHoverEffect(['js', 'html', 'react'])}>
+                  <div
+                    id="next"
+                    className="ic flex flex-col"
+                    onMouseEnter={() =>
+                      toggleHoverEffect(["js", "html", "react"])
+                    }
+                    onMouseLeave={() =>
+                      toggleHoverEffect(["js", "html", "react"])
+                    }
+                  >
                     <ReactSVG src={nextjs} />
                     <div className="text-center">Next.js</div>
                   </div>
@@ -324,7 +398,16 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="liferay" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['java', 'freemarker', 'clay'])} onMouseLeave={() => toggleHoverEffect(['java', 'freemarker', 'clay'])}>
+                  <div
+                    id="liferay"
+                    className="ic flex flex-col"
+                    onMouseEnter={() =>
+                      toggleHoverEffect(["java", "freemarker", "clay"])
+                    }
+                    onMouseLeave={() =>
+                      toggleHoverEffect(["java", "freemarker", "clay"])
+                    }
+                  >
                     <ReactSVG src={liferay} />
                     <div className="text-center">Liferay</div>
                   </div>
@@ -339,7 +422,16 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="vitest" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['js', 'html', 'vite', 'react'])} onMouseLeave={() => toggleHoverEffect(['js', 'html', 'vite', 'react'])}>
+                  <div
+                    id="vitest"
+                    className="ic flex flex-col"
+                    onMouseEnter={() =>
+                      toggleHoverEffect(["js", "html", "vite", "react"])
+                    }
+                    onMouseLeave={() =>
+                      toggleHoverEffect(["js", "html", "vite", "react"])
+                    }
+                  >
                     <ReactSVG src={vitest} />
                     <div className="text-center">Vitest</div>
                   </div>
@@ -352,7 +444,16 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="bootswatch" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['css', 'html', 'bootst'])} onMouseLeave={() => toggleHoverEffect(['css', 'html', 'bootst'])}>
+                  <div
+                    id="bootswatch"
+                    className="ic flex flex-col"
+                    onMouseEnter={() =>
+                      toggleHoverEffect(["css", "html", "bootst"])
+                    }
+                    onMouseLeave={() =>
+                      toggleHoverEffect(["css", "html", "bootst"])
+                    }
+                  >
                     <ReactSVG src={bootswatch} />
                     <div className="text-center">Bootswatch</div>
                   </div>
@@ -365,7 +466,28 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="daisy" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['css', 'html', 'js', 'react', 'tailwind'])} onMouseLeave={() => toggleHoverEffect(['css', 'html', 'js', 'react', 'tailwind'])}>
+                  <div
+                    id="daisy"
+                    className="ic flex flex-col"
+                    onMouseEnter={() =>
+                      toggleHoverEffect([
+                        "css",
+                        "html",
+                        "js",
+                        "react",
+                        "tailwind",
+                      ])
+                    }
+                    onMouseLeave={() =>
+                      toggleHoverEffect([
+                        "css",
+                        "html",
+                        "js",
+                        "react",
+                        "tailwind",
+                      ])
+                    }
+                  >
                     <ReactSVG src={daisy} />
                     <div className="text-center">DaisyUI</div>
                   </div>
@@ -378,7 +500,30 @@ export default function Techs() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <div id="shadcn" className="ic flex flex-col" onMouseEnter={() => toggleHoverEffect(['css', 'html', 'js', 'react', 'tailwind', 'radix'])} onMouseLeave={() => toggleHoverEffect(['css', 'html', 'js', 'react', 'tailwind', 'radix'])}>
+                  <div
+                    id="shadcn"
+                    className="ic flex flex-col"
+                    onMouseEnter={() =>
+                      toggleHoverEffect([
+                        "css",
+                        "html",
+                        "js",
+                        "react",
+                        "tailwind",
+                        "radix",
+                      ])
+                    }
+                    onMouseLeave={() =>
+                      toggleHoverEffect([
+                        "css",
+                        "html",
+                        "js",
+                        "react",
+                        "tailwind",
+                        "radix",
+                      ])
+                    }
+                  >
                     <ReactSVG src={shadcn} />
                     <div className="text-center">Shadcn/ui</div>
                   </div>

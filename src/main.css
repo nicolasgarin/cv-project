@@ -89,7 +89,6 @@
 
   section {
     min-height: 100vh;
-    border-bottom: 3px solid white;
   }
 }
 
@@ -120,4 +119,8 @@
 svg {
   height:3rem;
   width: 3rem;
+}
+
+#scrollarea {
+  width: -webkit-fill-available;
 }
