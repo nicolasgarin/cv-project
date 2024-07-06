@@ -47,7 +47,7 @@ export default function Techs() {
         <h2 className="text-center text-3xl text-sky-300 font-bold mb-10">
           Habilidades
         </h2>
-        <p>Diferentes tecnologías, frameworks y blabla que he utilizado o aprendido</p>
+        <p>Diferentes tecnologías, frameworks y librerías que he utilizado o aprendido</p>
         <div className="flex flex-col gap-10">
           <div className="nivel-1 flex justify-around">
             <TooltipProvider>
@@ -485,7 +485,7 @@ export default function Techs() {
                 </TooltipTrigger>
                 <TooltipContent className="flex flex-col items-center bg-slate-800">
                   <h4 className="font-bold text-sky-300">Freemarker</h4>
-                  <p className="mb-3">Librería de Java para creación de <br /> plantillas</p>
+                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
                   <div className="flex gap-4">
                     <div
                       className="radial-progress text-sky-300 "
@@ -511,15 +511,32 @@ export default function Techs() {
                   <div
                     id="clay"
                     className="ic flex flex-col"
-                    onMouseEnter={() => toggleHoverEffect(["java"])}
-                    onMouseLeave={() => toggleHoverEffect(["java"])}
+                    onMouseEnter={() => toggleHoverEffect(["java", "bootst"])}
+                    onMouseLeave={() => toggleHoverEffect(["java", "bootst"])}
                   >
                     <ReactSVG src={clay} />
                     <div className="text-center">Clay UI</div>
                   </div>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p className="text-cyan-400">Esto es git</p>
+                <TooltipContent className="flex flex-col items-center bg-slate-800">
+                  <h4 className="font-bold text-sky-300">Clay UI</h4>
+                  <p className="mb-3">Librería de componentes y estilos basado <br /> en Bootstrap, creado para Liferay</p>
+                  <div className="flex gap-4">
+                    <div
+                      className="radial-progress text-sky-300 "
+                      style={{ "--value": 100 }}
+                      role="progressbar"
+                    >
+                      EXP
+                    </div>
+                    <div
+                      className="radial-progress text-secondary"
+                      style={{ "--value": 100 }}
+                      role="progressbar"
+                    >
+                      CON
+                    </div>
+                  </div>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
