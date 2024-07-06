@@ -173,7 +173,11 @@ export default function Projects() {
                     </form>
                     <h3 className="font-bold text-lg">{proyecto.nombre}</h3>
                     <p className="py-4">
-                      Press ESC key or click outside to close
+                    <img
+                      className=""
+                      src={imgSetter(proyecto.img)}
+                      alt="car!"
+                    />
                     </p>
                   </div>
                   <form method="dialog" className="modal-backdrop">
