@@ -19,10 +19,10 @@ const proyectos: IProyectos = [
     anio: 2021,
     img: "imgPokedex",
     tecnologias: ["react", "ts", "sass"],
-    urlRepo: "https://github.com/NicolasGarin/pokedex",
-    urlDemo: "https://nicolasgarin.github.io/pokedex/",
     descripcionCorta: "Pokedex",
     descripcionLarga: "Pokedex",
+    urlRepo: "https://github.com/NicolasGarin/pokedex",
+    urlDemo: "https://nicolasgarin.github.io/pokedex/",
   },
   {
     id: "2",
@@ -30,10 +30,10 @@ const proyectos: IProyectos = [
     anio: 2021,
     img: "imgJapLanding",
     tecnologias: ["react", "ts", "sass"],
-    urlRepo: "https://github.com/NicolasGarin/pokedex",
-    urlDemo: "https://nicolasgarin.github.io/pokedex/",
     descripcionCorta: "Pokedex",
     descripcionLarga: "Pokedex",
+    urlRepo: "https://github.com/NicolasGarin/pokedex",
+    urlDemo: "https://nicolasgarin.github.io/pokedex/",
   },
   {
     id: "3",
@@ -41,10 +41,10 @@ const proyectos: IProyectos = [
     anio: 2022,
     img: "imgPokedex",
     tecnologias: ["react", "ts", "sass"],
-    urlRepo: "https://github.com/NicolasGarin/pokedex",
-    urlDemo: "https://nicolasgarin.github.io/pokedex/",
     descripcionCorta: "Pokedex",
     descripcionLarga: "Pokedex",
+    urlRepo: "https://github.com/NicolasGarin/pokedex",
+    urlDemo: "https://nicolasgarin.github.io/pokedex/",
   },
   {
     id: "4",
@@ -52,10 +52,10 @@ const proyectos: IProyectos = [
     anio: 2023,
     img: "imgFlashcard",
     tecnologias: ["react", "ts", "sass"],
-    urlRepo: "https://github.com/NicolasGarin/pokedex",
-    urlDemo: "https://nicolasgarin.github.io/pokedex/",
     descripcionCorta: "Pokedex",
     descripcionLarga: "Pokedex",
+    urlRepo: "https://github.com/NicolasGarin/pokedex",
+    urlDemo: "https://nicolasgarin.github.io/pokedex/",
   },
   {
     id: "5",
@@ -63,10 +63,10 @@ const proyectos: IProyectos = [
     anio: 2023,
     img: "imgHangman",
     tecnologias: ["react", "ts", "sass"],
-    urlRepo: "https://github.com/NicolasGarin/pokedex",
-    urlDemo: "https://nicolasgarin.github.io/pokedex/",
     descripcionCorta: "Pokedex",
     descripcionLarga: "Pokedex",
+    urlRepo: "https://github.com/NicolasGarin/pokedex",
+    urlDemo: "https://nicolasgarin.github.io/pokedex/",
   },
   {
     id: "6",
@@ -74,25 +74,23 @@ const proyectos: IProyectos = [
     anio: 2024,
     img: "imgProjectTracker",
     tecnologias: ["react", "ts", "sass"],
-    urlRepo: "https://github.com/NicolasGarin/pokedex",
-    urlDemo: "https://nicolasgarin.github.io/pokedex/",
     descripcionCorta: "Pokedex",
     descripcionLarga: "Pokedex",
+    urlRepo: "https://github.com/NicolasGarin/pokedex",
+    urlDemo: "https://nicolasgarin.github.io/pokedex/",
   },
-  ,
   {
     id: "7",
     nombre: "Project Tracker LP",
     anio: 2024,
     img: "imgProjectTrackerLP",
     tecnologias: ["react", "ts", "sass"],
-    urlRepo: "https://github.com/NicolasGarin/pokedex",
-    urlDemo: "https://nicolasgarin.github.io/pokedex/",
     descripcionCorta: "Pokedex",
     descripcionLarga: "Pokedex",
-  }
+    urlRepo: "https://github.com/NicolasGarin/pokedex",
+    urlDemo: "https://nicolasgarin.github.io/pokedex/",
+  },
 ];
-
 
 function imgSetter(string: string) {
   switch (string) {
@@ -119,9 +117,9 @@ export default function Projects() {
   return (
     <section id="projects" className="flex items-center">
       <div className="flex flex-col w-full">
-      <h2 className="text-center text-3xl text-sky-300 font-bold mb-10">
-        Proyectos
-      </h2>
+        <h2 className="text-center text-3xl text-sky-300 font-bold mb-10">
+          Proyectos
+        </h2>
         <p className="mb-10">
           Paralelamente a mi crecimiento y desarrollo profesional de manera
           privada, siempre he trabajado en aprender y adquirir conocimiento
@@ -133,32 +131,55 @@ export default function Projects() {
           <div className="flex w-max space-x-4 pb-8">
             {proyectos.map((proyecto) => (
               <>
-              <div className="card glass">
-                <figure>
-                  <img className="h-32" src={imgSetter(proyecto.img)} alt="car!" />
-                </figure>
-                <div className="card-body p-4">
-                  <h2 className="card-title flex text-sky-300  justify-between">{proyecto.nombre} <button onClick={()=>document.getElementById(proyecto.id)!.showModal()}><BsBoxArrowUpRight className="w-5 h-5" /></button></h2>
-                  <p>Pokedex desarrollada con React</p>
-                  <div className="flex gap-5">
-                  <img className="h-8" src={react} />
-                  <img className="h-8" src={ts} />
-                  <img className="h-8" src={sass} />
+                <div className="card glass">
+                  <figure>
+                    <img
+                      className="h-32"
+                      src={imgSetter(proyecto.img)}
+                      alt="car!"
+                    />
+                  </figure>
+                  <div className="card-body p-4">
+                    <h2 className="card-title flex text-sky-300  justify-between">
+                      {proyecto.nombre}
+                      <button
+                        onClick={() => {
+                          if (document) {
+                            (
+                              document.getElementById(
+                                proyecto.id
+                              ) as HTMLFormElement
+                            ).showModal();
+                          }
+                        }}
+                      >
+                        <BsBoxArrowUpRight className="w-5 h-5 hover:fill-sky-300" />
+                      </button>
+                    </h2>
+                    <p>Pokedex desarrollada con React</p>
+                    <div className="flex gap-5">
+                      <img className="h-8" src={react} />
+                      <img className="h-8" src={ts} />
+                      <img className="h-8" src={sass} />
+                    </div>
+                  </div>
                 </div>
-                </div>
-              </div>
-              <dialog id={proyecto.id} className="modal">
-                <div className="modal-box bg-black">
-                <form method="dialog">
-                  <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                </form>
-                  <h3 className="font-bold text-lg">{proyecto.nombre}</h3>
-                  <p className="py-4">Press ESC key or click outside to close</p>
-                </div>
-                <form method="dialog" className="modal-backdrop">
-                  <button>close</button>
-                </form>
-              </dialog>
+                <dialog id={proyecto.id} className="modal">
+                  <div className="modal-box bg-black">
+                    <form method="dialog">
+                      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                        ✕
+                      </button>
+                    </form>
+                    <h3 className="font-bold text-lg">{proyecto.nombre}</h3>
+                    <p className="py-4">
+                      Press ESC key or click outside to close
+                    </p>
+                  </div>
+                  <form method="dialog" className="modal-backdrop">
+                    <button>close</button>
+                  </form>
+                </dialog>
               </>
             ))}
           </div>

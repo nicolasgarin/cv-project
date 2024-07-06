@@ -1,4 +1,4 @@
-export type IProyecto = {
+export type IProyectos = {
     id: string;
     nombre: string;
     anio: number;
@@ -8,6 +8,4 @@ export type IProyecto = {
     descripcionLarga: string;
     urlRepo: string;
     urlDemo?: string;
-}
-
-export type IProyectos = IProyecto[]
+}[];
