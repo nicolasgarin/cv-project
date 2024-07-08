@@ -11,6 +11,8 @@ import react from "../../assets/logos/react.svg";
 import ts from "../../assets/logos/typescript.svg";
 import sass from "../../assets/logos/sass.svg";
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";
 
 const proyectos: IProyectos = [
   {
@@ -156,7 +158,7 @@ export default function Projects() {
                         <BsBoxArrowUpRight className="w-5 h-5 hover:fill-sky-300" />
                       </button>
                     </h2>
-                    <p>Pokedex desarrollada con React</p>
+                    <p>{proyecto.descripcionCorta}</p>
                     <div className="flex gap-5">
                       <img className="h-8" src={react} />
                       <img className="h-8" src={ts} />
@@ -176,9 +178,35 @@ export default function Projects() {
                     <img
                       className=""
                       src={imgSetter(proyecto.img)}
-                      alt="car!"
+                      alt={proyecto.img}
                     />
                     </p>
+                    <p>{proyecto.anio}</p>
+                    <p>{proyecto.descripcionLarga}</p>
+                    <div>
+                    <a
+                      href={proyecto.urlRepo}
+                      aria-label={
+                        lang == "es"
+                          ? "Enlace a cuenta de Github"
+                          : "Github account link"
+                      }
+                    >
+                      <FaGithub className="h-6 w-6 fill-gray" />
+                      Repository
+                    </a>
+                    <a
+                      href={proyecto.urlDemo}
+                      aria-label={
+                        lang == "es"
+                          ? "Enlace a cuenta de Github"
+                          : "Github account link"
+                      }
+                    >
+                      <FaPlay className="h-6 w-6 fill-gray" />
+                      Live Demo
+                    </a>
+                    </div>
                   </div>
                   <form method="dialog" className="modal-backdrop">
                     <button>close</button>
