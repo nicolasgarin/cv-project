@@ -559,8 +559,25 @@ export default function Techs() {
                     <div className="text-center">Vite</div>
                   </div>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p className="text-cyan-400">Esto es git</p>
+                <TooltipContent className="flex flex-col items-center bg-slate-800">
+                  <h4 className="font-bold text-sky-300">Vite</h4>
+                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <div className="flex gap-4">
+                    <div
+                      className="radial-progress text-sky-300 "
+                      style={{ "--value": 75 }}
+                      role="progressbar"
+                    >
+                      EXP
+                    </div>
+                    <div
+                      className="radial-progress text-secondary"
+                      style={{ "--value": 30 }}
+                      role="progressbar"
+                    >
+                      CON
+                    </div>
+                  </div>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -577,8 +594,25 @@ export default function Techs() {
                     <div className="text-center">Bootstrap</div>
                   </div>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p className="text-cyan-400">Esto es git</p>
+                <TooltipContent className="flex flex-col items-center bg-slate-800">
+                  <h4 className="font-bold text-sky-300">Bootstrap</h4>
+                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <div className="flex gap-4">
+                    <div
+                      className="radial-progress text-sky-300 "
+                      style={{ "--value": 100 }}
+                      role="progressbar"
+                    >
+                      EXP
+                    </div>
+                    <div
+                      className="radial-progress text-secondary"
+                      style={{ "--value": 100 }}
+                      role="progressbar"
+                    >
+                      CON
+                    </div>
+                  </div>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -599,8 +633,25 @@ export default function Techs() {
                     <div className="text-center">Tailwind CSS</div>
                   </div>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p className="text-cyan-400">Esto es git</p>
+                <TooltipContent className="flex flex-col items-center bg-slate-800">
+                  <h4 className="font-bold text-sky-300">Tailwind CSS</h4>
+                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <div className="flex gap-4">
+                    <div
+                      className="radial-progress text-sky-300 "
+                      style={{ "--value": 75 }}
+                      role="progressbar"
+                    >
+                      EXP
+                    </div>
+                    <div
+                      className="radial-progress text-secondary"
+                      style={{ "--value": 100 }}
+                      role="progressbar"
+                    >
+                      CON
+                    </div>
+                  </div>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -621,8 +672,25 @@ export default function Techs() {
                     <div className="text-center">Radix</div>
                   </div>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p className="text-cyan-400">Esto es git</p>
+                <TooltipContent className="flex flex-col items-center bg-slate-800">
+                  <h4 className="font-bold text-sky-300">Radix</h4>
+                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <div className="flex gap-4">
+                    <div
+                      className="radial-progress text-sky-300 "
+                      style={{ "--value": 50 }}
+                      role="progressbar"
+                    >
+                      EXP
+                    </div>
+                    <div
+                      className="radial-progress text-secondary"
+                      style={{ "--value": 100 }}
+                      role="progressbar"
+                    >
+                      CON
+                    </div>
+                  </div>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -643,8 +711,25 @@ export default function Techs() {
                     <div className="text-center">Next.js</div>
                   </div>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p className="text-cyan-400">Esto es git</p>
+                <TooltipContent className="flex flex-col items-center bg-slate-800">
+                  <h4 className="font-bold text-sky-300">Next.js</h4>
+                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <div className="flex gap-4">
+                    <div
+                      className="radial-progress text-sky-300 "
+                      style={{ "--value": 25 }}
+                      role="progressbar"
+                    >
+                      EXP
+                    </div>
+                    <div
+                      className="radial-progress text-secondary"
+                      style={{ "--value": 25 }}
+                      role="progressbar"
+                    >
+                      CON
+                    </div>
+                  </div>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -665,8 +750,25 @@ export default function Techs() {
                     <div className="text-center">Liferay</div>
                   </div>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p className="text-cyan-400">Esto es git</p>
+                <TooltipContent className="flex flex-col items-center bg-slate-800">
+                  <h4 className="font-bold text-sky-300">Liferay</h4>
+                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <div className="flex gap-4">
+                    <div
+                      className="radial-progress text-sky-300 "
+                      style={{ "--value": 100 }}
+                      role="progressbar"
+                    >
+                      EXP
+                    </div>
+                    <div
+                      className="radial-progress text-secondary"
+                      style={{ "--value": 100 }}
+                      role="progressbar"
+                    >
+                      CON
+                    </div>
+                  </div>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -689,8 +791,25 @@ export default function Techs() {
                     <div className="text-center">Vitest</div>
                   </div>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p className="text-cyan-400">Esto es git</p>
+                <TooltipContent className="flex flex-col items-center bg-slate-800">
+                  <h4 className="font-bold text-sky-300">Vitest</h4>
+                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <div className="flex gap-4">
+                    <div
+                      className="radial-progress text-sky-300 "
+                      style={{ "--value": 25 }}
+                      role="progressbar"
+                    >
+                      EXP
+                    </div>
+                    <div
+                      className="radial-progress text-secondary"
+                      style={{ "--value": 25 }}
+                      role="progressbar"
+                    >
+                      CON
+                    </div>
+                  </div>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -711,8 +830,25 @@ export default function Techs() {
                     <div className="text-center">Bootswatch</div>
                   </div>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p className="text-cyan-400">Esto es git</p>
+                <TooltipContent className="flex flex-col items-center bg-slate-800">
+                  <h4 className="font-bold text-sky-300">Bootswatch</h4>
+                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <div className="flex gap-4">
+                    <div
+                      className="radial-progress text-sky-300 "
+                      style={{ "--value": 25 }}
+                      role="progressbar"
+                    >
+                      EXP
+                    </div>
+                    <div
+                      className="radial-progress text-secondary"
+                      style={{ "--value": 100 }}
+                      role="progressbar"
+                    >
+                      CON
+                    </div>
+                  </div>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -745,8 +881,25 @@ export default function Techs() {
                     <div className="text-center">DaisyUI</div>
                   </div>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p className="text-cyan-400">Esto es git</p>
+                <TooltipContent className="flex flex-col items-center bg-slate-800">
+                  <h4 className="font-bold text-sky-300">DaisyUI</h4>
+                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <div className="flex gap-4">
+                    <div
+                      className="radial-progress text-sky-300 "
+                      style={{ "--value": 50 }}
+                      role="progressbar"
+                    >
+                      EXP
+                    </div>
+                    <div
+                      className="radial-progress text-secondary"
+                      style={{ "--value": 100 }}
+                      role="progressbar"
+                    >
+                      CON
+                    </div>
+                  </div>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -781,8 +934,25 @@ export default function Techs() {
                     <div className="text-center">Shadcn/ui</div>
                   </div>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p className="text-cyan-400">Esto es git</p>
+                <TooltipContent className="flex flex-col items-center bg-slate-800">
+                  <h4 className="font-bold text-sky-300">Shadcn/ui</h4>
+                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <div className="flex gap-4">
+                    <div
+                      className="radial-progress text-sky-300 "
+                      style={{ "--value": 50 }}
+                      role="progressbar"
+                    >
+                      EXP
+                    </div>
+                    <div
+                      className="radial-progress text-secondary"
+                      style={{ "--value": 100 }}
+                      role="progressbar"
+                    >
+                      CON
+                    </div>
+                  </div>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
