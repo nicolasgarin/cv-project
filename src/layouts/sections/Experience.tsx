@@ -27,7 +27,7 @@ export default function Experience() {
             </time>
             <div className="text-lg font-black"></div>
             <ul>
-              <li>Mar - Meta Front End Developer Certification</li>
+              <li>Feb - <a target="_blank" href="./certifications/meta_frontend_developer.pdf" className="text-sky-300 hover:underline">Meta Front End Developer Certification</a></li>
               <li>May - Project Tracker App</li>
               <li>Jul - Desarrollador Front End Semi Senior</li>
             </ul>
@@ -57,7 +57,7 @@ export default function Experience() {
             </time>
             <ul>
               <li>Mar - Flashcard App</li>
-              <li>Jul - Liferay Cloud Certification - Sao Paulo, Brasil</li>
+              <li>Abr - <a target="_blank" href="./certifications/liferay_cloud.png" className="text-sky-300 hover:underline">Liferay Cloud Certification - Sao Paulo, Brasil</a></li>
               <li>Oct - Proyecto X</li>
             </ul>
           </div>
@@ -143,11 +143,11 @@ export default function Experience() {
               2021
             </time>
             <div className="text-lg text-sky-300 font-bold">
-              Jóvenes a programar
+              <a href="./certifications/jap.pdf" target="_blank" className="text-sky-300 hover:underline">Jóvenes a programar</a>
             </div>
-            Curso introductorio a la programación Frontend: HTML, CSS,
+            Curso introductorio a la programación <br/>Frontend: HTML, CSS,
             JavaScript, Bootstrap, Ruby, estructuras de datos y gestión de
-            versiones (GitHub). Backend: Node Js, protocolos HTTP.
+            versiones (GitHub). <br/>Backend: Node Js, protocolos HTTP.
           </div>
           <hr />
         </li>
