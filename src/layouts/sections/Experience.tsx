@@ -1,3 +1,5 @@
+import { BsBoxArrowUpRight } from "react-icons/bs";
+
 export default function Experience() {
   return (
     <section id="experience">
@@ -57,7 +59,7 @@ export default function Experience() {
             </time>
             <ul>
               <li>Mar - Flashcard App</li>
-              <li>Abr - <a target="_blank" href="./certifications/liferay_cloud.png" className="text-sky-300 hover:underline">Liferay Cloud Certification - Sao Paulo, Brasil</a></li>
+              <li>Abr - <a target="_blank" href="./certifications/liferay_cloud.png" className="text-sky-300 hover:underline inline-flex items-center">Liferay Cloud Certification - Sao Paulo, Brasil <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-sky-300" /> </a></li>
               <li>Oct - Proyecto X</li>
             </ul>
           </div>
