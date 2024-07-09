@@ -13,6 +13,7 @@ import sass from "../../assets/logos/sass.svg";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
+import useUserOptions from "../../context/UserOptionsContext";
 
 const proyectos: IProyectos = [
   {
@@ -22,7 +23,8 @@ const proyectos: IProyectos = [
     img: "imgPokedex",
     tecnologias: ["react", "ts", "sass"],
     descripcionCorta: "Pokedex",
-    descripcionLarga: "Pokedex",
+    descripcionLarga:
+      "Aplicación de Pokedex para buscar y analizar cada Pokemón, sus estadísticas, evoluciones y ataques. Creada con React, Typescript, Sass y React-Query.",
     urlRepo: "https://github.com/NicolasGarin/pokedex",
     urlDemo: "https://nicolasgarin.github.io/pokedex/",
   },
@@ -116,6 +118,7 @@ function imgSetter(string: string) {
 }
 
 export default function Projects() {
+  const { lang } = useUserOptions();
   return (
     <section id="projects" className="flex items-center">
       <div className="flex flex-col w-full">
@@ -167,45 +170,47 @@ export default function Projects() {
                   </div>
                 </div>
                 <dialog id={proyecto.id} className="modal">
-                  <div className="modal-box bg-black">
-                    <form method="dialog">
-                      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                        ✕
-                      </button>
-                    </form>
-                    <h3 className="font-bold text-lg">{proyecto.nombre}</h3>
+                  <div className="modal-box bg-slate-800">
+                    <h3 className="font-bold text-xl flex justify-between">
+                      <span>{proyecto.nombre}</span>{" "}
+                      <form method="dialog">
+                        <button className="btn btn-sm btn-circle btn-ghost">
+                          ✕
+                        </button>
+                      </form>
+                    </h3>
                     <p className="py-4">
-                    <img
-                      className=""
-                      src={imgSetter(proyecto.img)}
-                      alt={proyecto.img}
-                    />
+                      <img
+                        className=""
+                        src={imgSetter(proyecto.img)}
+                        alt={proyecto.img}
+                      />
                     </p>
                     <p>{proyecto.anio}</p>
-                    <p>{proyecto.descripcionLarga}</p>
-                    <div>
-                    <a
-                      href={proyecto.urlRepo}
-                      aria-label={
-                        lang == "es"
-                          ? "Enlace a cuenta de Github"
-                          : "Github account link"
-                      }
-                    >
-                      <FaGithub className="h-6 w-6 fill-gray" />
-                      Repository
-                    </a>
-                    <a
-                      href={proyecto.urlDemo}
-                      aria-label={
-                        lang == "es"
-                          ? "Enlace a cuenta de Github"
-                          : "Github account link"
-                      }
-                    >
-                      <FaPlay className="h-6 w-6 fill-gray" />
-                      Live Demo
-                    </a>
+                    <p className="whitespace-pre-wrap">{proyecto.descripcionLarga}</p>
+                    <div className="flex">
+                      <a
+                        href={proyecto.urlRepo}
+                        aria-label={
+                          lang == "es"
+                            ? "Enlace a cuenta de Github"
+                            : "Github account link"
+                        }
+                      >
+                        <FaGithub className="h-6 w-6 fill-gray" />
+                        Repository
+                      </a>
+                      <a
+                        href={proyecto.urlDemo}
+                        aria-label={
+                          lang == "es"
+                            ? "Enlace a cuenta de Github"
+                            : "Github account link"
+                        }
+                      >
+                        <FaPlay className="h-6 w-6 fill-gray" />
+                        Live Demo
+                      </a>
                     </div>
                   </div>
                   <form method="dialog" className="modal-backdrop">
