@@ -119,6 +119,12 @@ function imgSetter(string: string) {
       return imgFlashcard;
     case "imgHangman":
       return imgHangman;
+      case "react":
+        return react;
+        case "ts":
+          return ts;
+          case "sass":
+            return sass;
     default:
       return "";
   }
@@ -170,9 +176,9 @@ export default function Projects() {
                     </h2>
                     <p>{proyecto.descripcionCorta}</p>
                     <div className="flex gap-5">
-                      <img className="h-8" src={react} />
-                      <img className="h-8" src={ts} />
-                      <img className="h-8" src={sass} />
+                      {proyecto.tecnologias.map((tech) => (
+                        <img className="h-8" src={imgSetter(tech)} />
+                      ))}
                     </div>
                   </div>
                 </div>
