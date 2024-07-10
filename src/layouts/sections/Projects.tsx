@@ -44,7 +44,7 @@ const proyectos: IProyectos = [
   {
     id: "3",
     nombre: "Wordle",
-    portada: 2022,
+    anio: 2022,
     portada: "imgPokedex",
     galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
     tecnologias: ["react", "ts", "sass"],
