@@ -153,7 +153,7 @@ export default function Projects() {
                   <figure>
                     <img
                       className="h-32"
-                      src={imgSetter(proyecto.portada)}
+                      src={window.location.origin + `/cv-project/${proyecto.portada}.png`}
                       alt="car!"
                     />
                   </figure>
@@ -195,7 +195,7 @@ export default function Projects() {
                     <p className="py-4">
                       <img
                         className=""
-                        src={imgSetter(proyecto.portada)}
+                        src={window.location.origin + `/cv-project/${proyecto.portada}.png`}
                         alt={proyecto.portada}
                       />
                     </p>
@@ -236,7 +236,6 @@ export default function Projects() {
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
       </div>
-      <img src={window.location.origin + `/cv-project/${proyectos[0].portada}.png`} />
     </section>
   );
 }
