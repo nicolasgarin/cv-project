@@ -14,6 +14,13 @@ import { BsBoxArrowUpRight } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
 import useUserOptions from "../../context/UserOptionsContext";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 const proyectos: IProyectos = [
   {
@@ -22,7 +29,7 @@ const proyectos: IProyectos = [
     anio: 2021,
     portada: "imgPokedex",
     galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
-    tecnologias: ["react", "ts", "sass"],
+    tecnologias: ["react", "sass", "bootstrap"],
     descripcionCorta: "Pokedex creada con React",
     descripcionLarga:
       "Aplicación de Pokedex para buscar y analizar cada Pokemón, sus estadísticas, evoluciones y ataques. Creada con React, Typescript, Sass y React-Query.",
@@ -35,7 +42,7 @@ const proyectos: IProyectos = [
     anio: 2021,
     portada: "imgJapLanding",
     galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
-    tecnologias: ["react", "ts", "sass"],
+    tecnologias: ["html", "js", "css", "bootstrap"],
     descripcionCorta: "Proyecto ecommerce para JaP",
     descripcionLarga: "Pokedex",
     urlRepo: "https://github.com/NicolasGarin/pokedex",
@@ -59,7 +66,7 @@ const proyectos: IProyectos = [
     anio: 2023,
     portada: "imgFlashcard",
     galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
-    tecnologias: ["react", "ts", "sass"],
+    tecnologias: ["react", "sass", "bootstrap"],
     descripcionCorta: "Juego de preguntas y respuestas",
     descripcionLarga: "Pokedex",
     urlRepo: "https://github.com/NicolasGarin/pokedex",
@@ -71,7 +78,7 @@ const proyectos: IProyectos = [
     anio: 2023,
     portada: "imgHangman",
     galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
-    tecnologias: ["react", "ts", "sass"],
+    tecnologias: ["react", "ts", "sass", "bootstrap"],
     descripcionCorta: "Juego del ahorcado",
     descripcionLarga: "Pokedex",
     urlRepo: "https://github.com/NicolasGarin/pokedex",
@@ -83,7 +90,7 @@ const proyectos: IProyectos = [
     anio: 2024,
     portada: "imgProjectTracker",
     galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
-    tecnologias: ["react", "ts", "sass"],
+    tecnologias: ["react", "ts", "sass", "bootstrap"],
     descripcionCorta: "Aplicación de seguimiento de proyectos",
     descripcionLarga: "Pokedex",
     urlRepo: "https://github.com/NicolasGarin/pokedex",
@@ -95,40 +102,13 @@ const proyectos: IProyectos = [
     anio: 2024,
     portada: "imgProjectTrackerLP",
     galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
-    tecnologias: ["react", "ts", "sass"],
+    tecnologias: ["html", "js", "sass", "tailwind"],
     descripcionCorta: "Landing page para Project Tracker",
     descripcionLarga: "Pokedex",
     urlRepo: "https://github.com/NicolasGarin/pokedex",
     urlDemo: "https://nicolasgarin.github.io/pokedex/",
   },
 ];
-
-function imgSetter(string: string) {
-  switch (string) {
-    case "imgPokedex":
-      return imgPokedex;
-    case "imgJapLanding":
-      return imgJapLanding;
-    case "imgProjectTracker":
-      return imgProjectTracker;
-    case "imgProjectTrackerLP":
-      return imgProjectTrackerLP;
-    case "imgWordle":
-      return imgWordle;
-    case "imgFlashcard":
-      return imgFlashcard;
-    case "imgHangman":
-      return imgHangman;
-      case "react":
-        return react;
-        case "ts":
-          return ts;
-          case "sass":
-            return sass;
-    default:
-      return "";
-  }
-}
 
 export default function Projects() {
   const { lang } = useUserOptions();
@@ -177,7 +157,7 @@ export default function Projects() {
                     <p>{proyecto.descripcionCorta}</p>
                     <div className="flex gap-5">
                       {proyecto.tecnologias.map((tech) => (
-                        <img className="h-8" src={imgSetter(tech)} />
+                        <img className="h-8" src={window.location.origin + `/cv-project/logos/${tech}.png`} />
                       ))}
                     </div>
                   </div>
@@ -193,11 +173,21 @@ export default function Projects() {
                       </form>
                     </h3>
                     <p className="py-4">
-                      <img
-                        className=""
-                        src={window.location.origin + `/cv-project/${proyecto.portada}.png`}
-                        alt={proyecto.portada}
-                      />
+
+                    <Carousel className="w-full max-w-xs">
+                      <CarouselContent>
+                        {(proyecto.galeria).map((img, index) => (
+                          <CarouselItem key={index}>
+                            <div className="p-1">
+                                <img className="" src={window.location.origin + `/cv-project/${img}.png`} alt={img} />
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious />
+                      <CarouselNext />
+                    </Carousel>
+
                     </p>
                     <p>{proyecto.anio}</p>
                     <p className="whitespace-pre-wrap">{proyecto.descripcionLarga}</p>
