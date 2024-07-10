@@ -2,7 +2,8 @@ export type IProyectos = {
     id: string;
     nombre: string;
     anio: number;
-    img: string;
+    portada: string;
+    galeria: string[];
     tecnologias: string[];
     descripcionCorta: string;
     descripcionLarga: string;
