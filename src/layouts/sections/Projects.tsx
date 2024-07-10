@@ -223,7 +223,7 @@ export default function Projects() {
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
       </div>
-      <img src={`/${proyectos[0].img}.png`} />
+      <img src={process.env.PUBLIC_URL + `/${proyectos[0].img}.png`} />
     </section>
   );
 }
