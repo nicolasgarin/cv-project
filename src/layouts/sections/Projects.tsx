@@ -195,8 +195,8 @@ export default function Projects() {
                     <p className="py-4">
                       <img
                         className=""
-                        src={imgSetter(proyecto.img)}
-                        alt={proyecto.img}
+                        src={imgSetter(proyecto.portada)}
+                        alt={proyecto.portada}
                       />
                     </p>
                     <p>{proyecto.anio}</p>
