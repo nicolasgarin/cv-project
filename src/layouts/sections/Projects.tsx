@@ -1,15 +1,5 @@
 import { IProyectos } from "../../@types/data";
-import imgPokedex from "./../../assets/project-img/pokedex.png";
-import imgProjectTracker from "./../../assets/project-img/project-tracker.png";
-import imgWordle from "./../../assets/project-img/project-tracker.png";
-import imgHangman from "./../../assets/project-img/project-tracker.png";
-import imgJapLanding from "./../../assets/project-img/proyecto-jap.png";
-import imgFlashcard from "./../../assets/project-img/flashcard-game.png";
-import imgProjectTrackerLP from "./../../assets/project-img/project-tracker-lp.png";
 import { ScrollArea, ScrollBar } from "../../components/ui/scroll-area";
-import react from "../../assets/logos/react.svg";
-import ts from "../../assets/logos/typescript.svg";
-import sass from "../../assets/logos/sass.svg";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
@@ -20,7 +10,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "./../../components/ui/carousel"
 
 const proyectos: IProyectos = [
   {
@@ -172,7 +162,7 @@ export default function Projects() {
                         </button>
                       </form>
                     </h3>
-                    <p className="py-4">
+                    <p className="flex justify-center py-4">
 
                     <Carousel className="w-full max-w-xs">
                       <CarouselContent>
@@ -190,9 +180,9 @@ export default function Projects() {
 
                     </p>
                     <p>{proyecto.anio}</p>
-                    <p className="whitespace-pre-wrap">{proyecto.descripcionLarga}</p>
-                    <div className="flex">
-                      <a
+                    <p className="whitespace-pre-wrap py-4">{proyecto.descripcionLarga}</p>
+                    <div className="flex justify-around">
+                      <a className="flex flex-col items-center gap-1"
                         href={proyecto.urlRepo}
                         aria-label={
                           lang == "es"
@@ -203,7 +193,7 @@ export default function Projects() {
                         <FaGithub className="h-6 w-6 fill-gray" />
                         Repository
                       </a>
-                      <a
+                      <a className="flex flex-col items-center gap-1"
                         href={proyecto.urlDemo}
                         aria-label={
                           lang == "es"

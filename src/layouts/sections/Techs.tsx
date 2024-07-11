@@ -1,28 +1,3 @@
-import git from "../../assets/logos/git.svg";
-import html from "../../assets/logos/html-5.svg";
-import css from "../../assets/logos/css-3.svg";
-import js from "../../assets/logos/javascript.svg";
-import python from "../../assets/logos/python.svg";
-import java from "../../assets/logos/java.svg";
-import github from "../../assets/logos/github.svg";
-import figma from "../../assets/logos/figma.svg";
-import sass from "../../assets/logos/sass.svg";
-import ts from "../../assets/logos/typescript.svg";
-import react from "../../assets/logos/react.svg";
-import jq from "../../assets/logos/jquery.svg";
-import freemarker from "../../assets/logos/freemarker.svg";
-import clay from "../../assets/logos/clay.svg";
-import mysql from "../../assets/logos/mysql.svg";
-import vite from "../../assets/logos/vite.svg";
-import bootstrap from "../../assets/logos/bootstrap.svg";
-import tailwind from "../../assets/logos/tailwind.svg";
-import liferay from "../../assets/logos/liferay.svg";
-import vitest from "../../assets/logos/vitest.svg";
-import bootswatch from "../../assets/logos/bootswatch.svg";
-import daisy from "../../assets/logos/daisyui.svg";
-import shadcn from "../../assets/logos/shadcn-ui.svg";
-import radix from "../../assets/logos/radix.svg";
-import nextjs from "../../assets/logos/next-js.svg";
 import { ReactSVG } from "react-svg";
 import {
   Tooltip,
@@ -54,7 +29,7 @@ export default function Techs() {
               <Tooltip>
                 <TooltipTrigger>
                   <div id="git" className="ic flex flex-col">
-                    <ReactSVG src={git} />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/git.svg`} />
                     <div className="text-center">Git</div>
                   </div>
                 </TooltipTrigger>
@@ -84,7 +59,7 @@ export default function Techs() {
               <Tooltip>
                 <TooltipTrigger>
                   <div id="html" className="ic flex flex-col">
-                    <ReactSVG src={html} />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/html-5.svg`} />
                     <div className="text-center">HTML 5</div>
                   </div>
                 </TooltipTrigger>
@@ -115,7 +90,7 @@ export default function Techs() {
               <Tooltip>
                 <TooltipTrigger>
                   <div id="css" className="ic flex flex-col">
-                    <ReactSVG src={css} />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/css-3.svg`} />
                     <div className="text-center">Css 3</div>
                   </div>
                 </TooltipTrigger>
@@ -146,7 +121,7 @@ export default function Techs() {
               <Tooltip>
                 <TooltipTrigger>
                   <div id="js" className="ic flex flex-col">
-                    <ReactSVG src={js} />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/javascript.svg`} />
                     <div className="text-center">Javascript</div>
                   </div>
                 </TooltipTrigger>
@@ -176,7 +151,7 @@ export default function Techs() {
               <Tooltip>
                 <TooltipTrigger>
                   <div className="ic flex flex-col">
-                    <ReactSVG src={python} />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/python.svg`} />
                     <div className="text-center">Python</div>
                   </div>
                 </TooltipTrigger>
@@ -206,7 +181,7 @@ export default function Techs() {
               <Tooltip>
                 <TooltipTrigger>
                   <div id="java" className="ic flex flex-col">
-                    <ReactSVG src={java} />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/java.svg`} />
                     <div className="text-center">Java</div>
                   </div>
                 </TooltipTrigger>
@@ -236,7 +211,7 @@ export default function Techs() {
               <Tooltip>
                 <TooltipTrigger>
                   <div className="ic flex flex-col">
-                    <ReactSVG src={mysql} />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/mysql.svg`} />
                     <div className="text-center">Mysql</div>
                   </div>
                 </TooltipTrigger>
@@ -273,7 +248,7 @@ export default function Techs() {
                     onMouseEnter={() => toggleHoverEffect(["git"])}
                     onMouseLeave={() => toggleHoverEffect(["git"])}
                   >
-                    <ReactSVG src={github} />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/github.svg`} />
                     <div className="text-center">Github</div>
                   </div>
                 </TooltipTrigger>
@@ -303,7 +278,7 @@ export default function Techs() {
               <Tooltip>
                 <TooltipTrigger>
                   <div id="figma" className="ic flex flex-col">
-                    <ReactSVG src={figma} />
+                    <ReactSVG src="/logos/figma.svg" />
                     <div className="text-center">Figma</div>
                   </div>
                 </TooltipTrigger>
@@ -338,7 +313,7 @@ export default function Techs() {
                     onMouseEnter={() => toggleHoverEffect(["css"])}
                     onMouseLeave={() => toggleHoverEffect(["css"])}
                   >
-                    <ReactSVG src={sass} />
+                    <ReactSVG src="/logos/sass.svg" />
                     <div className="text-center">Sass</div>
                   </div>
                 </TooltipTrigger>
@@ -373,7 +348,7 @@ export default function Techs() {
                     onMouseEnter={() => toggleHoverEffect(["js", "html"])}
                     onMouseLeave={() => toggleHoverEffect(["js", "html"])}
                   >
-                    <ReactSVG src={react} />
+                    <ReactSVG src="/logos/react.svg" />
                     <div className="text-center">React</div>
                   </div>
                 </TooltipTrigger>
@@ -408,7 +383,7 @@ export default function Techs() {
                     onMouseEnter={() => toggleHoverEffect(["js"])}
                     onMouseLeave={() => toggleHoverEffect(["js"])}
                   >
-                    <ReactSVG src={ts} />
+                    <ReactSVG src="/logos/typescript.svg" />
                     <div className="text-center">Typescript</div>
                   </div>
                 </TooltipTrigger>
@@ -443,7 +418,7 @@ export default function Techs() {
                     onMouseEnter={() => toggleHoverEffect(["js"])}
                     onMouseLeave={() => toggleHoverEffect(["js"])}
                   >
-                    <ReactSVG src={jq} />
+                    <ReactSVG src="/logos/jquery.svg" />
                     <div className="text-center">Jquery</div>
                   </div>
                 </TooltipTrigger>
@@ -479,7 +454,7 @@ export default function Techs() {
                     onMouseEnter={() => toggleHoverEffect(["java"])}
                     onMouseLeave={() => toggleHoverEffect(["java"])}
                   >
-                    <ReactSVG src={freemarker} />
+                    <ReactSVG src="/logos/freemarker.svg" />
                     <div className="text-center">Freemarker</div>
                   </div>
                 </TooltipTrigger>
@@ -514,7 +489,7 @@ export default function Techs() {
                     onMouseEnter={() => toggleHoverEffect(["java", "bootst"])}
                     onMouseLeave={() => toggleHoverEffect(["java", "bootst"])}
                   >
-                    <ReactSVG src={clay} />
+                    <ReactSVG src="/logos/clay.svg" />
                     <div className="text-center">Clay UI</div>
                   </div>
                 </TooltipTrigger>
@@ -555,7 +530,7 @@ export default function Techs() {
                       toggleHoverEffect(["js", "html", "react"])
                     }
                   >
-                    <ReactSVG src={vite} />
+                    <ReactSVG src="/logos/vite.svg" />
                     <div className="text-center">Vite</div>
                   </div>
                 </TooltipTrigger>
@@ -590,7 +565,7 @@ export default function Techs() {
                     onMouseEnter={() => toggleHoverEffect(["css", "html"])}
                     onMouseLeave={() => toggleHoverEffect(["css", "html"])}
                   >
-                    <ReactSVG src={bootstrap} />
+                    <ReactSVG src="/logos/bootstrap.svg" />
                     <div className="text-center">Bootstrap</div>
                   </div>
                 </TooltipTrigger>
@@ -629,7 +604,7 @@ export default function Techs() {
                       toggleHoverEffect(["css", "html", "js", "react"])
                     }
                   >
-                    <ReactSVG src={tailwind} />
+                    <ReactSVG src="/logos/tailwind.svg" />
                     <div className="text-center">Tailwind CSS</div>
                   </div>
                 </TooltipTrigger>
@@ -668,7 +643,7 @@ export default function Techs() {
                       toggleHoverEffect(["css", "html", "js", "react"])
                     }
                   >
-                    <ReactSVG src={radix} />
+                    <ReactSVG src="/logos/radix.svg" />
                     <div className="text-center">Radix</div>
                   </div>
                 </TooltipTrigger>
@@ -707,7 +682,7 @@ export default function Techs() {
                       toggleHoverEffect(["js", "html", "react"])
                     }
                   >
-                    <ReactSVG src={nextjs} />
+                    <ReactSVG src="/logos/next.svg" />
                     <div className="text-center">Next.js</div>
                   </div>
                 </TooltipTrigger>
@@ -746,7 +721,7 @@ export default function Techs() {
                       toggleHoverEffect(["java", "freemarker", "clay"])
                     }
                   >
-                    <ReactSVG src={liferay} />
+                    <ReactSVG src="/logos/liferay.svg" />
                     <div className="text-center">Liferay</div>
                   </div>
                 </TooltipTrigger>
@@ -787,7 +762,7 @@ export default function Techs() {
                       toggleHoverEffect(["js", "html", "vite", "react"])
                     }
                   >
-                    <ReactSVG src={vitest} />
+                    <ReactSVG src="/logos/vitest.svg" />
                     <div className="text-center">Vitest</div>
                   </div>
                 </TooltipTrigger>
@@ -826,7 +801,7 @@ export default function Techs() {
                       toggleHoverEffect(["css", "html", "bootst"])
                     }
                   >
-                    <ReactSVG src={bootswatch} />
+                    <ReactSVG src="/logos/bootswatch.svg" />
                     <div className="text-center">Bootswatch</div>
                   </div>
                 </TooltipTrigger>
@@ -877,7 +852,7 @@ export default function Techs() {
                       ])
                     }
                   >
-                    <ReactSVG src={daisy} />
+                    <ReactSVG src="/logos/daisyui.svg" />
                     <div className="text-center">DaisyUI</div>
                   </div>
                 </TooltipTrigger>
@@ -930,7 +905,7 @@ export default function Techs() {
                       ])
                     }
                   >
-                    <ReactSVG src={shadcn} />
+                    <ReactSVG src="/logos/shadcnui.svg" />
                     <div className="text-center">Shadcn/ui</div>
                   </div>
                 </TooltipTrigger>
