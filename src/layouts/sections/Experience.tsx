@@ -89,7 +89,7 @@ export default function Experience() {
             <div className="text-lg font-black"></div>
             <ul>
               <li>Ene - Pokedex React App</li>
-              <li>Feb - Trainee en Isa Software</li>
+              <li>Feb - Junior Developer en Isa Software</li>
               <li>Jun - Entrada a proyecto Portal Antel</li>
               <li>Oct - Hangman App</li>
             </ul>
