@@ -1,3 +1,4 @@
+import { ITechs } from "../../@types/data";
 import { ReactSVG } from "react-svg";
 import {
   Tooltip,
@@ -5,971 +6,388 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../../components/ui/tooltip";
+import useUserOptions from "../../context/UserOptionsContext";
+
+const techs: ITechs = [
+  {
+    id: "git",
+    name: "Git",
+    imgSrc: "git",
+    descrip: "Sistema de control de versiones",
+    engDescrip: "Version control system",
+    exp: 75,
+    knowledge: 75,
+  },
+  {
+    id: "html",
+    name: "HTML 5",
+    imgSrc: "html-5",
+    descrip: "Lenguaje de marcado de hipertexto",
+    engDescrip: "Markup language",
+    exp: 100,
+    knowledge: 100,
+  },
+  {
+    id: "css",
+    name: "Css 3",
+    imgSrc: "css-3",
+    descrip: "Lenguaje de hojas de estilo",
+    engDescrip: "Style sheet language",
+    exp: 100,
+    knowledge: 100,
+  },
+  {
+    id: "js",
+    name: "Javascript",
+    imgSrc: "javascript",
+    descrip: "Lenguaje de programación",
+    engDescrip: "Programming language",
+    exp: 100,
+    knowledge: 100,
+  },
+  {
+    id: "python",
+    name: "Python",
+    imgSrc: "python",
+    descrip: "Lenguaje de programación",
+    engDescrip: "Programming language",
+    exp: 25,
+    knowledge: 50,
+  },
+  {
+    id: "mysql",
+    name: "Mysql",
+    imgSrc: "mysql",
+    descrip: "Sistema de gestión de bases de datos",
+    engDescrip: "Database management system",
+    exp: 25,
+    knowledge: 75,
+  },
+  {
+    id: "github",
+    name: "Github",
+    imgSrc: "github",
+    descrip: "Plataforma de gestión de repositorios basado en git",
+    engDescrip: "Repositories managment system based on git",
+    exp: 100,
+    knowledge: 80,
+    hoverEffect: ["git"],
+  },
+  {
+    id: "figma",
+    name: "Figma",
+    imgSrc: "figma",
+    descrip: "Herramienta de diseño para la creación de prototipos",
+    engDescrip: "Design tool for prototyping",
+    exp: 75,
+    knowledge: 75,
+  },
+  {
+    id: "sass",
+    name: "Sass",
+    imgSrc: "sass",
+    descrip: "Procesador de Css",
+    engDescrip: "Css processor",
+    exp: 100,
+    knowledge: 100,
+    hoverEffect: ["css"],
+  },
+  {
+    id: "react",
+    name: "React",
+    imgSrc: "react",
+    descrip: "Librería de Javascript para creación de interfaces de usuario y manejo de estados",
+    engDescrip: "Javascript library for user interfaces creation and state handling",
+    exp: 100,
+    knowledge: 100,
+  },
+  {
+    id: "ts",
+    name: "Typescript",
+    imgSrc: "typescript",
+    descrip: "Extensión de Javascript para manejo de tipos",
+    engDescrip: "Javascript extension for type handling",
+    exp: 50,
+    knowledge: 75,
+    hoverEffect: ["js"],
+  },
+  {
+    id: "jq",
+    name: "JQuery",
+    imgSrc: "jquery",
+    descrip: "Librería de Javascript para el manejo de interacción con elementos HTML",
+    engDescrip: "Javascript library for HTML elements interaction handling",
+    exp: 100,
+    knowledge: 100,
+    hoverEffect: ["js"],
+  },
+  {
+    id: "freemarker",
+    name: "Freemarker",
+    imgSrc: "freemarker",
+    descrip: " Librería de Java para creación de plantillas",
+    engDescrip: "Java library for templates creation",
+    exp: 100,
+    knowledge: 100,
+    hoverEffect: ["java"],
+  },
+  {
+    id: "clay",
+    name: "Clay UI",
+    imgSrc: "clay",
+    descrip: "Librería de componentes y estilos basado en Bootstrap, creado para Liferay",
+    engDescrip: "Library of components and styles based on Bootstrap, created for Liferay",
+    exp: 100,
+    knowledge: 100,
+    hoverEffect: ["java", "bootst"],
+  },
+  {
+    id: "vite",
+    name: "Vite",
+    imgSrc: "vite",
+    descrip: "Herramienta de construcción de proyectos",
+    engDescrip: "Project building tool",
+    exp: 75,
+    knowledge: 50,
+    hoverEffect: ["js", "html", "react"],
+  },
+  {
+    id: "bootst",
+    name: "Bootstrap",
+    imgSrc: "bootstrap",
+    descrip: "Framework de css de reglas de estilos y componentes",
+    engDescrip: "Css framework for style rules and components",
+    exp: 100,
+    knowledge: 100,
+    hoverEffect: ["css", "html"],
+  },
+  {
+    id: "tailwind",
+    name: "Tailwind",
+    imgSrc: "tailwind",
+    descrip: "Framework de css enfocado en proveer clases de utilidad",
+    engDescrip: "Css framework focused on providing utility classes",
+    exp: 75,
+    knowledge: 100,
+    hoverEffect: ["css", "html", "js", "react"],
+  },
+  {
+    id: "radix",
+    name: "Radix",
+    imgSrc: "radix",
+    descrip: "Biblioteca de componentes de UI para React",
+    engDescrip: "UI component library for React",
+    exp: 50,
+    knowledge: 100,
+    hoverEffect: ["css", "html", "js", "react"],
+  },
+  {
+    id: "next",
+    name: "Next.js",
+    imgSrc: "next-js",
+    descrip: "Framework de React para crear paquetes SSR",
+    engDescrip: "React framework for creating SSR packages",
+    exp: 25,
+    knowledge: 25,
+    hoverEffect: ["js", "html", "react"],
+  },
+  {
+    id: "liferay",
+    name: "Liferay",
+    imgSrc: "liferay",
+    descrip: "CMS basado en Java",
+    engDescrip: "Java based CMS",
+    exp: 100,
+    knowledge: 100,
+    hoverEffect: ["java", "freemarker", "clay"],
+  },
+  {
+    id: "vitest",
+    name: "Vitest",
+    imgSrc: "vitest",
+    descrip: "Framework de testing basado en Vite",
+    engDescrip: "Vite based testing framework",
+    exp: 25,
+    knowledge: 25,
+    hoverEffect: ["js", "html", "vite", "react"],
+  },
+  {
+    id: "bootswatch",
+    name: "Bootswatch",
+    imgSrc: "bootswatch",
+    descrip: "Plugin de Bootstrap para generación de temas",
+    engDescrip: "Bootstrap plugin for theme generation",
+    exp: 25,
+    knowledge: 100,
+    hoverEffect: ["css", "html", "bootst"],
+  },
+  {
+    id: "daisy",
+    name: "DaisyUI",
+    imgSrc: "daisyui",
+    descrip: "Librería de componentes de Tailwind para frameworks de Javascript",
+    engDescrip: "Tailwind based component library for Javascript frameworks",
+    exp: 50,
+    knowledge: 100,
+    hoverEffect: ["css", "html", "js", "react", "tailwind"],
+  },
+  {
+    id: "shadcn",
+    name: "Shadcn/ui",
+    imgSrc: "shadcn-ui",
+    descrip: "Librería de componentes basado en Tailwind para React",
+    engDescrip: "Tailwind based component library for React",
+    exp: 50,
+    knowledge: 100,
+    hoverEffect: ["css", "html", "js", "react", "tailwind", "radix"],
+  },
+  {
+    id: "astro",
+    name: "Astro",
+    imgSrc: "astro",
+    descrip: "Framework de Javascript para creación de sitios estáticos optimizados",
+    engDescrip: "Javascript framework for optimized static websites",
+    exp: 25,
+    knowledge: 50,
+    hoverEffect: ["js"],
+  }
+];
+
+function toggleHoverEffect(elements: string[] | undefined) {
+  if (elements === undefined) {
+    return;
+  } else {
+  for (var e in elements) {
+    console.log(document.getElementById(elements[e])!.classList);
+    document.getElementById(elements[e])!.classList.toggle("effect");
+  }
+  }
+}
+
+function Tech({
+  id,
+  name,
+  imgSrc,
+  descrip,
+  engDescrip,
+  exp,
+  knowledge,
+  hoverEffect,
+}: ITechs[number]) {
+  const { lang } = useUserOptions();
+
+  return (
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger>
+          <div
+            id={id}
+            className="ic flex flex-col"
+            onMouseEnter={() =>
+               toggleHoverEffect(hoverEffect)
+            }
+            onMouseLeave={() =>
+              toggleHoverEffect(hoverEffect)
+            }
+          >
+            <ReactSVG
+              src={window.location.origin + `/cv-project/logos/${imgSrc}.svg`}
+            />
+            <div className="text-center">{name}</div>
+          </div>
+        </TooltipTrigger>
+        <TooltipContent className="flex flex-col items-center bg-slate-200 dark:bg-slate-800">
+          <h4 className="font-bold text-orange-600 dark:text-sky-300">{name}</h4>
+          <p className="mb-3 max-w-[12rem]">{lang == "es" ? descrip : engDescrip}</p>
+          <div className="flex gap-4">
+            <div
+              className="radial-progress text-orange-600 dark:text-sky-300 "
+              style={{ "--value": exp }}
+              role="progressbar"
+            >
+              EXP
+            </div>
+            <div
+              className="radial-progress text-primary"
+              style={{ "--value": knowledge }}
+              role="progressbar"
+            >
+              CON
+            </div>
+          </div>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  );
+}
 
 export default function Techs() {
-  function toggleHoverEffect(elements: string[]) {
-    console.log(elements);
-    for (var e in elements) {
-      console.log(document.getElementById(elements[e])!.classList);
-
-      document.getElementById(elements[e])!.classList.toggle("effect");
-    }
-  }
-
   return (
     <section id="techs" className="flex items-center">
       <div className="flex flex-col justify-center w-full">
-        <h2 className="text-center text-3xl text-sky-300 font-bold mb-10">
+        <h2 className="text-center text-3xl text-orange-600 dark:text-sky-300 font-bold mb-10">
           Habilidades
         </h2>
-        <p>Diferentes tecnologías, frameworks y librerías que he utilizado o aprendido</p>
+        <p className="mb-10">
+          Diferentes tecnologías, frameworks y librerías que he utilizado o
+          aprendido
+        </p>
         <div className="flex flex-col gap-10">
           <div className="nivel-1 flex justify-around">
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div id="git" className="ic flex flex-col">
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/git.svg`} />
-                    <div className="text-center">Git</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Git</h4>
-                  <p className="mb-3">Sistema de control de versiones</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 75 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 75 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div id="html" className="ic flex flex-col">
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/html-5.svg`} />
-                    <div className="text-center">HTML 5</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">HTML 5</h4>
-                  <p className="mb-3">Lenguaje de marcado</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div id="css" className="ic flex flex-col">
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/css-3.svg`} />
-                    <div className="text-center">Css 3</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Css 3</h4>
-                  <p className="mb-3">Lenguaje de hojas de estilo</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div id="js" className="ic flex flex-col">
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/javascript.svg`} />
-                    <div className="text-center">Javascript</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Javascript</h4>
-                  <p className="mb-3">Lenguaje de programación</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 80 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div className="ic flex flex-col">
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/python.svg`} />
-                    <div className="text-center">Python</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Python</h4>
-                  <p className="mb-3">Lenguaje de programación</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 20 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 40 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div id="java" className="ic flex flex-col">
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/java.svg`} />
-                    <div className="text-center">Java</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Java</h4>
-                  <p className="mb-3">Lenguaje de programación</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 50 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 40 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div className="ic flex flex-col">
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/mysql.svg`} />
-                    <div className="text-center">Mysql</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Mysql</h4>
-                  <p className="mb-3">Sistema de gestión de bases de datos</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 25 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 75 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
+            {techs.slice(0, 6).map((tech) => (
+              <Tech
+                key={tech.id}
+                id={tech.id}
+                name={tech.name}
+                imgSrc={tech.imgSrc}
+                descrip={tech.descrip}
+                engDescrip={tech.engDescrip}
+                exp={tech.exp}
+                knowledge={tech.knowledge}
+              />
+            ))}
           </div>
           <div className="nivel-2 flex justify-around">
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="github"
-                    className="ic flex flex-col"
-                    onMouseEnter={() => toggleHoverEffect(["git"])}
-                    onMouseLeave={() => toggleHoverEffect(["git"])}
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/github.svg`} />
-                    <div className="text-center">Github</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Github</h4>
-                  <p className="mb-3">Plataforma de gestión de repositorios <br /> basado en git</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 50 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 40 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div id="figma" className="ic flex flex-col">
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/figma.svg`} />
-                    <div className="text-center">Figma</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Figma</h4>
-                  <p className="mb-3">Herramnienta de diseño</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 75 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 75 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="sass"
-                    className="ic flex flex-col"
-                    onMouseEnter={() => toggleHoverEffect(["css"])}
-                    onMouseLeave={() => toggleHoverEffect(["css"])}
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/sass.svg`} />
-                    <div className="text-center">Sass</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Sass</h4>
-                  <p className="mb-3">Procesador de Css</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="react"
-                    className="ic flex flex-col"
-                    onMouseEnter={() => toggleHoverEffect(["js", "html"])}
-                    onMouseLeave={() => toggleHoverEffect(["js", "html"])}
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/react.svg`} />
-                    <div className="text-center">React</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">React</h4>
-                  <p className="mb-3">Librería de Javascript para crear interfaces <br/> de usuario y manejo de estados</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 75 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 90 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="ts"
-                    className="ic flex flex-col"
-                    onMouseEnter={() => toggleHoverEffect(["js"])}
-                    onMouseLeave={() => toggleHoverEffect(["js"])}
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/typescript.svg`} />
-                    <div className="text-center">Typescript</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Typescript</h4>
-                  <p className="mb-3">Extensión de Javascript para manejo de tipos</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 50 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 50 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="jq"
-                    className="ic flex flex-col"
-                    onMouseEnter={() => toggleHoverEffect(["js"])}
-                    onMouseLeave={() => toggleHoverEffect(["js"])}
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/jquery.svg`}/>
-                    <div className="text-center">Jquery</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">JQuery</h4>
-                  <p className="mb-3">Librería de Javascript que facilita la <br />interacción 
-                  con elementos HTML</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="freemarker"
-                    className="ic flex flex-col"
-                    onMouseEnter={() => toggleHoverEffect(["java"])}
-                    onMouseLeave={() => toggleHoverEffect(["java"])}
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/freemarker.svg`} />
-                    <div className="text-center">Freemarker</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Freemarker</h4>
-                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="clay"
-                    className="ic flex flex-col"
-                    onMouseEnter={() => toggleHoverEffect(["java", "bootst"])}
-                    onMouseLeave={() => toggleHoverEffect(["java", "bootst"])}
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/clay.svg`} />
-                    <div className="text-center">Clay UI</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Clay UI</h4>
-                  <p className="mb-3">Librería de componentes y estilos basado <br /> en Bootstrap, creado para Liferay</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
+            {techs.slice(6, 14).map((tech) => (
+              <Tech
+                key={tech.id}
+                id={tech.id}
+                name={tech.name}
+                imgSrc={tech.imgSrc}
+                descrip={tech.descrip}
+                engDescrip={tech.engDescrip}
+                exp={tech.exp}
+                knowledge={tech.knowledge}
+              />
+            ))}
           </div>
           <div className="nivel-3 flex justify-around">
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="vite"
-                    className="ic flex flex-col"
-                    onMouseEnter={() =>
-                      toggleHoverEffect(["js", "html", "react"])
-                    }
-                    onMouseLeave={() =>
-                      toggleHoverEffect(["js", "html", "react"])
-                    }
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/vite.svg`} />
-                    <div className="text-center">Vite</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Vite</h4>
-                  <p className="mb-3">Herramienta de construcción <br /> de proyectos</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 75 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 30 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="bootst"
-                    className="ic flex flex-col"
-                    onMouseEnter={() => toggleHoverEffect(["css", "html"])}
-                    onMouseLeave={() => toggleHoverEffect(["css", "html"])}
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/bootstrap.svg`} />
-                    <div className="text-center">Bootstrap</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Bootstrap</h4>
-                  <p className="mb-3">Framework de css de reglas de estilos <br /> y componentes</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="tailwind"
-                    className="ic flex flex-col"
-                    onMouseEnter={() =>
-                      toggleHoverEffect(["css", "html", "js", "react"])
-                    }
-                    onMouseLeave={() =>
-                      toggleHoverEffect(["css", "html", "js", "react"])
-                    }
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/tailwind.svg`} />
-                    <div className="text-center">Tailwind CSS</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Tailwind CSS</h4>
-                  <p className="mb-3">Framework de css enfocado en proveer <br /> clases de utilidad</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 75 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="radix"
-                    className="ic flex flex-col"
-                    onMouseEnter={() =>
-                      toggleHoverEffect(["css", "html", "js", "react"])
-                    }
-                    onMouseLeave={() =>
-                      toggleHoverEffect(["css", "html", "js", "react"])
-                    }
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/radix.svg`} />
-                    <div className="text-center">Radix</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Radix</h4>
-                  <p className="mb-3">Biblioteca de componentes de UI <br /> para React</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 50 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="next"
-                    className="ic flex flex-col"
-                    onMouseEnter={() =>
-                      toggleHoverEffect(["js", "html", "react"])
-                    }
-                    onMouseLeave={() =>
-                      toggleHoverEffect(["js", "html", "react"])
-                    }
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/next-js.svg`} />
-                    <div className="text-center">Next.js</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Next.js</h4>
-                  <p className="mb-3">Framework de React para crear <br /> paquetes SSR</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 25 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 25 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="liferay"
-                    className="ic flex flex-col"
-                    onMouseEnter={() =>
-                      toggleHoverEffect(["java", "freemarker", "clay"])
-                    }
-                    onMouseLeave={() =>
-                      toggleHoverEffect(["java", "freemarker", "clay"])
-                    }
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/liferay.svg`} />
-                    <div className="text-center">Liferay</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Liferay</h4>
-                  <p className="mb-3">CMS basado en Java</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
+          {techs.slice(14, 20).map((tech) => (
+              <Tech
+                key={tech.id}
+                id={tech.id}
+                name={tech.name}
+                imgSrc={tech.imgSrc}
+                descrip={tech.descrip}
+                engDescrip={tech.engDescrip}
+                exp={tech.exp}
+                knowledge={tech.knowledge}
+              />
+            ))}
           </div>
           <div className="nivel-4 flex justify-around">
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="vitest"
-                    className="ic flex flex-col"
-                    onMouseEnter={() =>
-                      toggleHoverEffect(["js", "html", "vite", "react"])
-                    }
-                    onMouseLeave={() =>
-                      toggleHoverEffect(["js", "html", "vite", "react"])
-                    }
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/vitest.svg`} />
-                    <div className="text-center">Vitest</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Vitest</h4>
-                  <p className="mb-3">Framework de testing<br />basado  en Vite</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 25 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 25 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="bootswatch"
-                    className="ic flex flex-col"
-                    onMouseEnter={() =>
-                      toggleHoverEffect(["css", "html", "bootst"])
-                    }
-                    onMouseLeave={() =>
-                      toggleHoverEffect(["css", "html", "bootst"])
-                    }
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/bootswatch.svg`} />
-                    <div className="text-center">Bootswatch</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Bootswatch</h4>
-                  <p className="mb-3">Plugin de Bootstrap para <br />generación de temas</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 25 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="daisy"
-                    className="ic flex flex-col"
-                    onMouseEnter={() =>
-                      toggleHoverEffect([
-                        "css",
-                        "html",
-                        "js",
-                        "react",
-                        "tailwind",
-                      ])
-                    }
-                    onMouseLeave={() =>
-                      toggleHoverEffect([
-                        "css",
-                        "html",
-                        "js",
-                        "react",
-                        "tailwind",
-                      ])
-                    }
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/daisyui.svg`} />
-                    <div className="text-center">DaisyUI</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">DaisyUI</h4>
-                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 50 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="shadcn"
-                    className="ic flex flex-col"
-                    onMouseEnter={() =>
-                      toggleHoverEffect([
-                        "css",
-                        "html",
-                        "js",
-                        "react",
-                        "tailwind",
-                        "radix",
-                      ])
-                    }
-                    onMouseLeave={() =>
-                      toggleHoverEffect([
-                        "css",
-                        "html",
-                        "js",
-                        "react",
-                        "tailwind",
-                        "radix",
-                      ])
-                    }
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/shadcn-ui.svg`} />
-                    <div className="text-center">Shadcn/ui</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Shadcn/ui</h4>
-                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 50 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 100 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger>
-                  <div
-                    id="astro"
-                    className="ic flex flex-col"
-                    onMouseEnter={() =>
-                      toggleHoverEffect(["js"])
-                    }
-                    onMouseLeave={() =>
-                      toggleHoverEffect(["js"])
-                    }
-                  >
-                    <ReactSVG src={window.location.origin + `/cv-project/logos/astro.svg`} />
-                    <div className="text-center">Astro</div>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="flex flex-col items-center bg-slate-800">
-                  <h4 className="font-bold text-sky-300">Astro</h4>
-                  <p className="mb-3">Framework de Javascript para creación<br />de sitios estáticos optimizados</p>
-                  <div className="flex gap-4">
-                    <div
-                      className="radial-progress text-sky-300 "
-                      style={{ "--value": 25 }}
-                      role="progressbar"
-                    >
-                      EXP
-                    </div>
-                    <div
-                      className="radial-progress text-secondary"
-                      style={{ "--value": 50 }}
-                      role="progressbar"
-                    >
-                      CON
-                    </div>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
+          {techs.slice(20, 25).map((tech) => (
+              <Tech
+                key={tech.id}
+                id={tech.id}
+                name={tech.name}
+                imgSrc={tech.imgSrc}
+                descrip={tech.descrip}
+                engDescrip={tech.engDescrip}
+                exp={tech.exp}
+                knowledge={tech.knowledge}
+              />
+            ))}
           </div>
         </div>
       </div>

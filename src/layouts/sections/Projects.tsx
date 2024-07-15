@@ -32,7 +32,7 @@ const proyectos: IProyectos = [
     anio: 2021,
     portada: "imgJapLanding",
     galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
-    tecnologias: ["html", "js", "css", "bootstrap"],
+    tecnologias: ["html-5", "javascript", "css-3", "bootstrap"],
     descripcionCorta: "Proyecto ecommerce para JaP",
     descripcionLarga: "Pokedex",
     urlRepo: "https://github.com/NicolasGarin/pokedex",
@@ -79,7 +79,7 @@ const proyectos: IProyectos = [
     nombre: "Project Tracker",
     anio: 2024,
     portada: "imgProjectTracker",
-    galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
+    galeria: ["poj-trac-1", "imgPokedex2", "imgPokedex3"],
     tecnologias: ["react", "ts", "sass", "bootstrap"],
     descripcionCorta: "Aplicación de seguimiento de proyectos",
     descripcionLarga: "Pokedex",
@@ -105,7 +105,7 @@ export default function Projects() {
   return (
     <section id="projects" className="flex items-center">
       <div className="flex flex-col w-full">
-        <h2 className="text-center text-3xl text-sky-300 font-bold mb-10">
+        <h2 className="text-center text-3xl text-orange-600 dark:text-sky-300 font-bold mb-10">
           Proyectos
         </h2>
         <p className="mb-10">
@@ -128,7 +128,7 @@ export default function Projects() {
                     />
                   </figure>
                   <div className="card-body p-4">
-                    <h2 className="card-title flex text-sky-300  justify-between">
+                    <h2 className="card-title flex text-orange-600 dark:text-sky-300  justify-between">
                       {proyecto.nombre}
                       <button
                         onClick={() => {
@@ -141,19 +141,19 @@ export default function Projects() {
                           }
                         }}
                       >
-                        <BsBoxArrowUpRight className="w-5 h-5 hover:fill-sky-300" />
+                        <BsBoxArrowUpRight className="w-5 h-5 hover:fill-orange-600 hover:dark:fill-sky-300" />
                       </button>
                     </h2>
                     <p>{proyecto.descripcionCorta}</p>
                     <div className="flex gap-5">
                       {proyecto.tecnologias.map((tech) => (
-                        <img className="h-8" src={window.location.origin + `/cv-project/logos/${tech}.png`} />
+                        <img className="h-8" src={window.location.origin + `/cv-project/logos/${tech}.svg`} />
                       ))}
                     </div>
                   </div>
                 </div>
                 <dialog id={proyecto.id} className="modal">
-                  <div className="modal-box bg-slate-800">
+                  <div className="modal-box bg-slate-200 dark:bg-slate-800">
                     <h3 className="font-bold text-xl flex justify-between">
                       <span>{proyecto.nombre}</span>{" "}
                       <form method="dialog">
@@ -169,7 +169,7 @@ export default function Projects() {
                         {(proyecto.galeria).map((img, index) => (
                           <CarouselItem key={index}>
                             <div className="p-1">
-                                <img className="" src={window.location.origin + `/cv-project/${img}.png`} alt={img} />
+                                <img className="" src={window.location.origin + `/cv-project/project-img/${img}.png`} alt={img} />
                             </div>
                           </CarouselItem>
                         ))}
@@ -177,7 +177,6 @@ export default function Projects() {
                       <CarouselPrevious />
                       <CarouselNext />
                     </Carousel>
-
                     </p>
                     <p>{proyecto.anio}</p>
                     <p className="whitespace-pre-wrap py-4">{proyecto.descripcionLarga}</p>
@@ -213,7 +212,7 @@ export default function Projects() {
               </>
             ))}
           </div>
-          <ScrollBar orientation="horizontal" />
+          <ScrollBar orientation="horizontal"  />
         </ScrollArea>
       </div>
     </section>

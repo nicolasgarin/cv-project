@@ -10,3 +10,14 @@ export type IProyectos = {
     urlRepo: string;
     urlDemo?: string;
 }[];
+
+export type ITechs = {
+    id: string;
+    name: string;
+    imgSrc: string;
+    descrip: string;
+    engDescrip: string;
+    exp: number;
+    knowledge: number;
+    hoverEffect?: string[];
+}[];

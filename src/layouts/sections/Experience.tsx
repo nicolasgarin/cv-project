@@ -3,7 +3,7 @@ import { BsBoxArrowUpRight } from "react-icons/bs";
 export default function Experience() {
   return (
     <section id="experience">
-      <h2 className="text-center text-3xl text-sky-300 font-bold">
+      <h2 className="text-center text-3xl text-orange-600 dark:text-sky-300 font-bold">
         Experiencia
       </h2>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical my-12">
@@ -19,17 +19,17 @@ export default function Experience() {
                 fillRule="evenodd"
                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                 clipRule="evenodd"
-                className="text-sky-300"
+                className="text-orange-600 dark:text-sky-300"
               />
             </svg>
           </div>
           <div className="timeline-start md:text-end mb-5">
-            <time className="font-mono italic text-sky-300 font-bold">
+            <time className="font-mono italic text-orange-600 dark:text-sky-300 font-bold">
               2024
             </time>
             <div className="text-lg font-black"></div>
             <ul>
-              <li>Feb - <a target="_blank" href="./certifications/meta_frontend_developer.pdf" className="text-sky-300 hover:underline">Meta Front End Developer Certification</a></li>
+              <li>Feb - <a target="_blank" href="./certifications/meta_frontend_developer.pdf" className="text-orange-600 dark:text-sky-300 hover:underline">Meta Front End Developer Certification <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-orange-600 dark:fill-sky-300" /></a></li>
               <li>May - Project Tracker App</li>
               <li>Jul - Desarrollador Front End Semi Senior</li>
             </ul>
@@ -49,17 +49,17 @@ export default function Experience() {
                 fillRule="evenodd"
                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                 clipRule="evenodd"
-                className="text-sky-300"
+                className="text-orange-600 dark:text-sky-300"
               />
             </svg>
           </div>
           <div className="timeline-end mb-5">
-            <time className="font-mono italic text-sky-300 font-bold">
+            <time className="font-mono italic text-orange-600 dark:text-sky-300 font-bold">
               2023
             </time>
             <ul>
               <li>Mar - Flashcard App</li>
-              <li>Abr - <a target="_blank" href="./certifications/liferay_cloud.png" className="text-sky-300 hover:underline inline-flex items-center">Liferay Cloud Certification - Sao Paulo, Brasil <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-sky-300" /> </a></li>
+              <li>Abr - <a target="_blank" href="./certifications/liferay_cloud.png" className="text-orange-600 dark:text-sky-300 hover:underline inline-flex items-center">Liferay Cloud Certification - Sao Paulo, Brasil <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-orange-600 dark:fill-sky-300" /> </a></li>
               <li>Oct - Proyecto X</li>
             </ul>
           </div>
@@ -78,12 +78,12 @@ export default function Experience() {
                 fillRule="evenodd"
                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                 clipRule="evenodd"
-                className="text-sky-300"
+                className="text-orange-600 dark:text-sky-300"
               />
             </svg>
           </div>
           <div className="timeline-start mb-5 md:text-end">
-            <time className="font-mono italic text-sky-300 font-bold">
+            <time className="font-mono italic text-orange-600 dark:text-sky-300 font-bold">
               2022
             </time>
             <div className="text-lg font-black"></div>
@@ -109,15 +109,15 @@ export default function Experience() {
                 fillRule="evenodd"
                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                 clipRule="evenodd"
-                className="text-sky-300"
+                className="text-orange-600 dark:text-sky-300"
               />
             </svg>
           </div>
           <div className="timeline-end mb-5">
-            <time className="font-mono italic text-sky-300 font-bold">
+            <time className="font-mono italic text-orange-600 dark:text-sky-300 font-bold">
               2022 - Actualidad
             </time>
-            <div className="text-lg text-sky-300 font-bold">
+            <div className="text-lg text-orange-600 dark:text-sky-300 font-bold">
               Frontend Developer - Isa Software
             </div>
           </div>
@@ -136,16 +136,16 @@ export default function Experience() {
                 fillRule="evenodd"
                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                 clipRule="evenodd"
-                className="text-sky-300"
+                className="text-orange-600 dark:text-sky-300"
               />
             </svg>
           </div>
           <div className="timeline-start mb-5 md:text-end">
-            <time className="font-mono italic text-sky-300 font-bold">
+            <time className="font-mono italic text-orange-600 dark:text-sky-300 font-bold">
               2021
             </time>
-            <div className="text-lg text-sky-300 font-bold">
-              <a href="./certifications/jap.pdf" target="_blank" className="text-sky-300 hover:underline">Jóvenes a programar</a>
+            <div className="text-lg text-orange-600 dark:text-sky-300 font-bold">
+              <a href="./certifications/jap.pdf" target="_blank" className="text-orange-600 dark:text-sky-300 hover:underline">Jóvenes a programar</a>
             </div>
             Curso introductorio a la programación <br/>Frontend: HTML, CSS,
             JavaScript, Bootstrap, Ruby, estructuras de datos y gestión de
@@ -166,12 +166,12 @@ export default function Experience() {
                 fillRule="evenodd"
                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                 clipRule="evenodd"
-                className="text-sky-300"
+                className="text-orange-600 dark:text-sky-300"
               />
             </svg>
           </div>
           <div className="timeline-end mb-5">
-            <time className="font-mono italic text-sky-300 font-bold">
+            <time className="font-mono italic text-orange-600 dark:text-sky-300 font-bold">
               2009 - 2022
             </time>
             <ul>
@@ -201,15 +201,15 @@ export default function Experience() {
                 fillRule="evenodd"
                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                 clipRule="evenodd"
-                className="text-sky-300"
+                className="text-orange-600 dark:text-sky-300"
               />
             </svg>
           </div>
           <div className="timeline-start md:text-end">
-            <time className="font-mono italic text-sky-300 font-bold">
+            <time className="font-mono italic text-orange-600 dark:text-sky-300 font-bold">
               2003 - 2008
             </time>
-            <div className="text-lg text-sky-300 font-bold">
+            <div className="text-lg text-orange-600 dark:text-sky-300 font-bold">
               Bachillerato en Ingeniería
             </div>
             Colegio Español Miguel de Cervantes Saavedra

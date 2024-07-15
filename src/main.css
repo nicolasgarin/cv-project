@@ -73,6 +73,10 @@
 
 * {
   font-family: Raleway;
+  color: #2e2e2e;
+}
+
+.dark * {
   color: white;
 }
 
@@ -82,9 +86,12 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-image: url("./assets/bg.png");
+    background-image: url("./assets/bg-light.jpg");
     background-attachment: fixed;
     background-size: cover;
+    &.dark {
+      background-image: url("./assets/bg.png");
+    }
   }
 
   section {
@@ -93,11 +100,19 @@
 }
 
 #sidebar .nav-bar .active .nav-item {
-  color: skyblue;
+  color: rgb(234 88 12);
   font-weight: 600;
 }
 
+.dark #sidebar .nav-bar .active .nav-item {
+  color: skyblue;
+}
+
 #sidebar .nav-link:hover .nav-item {
+  color: rgb(234 88 12);
+}
+
+.dark #sidebar .nav-link:hover .nav-item {
   color: skyblue;
 }
 
@@ -109,11 +124,15 @@
 #sidebar .nav-item::before {
   display: inline-block;
   content: "";
-  border-top: 2px solid skyblue;
+  border-top: 2px solid rgb(234 88 12);
   width: 50px;
   margin: 0 1rem 0 0;
   transform: translateY(-4px);
   transition: .5s;
+}
+
+.dark #sidebar .nav-item::before {
+  border-top: 2px solid skyblue;
 }
 
 svg {
@@ -123,4 +142,8 @@ svg {
 
 #scrollarea {
   width: -webkit-fill-available;
+}
+
+#user-options {
+  z-index: 100;
 }

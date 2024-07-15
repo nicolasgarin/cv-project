@@ -6,7 +6,7 @@
     font-size: 800;
   }
   svg {
-    filter: drop-shadow(0px 0px 7px #7DD3FC);
+    filter: drop-shadow(0px 0px 7px rgb(70, 70, 70));
     transition: 0.5s;
   }
 }
@@ -22,37 +22,33 @@
   }
   &.effect {
     svg {
+      filter: drop-shadow(0px 0px 7px rgb(70, 70, 70));
+      transition: 0.5s;
+    }
+  }
+}
+
+.dark {
+  .ic:hover {
+
+    svg {
       filter: drop-shadow(0px 0px 7px #7DD3FC);
-      transition: 0.5s;
     }
   }
-}
-
-#bootst:hover {
-  #css,
-  #html {
+  .ic {
+    transition: .5s;
+    >div>div {
+      display: flex;
+      justify-content: center;
+    }
     svg {
-      filter: drop-shadow(0px 0px 4px #7DD3FC);
       transition: 0.5s;
     }
-  }
-}
-
-#freemarker:hover {
-  #java:hover {
-    svg {
-      filter: drop-shadow(0px 0px 4px #7DD3FC);
-      transition: 0.5s;
-    }
-  }
-}
-
-#clay:hover {
-  #java:hover,
-  #css:hover {
-    svg {
-      filter: drop-shadow(0px 0px 4px #7DD3FC);
-      transition: 0.5s;
+    &.effect {
+      svg {
+        filter: drop-shadow(0px 0px 7px #7DD3FC);
+        transition: 0.5s;
+      }
     }
   }
 }

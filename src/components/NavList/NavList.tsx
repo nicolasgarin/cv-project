@@ -18,7 +18,7 @@ export default function NavList() {
         <div className="nav-item">{lang == "es" ? "Sobre mi" : "About"}</div>
       </Link>
       <Link
-        className="nav-link hover:cursor-pointer hover:text-cyan-300"
+        className="nav-link hover:cursor-pointer dark:hover:text-cyan-300 hover:text-orange-600"
         activeClass="active"
         to="experience"
         spy={true}
@@ -31,7 +31,7 @@ export default function NavList() {
         </div>
       </Link>
       <Link
-        className="nav-link hover:cursor-pointer hover:text-cyan-300"
+        className="nav-link hover:cursor-pointer dark:hover:text-cyan-300 hover:text-orange-600"
         activeClass="active"
         to="projects"
         spy={true}
@@ -44,7 +44,7 @@ export default function NavList() {
         </div>
       </Link>
       <Link
-        className="nav-link hover:cursor-pointer hover:text-cyan-300"
+        className="nav-link hover:cursor-pointer dark:hover:text-cyan-300 hover:text-orange-600"
         activeClass="active"
         to="techs"
         spy={true}
