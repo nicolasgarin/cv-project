@@ -278,7 +278,7 @@ export default function Techs() {
               <Tooltip>
                 <TooltipTrigger>
                   <div id="figma" className="ic flex flex-col">
-                    <ReactSVG src="/logos/figma.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/figma.svg`} />
                     <div className="text-center">Figma</div>
                   </div>
                 </TooltipTrigger>
@@ -313,7 +313,7 @@ export default function Techs() {
                     onMouseEnter={() => toggleHoverEffect(["css"])}
                     onMouseLeave={() => toggleHoverEffect(["css"])}
                   >
-                    <ReactSVG src="/logos/sass.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/sass.svg`} />
                     <div className="text-center">Sass</div>
                   </div>
                 </TooltipTrigger>
@@ -348,7 +348,7 @@ export default function Techs() {
                     onMouseEnter={() => toggleHoverEffect(["js", "html"])}
                     onMouseLeave={() => toggleHoverEffect(["js", "html"])}
                   >
-                    <ReactSVG src="/logos/react.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/react.svg`} />
                     <div className="text-center">React</div>
                   </div>
                 </TooltipTrigger>
@@ -383,7 +383,7 @@ export default function Techs() {
                     onMouseEnter={() => toggleHoverEffect(["js"])}
                     onMouseLeave={() => toggleHoverEffect(["js"])}
                   >
-                    <ReactSVG src="/logos/typescript.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/typescript.svg`} />
                     <div className="text-center">Typescript</div>
                   </div>
                 </TooltipTrigger>
@@ -418,7 +418,7 @@ export default function Techs() {
                     onMouseEnter={() => toggleHoverEffect(["js"])}
                     onMouseLeave={() => toggleHoverEffect(["js"])}
                   >
-                    <ReactSVG src="/logos/jquery.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/jquery.svg`}/>
                     <div className="text-center">Jquery</div>
                   </div>
                 </TooltipTrigger>
@@ -454,7 +454,7 @@ export default function Techs() {
                     onMouseEnter={() => toggleHoverEffect(["java"])}
                     onMouseLeave={() => toggleHoverEffect(["java"])}
                   >
-                    <ReactSVG src="/logos/freemarker.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/freemarker.svg`} />
                     <div className="text-center">Freemarker</div>
                   </div>
                 </TooltipTrigger>
@@ -489,7 +489,7 @@ export default function Techs() {
                     onMouseEnter={() => toggleHoverEffect(["java", "bootst"])}
                     onMouseLeave={() => toggleHoverEffect(["java", "bootst"])}
                   >
-                    <ReactSVG src="/logos/clay.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/clay.svg`} />
                     <div className="text-center">Clay UI</div>
                   </div>
                 </TooltipTrigger>
@@ -530,13 +530,13 @@ export default function Techs() {
                       toggleHoverEffect(["js", "html", "react"])
                     }
                   >
-                    <ReactSVG src="/logos/vite.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/vite.svg`} />
                     <div className="text-center">Vite</div>
                   </div>
                 </TooltipTrigger>
                 <TooltipContent className="flex flex-col items-center bg-slate-800">
                   <h4 className="font-bold text-sky-300">Vite</h4>
-                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <p className="mb-3">Herramienta de construcción <br /> de proyectos</p>
                   <div className="flex gap-4">
                     <div
                       className="radial-progress text-sky-300 "
@@ -565,13 +565,13 @@ export default function Techs() {
                     onMouseEnter={() => toggleHoverEffect(["css", "html"])}
                     onMouseLeave={() => toggleHoverEffect(["css", "html"])}
                   >
-                    <ReactSVG src="/logos/bootstrap.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/bootstrap.svg`} />
                     <div className="text-center">Bootstrap</div>
                   </div>
                 </TooltipTrigger>
                 <TooltipContent className="flex flex-col items-center bg-slate-800">
                   <h4 className="font-bold text-sky-300">Bootstrap</h4>
-                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <p className="mb-3">Framework de css de reglas de estilos <br /> y componentes</p>
                   <div className="flex gap-4">
                     <div
                       className="radial-progress text-sky-300 "
@@ -604,13 +604,13 @@ export default function Techs() {
                       toggleHoverEffect(["css", "html", "js", "react"])
                     }
                   >
-                    <ReactSVG src="/logos/tailwind.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/tailwind.svg`} />
                     <div className="text-center">Tailwind CSS</div>
                   </div>
                 </TooltipTrigger>
                 <TooltipContent className="flex flex-col items-center bg-slate-800">
                   <h4 className="font-bold text-sky-300">Tailwind CSS</h4>
-                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <p className="mb-3">Framework de css enfocado en proveer <br /> clases de utilidad</p>
                   <div className="flex gap-4">
                     <div
                       className="radial-progress text-sky-300 "
@@ -643,13 +643,13 @@ export default function Techs() {
                       toggleHoverEffect(["css", "html", "js", "react"])
                     }
                   >
-                    <ReactSVG src="/logos/radix.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/radix.svg`} />
                     <div className="text-center">Radix</div>
                   </div>
                 </TooltipTrigger>
                 <TooltipContent className="flex flex-col items-center bg-slate-800">
                   <h4 className="font-bold text-sky-300">Radix</h4>
-                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <p className="mb-3">Biblioteca de componentes de UI <br /> para React</p>
                   <div className="flex gap-4">
                     <div
                       className="radial-progress text-sky-300 "
@@ -682,13 +682,13 @@ export default function Techs() {
                       toggleHoverEffect(["js", "html", "react"])
                     }
                   >
-                    <ReactSVG src="/logos/next.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/next-js.svg`} />
                     <div className="text-center">Next.js</div>
                   </div>
                 </TooltipTrigger>
                 <TooltipContent className="flex flex-col items-center bg-slate-800">
                   <h4 className="font-bold text-sky-300">Next.js</h4>
-                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <p className="mb-3">Framework de React para crear <br /> paquetes SSR</p>
                   <div className="flex gap-4">
                     <div
                       className="radial-progress text-sky-300 "
@@ -721,13 +721,13 @@ export default function Techs() {
                       toggleHoverEffect(["java", "freemarker", "clay"])
                     }
                   >
-                    <ReactSVG src="/logos/liferay.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/liferay.svg`} />
                     <div className="text-center">Liferay</div>
                   </div>
                 </TooltipTrigger>
                 <TooltipContent className="flex flex-col items-center bg-slate-800">
                   <h4 className="font-bold text-sky-300">Liferay</h4>
-                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <p className="mb-3">CMS basado en Java</p>
                   <div className="flex gap-4">
                     <div
                       className="radial-progress text-sky-300 "
@@ -762,13 +762,13 @@ export default function Techs() {
                       toggleHoverEffect(["js", "html", "vite", "react"])
                     }
                   >
-                    <ReactSVG src="/logos/vitest.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/vitest.svg`} />
                     <div className="text-center">Vitest</div>
                   </div>
                 </TooltipTrigger>
                 <TooltipContent className="flex flex-col items-center bg-slate-800">
                   <h4 className="font-bold text-sky-300">Vitest</h4>
-                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <p className="mb-3">Framework de testing<br />basado  en Vite</p>
                   <div className="flex gap-4">
                     <div
                       className="radial-progress text-sky-300 "
@@ -801,13 +801,13 @@ export default function Techs() {
                       toggleHoverEffect(["css", "html", "bootst"])
                     }
                   >
-                    <ReactSVG src="/logos/bootswatch.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/bootswatch.svg`} />
                     <div className="text-center">Bootswatch</div>
                   </div>
                 </TooltipTrigger>
                 <TooltipContent className="flex flex-col items-center bg-slate-800">
                   <h4 className="font-bold text-sky-300">Bootswatch</h4>
-                  <p className="mb-3">Librería de Java para creación <br /> de plantillas</p>
+                  <p className="mb-3">Plugin de Bootstrap para <br />generación de temas</p>
                   <div className="flex gap-4">
                     <div
                       className="radial-progress text-sky-300 "
@@ -852,7 +852,7 @@ export default function Techs() {
                       ])
                     }
                   >
-                    <ReactSVG src="/logos/daisyui.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/daisyui.svg`} />
                     <div className="text-center">DaisyUI</div>
                   </div>
                 </TooltipTrigger>
@@ -905,7 +905,7 @@ export default function Techs() {
                       ])
                     }
                   >
-                    <ReactSVG src="/logos/shadcnui.svg" />
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/shadcn-ui.svg`} />
                     <div className="text-center">Shadcn/ui</div>
                   </div>
                 </TooltipTrigger>
@@ -923,6 +923,45 @@ export default function Techs() {
                     <div
                       className="radial-progress text-secondary"
                       style={{ "--value": 100 }}
+                      role="progressbar"
+                    >
+                      CON
+                    </div>
+                  </div>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div
+                    id="astro"
+                    className="ic flex flex-col"
+                    onMouseEnter={() =>
+                      toggleHoverEffect(["js"])
+                    }
+                    onMouseLeave={() =>
+                      toggleHoverEffect(["js"])
+                    }
+                  >
+                    <ReactSVG src={window.location.origin + `/cv-project/logos/astro.svg`} />
+                    <div className="text-center">Astro</div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent className="flex flex-col items-center bg-slate-800">
+                  <h4 className="font-bold text-sky-300">Astro</h4>
+                  <p className="mb-3">Framework de Javascript para creación<br />de sitios estáticos optimizados</p>
+                  <div className="flex gap-4">
+                    <div
+                      className="radial-progress text-sky-300 "
+                      style={{ "--value": 25 }}
+                      role="progressbar"
+                    >
+                      EXP
+                    </div>
+                    <div
+                      className="radial-progress text-secondary"
+                      style={{ "--value": 50 }}
                       role="progressbar"
                     >
                       CON
