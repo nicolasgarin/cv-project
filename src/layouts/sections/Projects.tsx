@@ -164,7 +164,7 @@ export default function Projects() {
                     </h3>
                     <p className="flex justify-center py-4">
 
-                    <Carousel className="w-full max-w-xs">
+                    <Carousel className="w-full max-w-[23rem]">
                       <CarouselContent>
                         {(proyecto.galeria).map((img, index) => (
                           <CarouselItem key={index}>
