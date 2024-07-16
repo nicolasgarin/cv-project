@@ -273,7 +273,7 @@ function Tech({
   exp,
   knowledge,
   hoverEffect,
-}: ITechs) {
+}: ITechs[number]) {
   const { lang } = useUserOptions();
 
   return (
