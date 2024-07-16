@@ -7,6 +7,7 @@ export type IProyectos = {
     tecnologias: string[];
     descripcionCorta: string;
     descripcionLarga: string;
+    tag: string;
     urlRepo: string;
     urlDemo?: string;
 }[];
