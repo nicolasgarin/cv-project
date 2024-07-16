@@ -273,7 +273,7 @@ function Tech({
   exp,
   knowledge,
   hoverEffect,
-}: ITechs[number]) {
+}: ITechs) {
   const { lang } = useUserOptions();
 
   return (
@@ -344,6 +344,7 @@ export default function Techs() {
                 engDescrip={tech.engDescrip}
                 exp={tech.exp}
                 knowledge={tech.knowledge}
+                hoverEffect={tech.hoverEffect}
               />
             ))}
           </div>
@@ -358,6 +359,7 @@ export default function Techs() {
                 engDescrip={tech.engDescrip}
                 exp={tech.exp}
                 knowledge={tech.knowledge}
+                hoverEffect={tech.hoverEffect}
               />
             ))}
           </div>
@@ -372,6 +374,7 @@ export default function Techs() {
                 engDescrip={tech.engDescrip}
                 exp={tech.exp}
                 knowledge={tech.knowledge}
+                hoverEffect={tech.hoverEffect}
               />
             ))}
           </div>
@@ -386,6 +389,7 @@ export default function Techs() {
                 engDescrip={tech.engDescrip}
                 exp={tech.exp}
                 knowledge={tech.knowledge}
+                hoverEffect={tech.hoverEffect}
               />
             ))}
           </div>
