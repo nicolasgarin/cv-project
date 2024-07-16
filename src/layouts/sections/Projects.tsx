@@ -18,7 +18,7 @@ const proyectos: IProyectos = [
     nombre: "Pokedex",
     anio: 2021,
     portada: "imgPokedex",
-    galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
+    galeria: ["imgPokedex-344 x 210", "imgPokedex2", "imgPokedex3"],
     tecnologias: ["react", "sass", "bootstrap"],
     descripcionCorta: "Pokedex creada con React",
     descripcionLarga:
