@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from "react";
-import { dataOp, DataContextType, IProyectos, ITechs } from "../@types/data";
+import { DataContextType, IProyectos, ITechs } from "../@types/data";
 
 const DataContext = createContext<DataContextType | undefined>(
   undefined
