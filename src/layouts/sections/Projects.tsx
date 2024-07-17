@@ -41,7 +41,7 @@ export default function Projects() {
                       src={window.location.origin + `/cv-project/${proyecto.portada}.png`}
                       alt="car!"
                     />
-                    <span className="absolute left-[10px] bottom-[140px] rounded-lg px-1 py-2 bg-slate-200 dark:bg-slate-800">{proyecto.tag}</span>
+                    <span className="absolute left-[10px] bottom-[140px] rounded-lg px-2 py-1 bg-slate-300 dark:bg-slate-700">{proyecto.tag}</span>
                   </figure>
                   <div className="card-body p-4">
                     <h2 className="card-title flex text-orange-600 dark:text-sky-300  justify-between">
