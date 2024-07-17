@@ -29,7 +29,7 @@ function Tech({
   knowledge,
   hoverEffect,
 }: ITechs[number]) {
-  const { techs } = useData();
+  const { lang } = useUserOptions();
 
   return (
     <TooltipProvider>
@@ -77,7 +77,7 @@ function Tech({
 }
 
 export default function Techs() {
-
+  const { techs } = useData();
   return (
     <section id="techs" className="flex items-center">
       <div className="flex flex-col justify-center w-full">
