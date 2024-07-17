@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from "react";
-import { DataOp, DataContextType, IProyectos, ITechs } from "../@types/data";
+import { dataOp, DataContextType, IProyectos, ITechs } from "../@types/data";
 
 const DataContext = createContext<DataContextType | undefined>(
   undefined
@@ -114,6 +114,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
       urlDemo: "https://nicolasgarin.github.io/minimalist-portfolio-json/",
     }
   ];
+
   const techs: ITechs = [
     {
       id: "git",
