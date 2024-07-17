@@ -3,6 +3,7 @@ import { ScrollArea, ScrollBar } from "../../components/ui/scroll-area";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
+import useData from "../../context/DataContext";
 import useUserOptions from "../../context/UserOptionsContext";
 import {
   Carousel,
@@ -12,115 +13,11 @@ import {
   CarouselPrevious,
 } from "./../../components/ui/carousel"
 
-const proyectos: IProyectos = [
-  {
-    id: "1",
-    nombre: "Pokedex",
-    anio: 2021,
-    portada: "imgPokedex",
-    galeria: ["imgPokedex-344 x 210", "imgPokedex2", "imgPokedex3"],
-    tecnologias: ["react", "sass", "bootstrap"],
-    descripcionCorta: "Pokedex creada con React",
-    descripcionLarga:
-      "Aplicación de Pokedex para buscar y analizar cada Pokemón, sus estadísticas, evoluciones y ataques. Creada con React, Typescript, Sass y React-Query.",
-    tag: "WebApp",
-    urlRepo: "https://github.com/NicolasGarin/pokedex",
-    urlDemo: "https://nicolasgarin.github.io/pokedex/",
-  },
-  {
-    id: "2",
-    nombre: "Jap Ecommerce",
-    anio: 2021,
-    portada: "imgJapLanding",
-    galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
-    tecnologias: ["html-5", "javascript", "css-3", "bootstrap"],
-    descripcionCorta: "Proyecto ecommerce para JaP",
-    descripcionLarga: "Proyecto final de curso para Jóvenes a Programar, eCommerce completo con catálogo de productos, filtros de búsqueda y proceso de compra. Realizado con Html, Css y Javascript.",
-    tag: "WebApp",
-    urlRepo: "https://github.com/nicolasgarin/Proyecto-JaP",
-    urlDemo: "https://nicolasgarin.github.io/Proyecto-JaP/",
-  },
-  {
-    id: "3",
-    nombre: "Wordle",
-    anio: 2022,
-    portada: "imgPokedex",
-    galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
-    tecnologias: ["react", "ts", "sass"],
-    descripcionCorta: "Pokedex",
-    descripcionLarga: "Pokedex",
-    tag: "WebApp",
-    urlRepo: "https://github.com/NicolasGarin/pokedex",
-    urlDemo: "https://nicolasgarin.github.io/pokedex/",
-  },
-  {
-    id: "4",
-    nombre: "Flashcard App",
-    anio: 2023,
-    portada: "imgFlashcard",
-    galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
-    tecnologias: ["react", "sass", "bootstrap"],
-    tag: "WebApp",
-    descripcionCorta: "Juego de preguntas y respuestas",
-    descripcionLarga: "Juego de preguntas y respuestas con elección de categorías y modalidad de juego, sección de estadísticas y tema claro/oscuro. Creado con React, Sass, Bootstrap.",
-    urlRepo: "https://github.com/nicolasgarin/flashcard-app",
-  },
-  {
-    id: "5",
-    nombre: "Hangman App",
-    anio: 2023,
-    portada: "imgHangman",
-    galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
-    tecnologias: ["react", "ts", "sass", "bootstrap"],
-    descripcionCorta: "Juego del ahorcado",
-    descripcionLarga: "Pokedex",
-    tag: "WebApp",
-    urlRepo: "https://github.com/NicolasGarin/pokedex",
-    urlDemo: "https://nicolasgarin.github.io/pokedex/",
-  },
-  {
-    id: "6",
-    nombre: "Project Tracker",
-    anio: 2024,
-    portada: "imgProjectTracker",
-    galeria: ["poj-trac-1", "imgPokedex2", "imgPokedex3"],
-    tecnologias: ["react", "ts", "sass", "bootstrap"],
-    descripcionCorta: "Aplicación de seguimiento de proyectos",
-    descripcionLarga: "Aplicación de seguimiento y gestión de proyectos para logro de objetivos personales. Visualización gráfica de avance mensual, opciones de filtrado de proyectos, tema claro/oscuro y elección de lenguaje. Creado con Vite, React, Typescript, Sass, Bootstrap y Vitest.",
-    tag: "WebApp",
-    urlRepo: "https://github.com/nicolasgarin/project-tracker-ts-app",
-    urlDemo: "https://nicolasgarin.github.io/project-tracker-ts-app/",
-  },
-  {
-    id: "7",
-    nombre: "Project Tracker LP",
-    anio: 2024,
-    portada: "imgProjectTrackerLP",
-    galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
-    tecnologias: ["html", "js", "sass", "tailwind"],
-    descripcionCorta: "Landing page para Project Tracker",
-    descripcionLarga: "Landing page para Project Tracker app, creada con HTML, CSS, Tailwind y Javascript.",
-    tag: "Landing Page",
-    urlRepo: "https://github.com/nicolasgarin/project-tracker-lp",
-    urlDemo: "https://nicolasgarin.github.io/project-tracker-lp/",
-  },
-  {
-    id: "8",
-    nombre: "Minimalist Portfolio",
-    anio: 2024,
-    portada: "imgProjectTrackerLP",
-    galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
-    tecnologias: ["astro", "typescript", "css"],
-    descripcionCorta: "Portfolio minimalista configurable via JSON",
-    descripcionLarga: "Portfolio minimalista que toma toda la información a través de un JSON. Creado con Astro, Typescript, y Css.",
-    tag: "Portfolio",
-    urlRepo: "https://github.com/nicolasgarin/minimalist-portfolio-json",
-    urlDemo: "https://nicolasgarin.github.io/minimalist-portfolio-json/",
-  }
-];
 
 export default function Projects() {
+  const { projects } = useData();
   const { lang } = useUserOptions();
+
   return (
     <section id="projects" className="flex items-center">
       <div className="flex flex-col w-full">
@@ -136,7 +33,7 @@ export default function Projects() {
         </p>
         <ScrollArea id="scrollarea" className="whitespace-nowrap">
           <div className="flex w-max space-x-4 pb-8">
-            {proyectos.map((proyecto) => (
+            {projects.map((proyecto) => (
               <>
                 <div className="card glass">
                   <figure>
