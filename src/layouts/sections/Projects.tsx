@@ -1,4 +1,3 @@
-import { IProyectos } from "../../@types/data";
 import { ScrollArea, ScrollBar } from "../../components/ui/scroll-area";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
