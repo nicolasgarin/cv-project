@@ -7,6 +7,7 @@ import {
   TooltipTrigger,
 } from "../../components/ui/tooltip";
 import useData from "../../context/DataContext";
+import useUserOptions from "../../context/UserOptionsContext";
 
 function toggleHoverEffect(elements: string[] | undefined) {
   if (elements === undefined) {
