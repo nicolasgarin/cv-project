@@ -98,6 +98,18 @@ const proyectos: IProyectos = [
     urlRepo: "https://github.com/NicolasGarin/pokedex",
     urlDemo: "https://nicolasgarin.github.io/pokedex/",
   },
+  {
+    id: "8",
+    nombre: "Loopstudios",
+    anio: 2024,
+    portada: "imgProjectTrackerLP",
+    galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
+    tecnologias: ["astro", "tailwind"],
+    descripcionCorta: "Landing page para Loopstudios",
+    descripcionLarga: "Landing page para empresa ficticia de realidad virtual, creada con Astro y Tailwind.",
+    urlRepo: "https://github.com/NicolasGarin/loopstudios",
+    urlDemo: "https://nicolasgarin.github.io/loopstudios/",
+  }
 ];
 
 export default function Projects() {
