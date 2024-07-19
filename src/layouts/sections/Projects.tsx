@@ -1,8 +1,8 @@
-import { IProyectos } from "../../@types/data";
 import { ScrollArea, ScrollBar } from "../../components/ui/scroll-area";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
+import useData from "../../context/DataContext";
 import useUserOptions from "../../context/UserOptionsContext";
 import {
   Carousel,
@@ -113,7 +113,9 @@ const proyectos: IProyectos = [
 ];
 
 export default function Projects() {
+  const { projects } = useData();
   const { lang } = useUserOptions();
+
   return (
     <section id="projects" className="flex items-center">
       <div className="flex flex-col w-full">
@@ -129,7 +131,7 @@ export default function Projects() {
         </p>
         <ScrollArea id="scrollarea" className="whitespace-nowrap">
           <div className="flex w-max space-x-4 pb-8">
-            {proyectos.map((proyecto) => (
+            {projects.map((proyecto) => (
               <>
                 <div className="card glass">
                   <figure>
@@ -138,6 +140,7 @@ export default function Projects() {
                       src={window.location.origin + `/cv-project/${proyecto.portada}.png`}
                       alt="car!"
                     />
+                    <span className="absolute left-[10px] bottom-[140px] rounded-lg px-2 py-1 bg-slate-300 dark:bg-slate-700">{proyecto.tag}</span>
                   </figure>
                   <div className="card-body p-4">
                     <h2 className="card-title flex text-orange-600 dark:text-sky-300  justify-between">
@@ -176,7 +179,7 @@ export default function Projects() {
                     </h3>
                     <p className="flex justify-center py-4">
 
-                    <Carousel className="w-full max-w-xs">
+                    <Carousel className="w-full max-w-[23rem]">
                       <CarouselContent>
                         {(proyecto.galeria).map((img, index) => (
                           <CarouselItem key={index}>
