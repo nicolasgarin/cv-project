@@ -147,3 +147,16 @@ svg {
 #user-options {
   z-index: 100;
 }
+
+.card-image {
+  background-size: cover;
+  background-position: center;
+}
+
+.modal-link:hover svg {
+  fill: rgb(234 88 12) !important;
+}
+
+.dark .modal-link:hover svg {
+  fill: rgb(125 211 252) !important;
+}

@@ -1,4 +1,4 @@
-export type IProyectos = {
+export type IProyecto = {
   id: string;
   nombre: string;
   anio: number;
@@ -10,9 +10,11 @@ export type IProyectos = {
   tag: string;
   urlRepo: string;
   urlDemo?: string;
-}[];
+}
 
-export type ITechs = {
+export type IProyectos = IProyecto[]
+
+export type ITech = {
   id: string;
   name: string;
   imgSrc: string;
@@ -21,7 +23,9 @@ export type ITechs = {
   exp: number;
   knowledge: number;
   hoverEffect?: string[];
-}[];
+};
+
+export type ITechs = ITech[]
 
 export interface dataOp {
   projects: IProyectos;

@@ -14,7 +14,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
       nombre: "Pokedex",
       anio: 2021,
       portada: "imgPokedex",
-      galeria: ["imgPokedex-344 x 210", "imgPokedex2", "imgPokedex3"],
+      galeria: ["pokedex", "pokedex", "imgPokedex3"],
       tecnologias: ["react", "sass", "bootstrap"],
       descripcionCorta: "Pokedex creada con React",
       descripcionLarga:
