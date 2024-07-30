@@ -21,7 +21,7 @@ export default function ProjectCard({ proyecto }: { proyecto: IProyecto }) {
           className="card-image h-32"
           style={{
             backgroundImage: `url(${
-              window.location.origin + `/cv-project/${proyecto.portada}.png`
+              window.location.origin + `/cv-project/project-img/${proyecto.portada}.png`
             })`,
           }}
         >
@@ -44,11 +44,11 @@ export default function ProjectCard({ proyecto }: { proyecto: IProyecto }) {
               <BsBoxArrowUpRight className="w-5 h-5 hover:fill-orange-600 hover:dark:fill-sky-300" />
             </button>
           </h2>
-          <p className="text-wrap text-sm h-12">{proyecto.descripcionCorta}</p>
+          <p className="text-wrap text-sm h-12">{lang == "es" ? proyecto.descripcionCorta : proyecto.descripcionCortaEng}</p>
           <div className="flex gap-4">
             {proyecto.tecnologias.map((tech: string) => (
               <img
-                className="h-7"
+                className="h-6"
                 src={window.location.origin + `/cv-project/logos/${tech}.svg`}
               />
             ))}
@@ -89,8 +89,8 @@ export default function ProjectCard({ proyecto }: { proyecto: IProyecto }) {
             </Carousel>
           </p>
           <p>{proyecto.anio}</p>
-          <p className="whitespace-pre-wrap py-4">
-            {proyecto.descripcionLarga}
+          <p className="whitespace-pre-wrap pt-2 pb-4 text-sm">
+            {lang == "es" ? proyecto.descripcionLarga : proyecto.descripcionLargaEng}
           </p>
           <div className="flex justify-around">
             <a
@@ -101,6 +101,7 @@ export default function ProjectCard({ proyecto }: { proyecto: IProyecto }) {
                   ? "Enlace a cuenta de Github"
                   : "Github account link"
               }
+              target="_blank"
             >
               <FaGithub className="h-6 w-6" />
               Repo
@@ -114,9 +115,10 @@ export default function ProjectCard({ proyecto }: { proyecto: IProyecto }) {
                     ? "Enlace a cuenta de Github"
                     : "Github account link"
                 }
+                target="_blank"
               >
                 <FaPlay className="h-6 w-6" />
-                Live Demo
+                Demo
               </a>
             ) : (
               <div
@@ -127,7 +129,7 @@ export default function ProjectCard({ proyecto }: { proyecto: IProyecto }) {
                   : "Github account link"
               }>
                 <FaPlay className="h-6 w-6 fill-gray-300 dark:fill-gray-600" />
-                Live Demo
+                Demo
               </div>
             )}
           </div>

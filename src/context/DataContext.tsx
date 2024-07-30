@@ -1,9 +1,7 @@
 import React, { createContext, useContext } from "react";
 import { DataContextType, IProyectos, ITechs } from "../@types/data";
 
-const DataContext = createContext<DataContextType | undefined>(
-  undefined
-);
+const DataContext = createContext<DataContextType | undefined>(undefined);
 
 export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -13,12 +11,14 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
       id: "1",
       nombre: "Pokedex",
       anio: 2021,
-      portada: "imgPokedex",
+      portada: "pokedex",
       galeria: ["pokedex", "pokedex", "imgPokedex3"],
       tecnologias: ["react", "sass", "bootstrap"],
       descripcionCorta: "Pokedex creada con React",
+      descripcionCortaEng: "First React project",
       descripcionLarga:
         "Aplicación de Pokedex para buscar y analizar cada Pokemón, sus estadísticas, evoluciones y ataques. Creada con React, Typescript, Sass y React-Query.",
+      descripcionLargaEng: "",
       tag: "WebApp",
       urlRepo: "https://github.com/NicolasGarin/pokedex",
       urlDemo: "https://nicolasgarin.github.io/pokedex/",
@@ -27,11 +27,14 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
       id: "2",
       nombre: "Jap Ecommerce",
       anio: 2021,
-      portada: "imgJapLanding",
+      portada: "proyecto-jap",
       galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
       tecnologias: ["html-5", "javascript", "css-3", "bootstrap"],
       descripcionCorta: "Proyecto ecommerce para JaP",
-      descripcionLarga: "Proyecto final de curso para Jóvenes a Programar, eCommerce completo con catálogo de productos, filtros de búsqueda y proceso de compra. Realizado con Html, Css y Javascript.",
+      descripcionCortaEng: "Jap Ecommerce",
+      descripcionLarga:
+        "Proyecto final de curso para Jóvenes a Programar, eCommerce completo con catálogo de productos, filtros de búsqueda y proceso de compra. Realizado con Html, Css y Javascript.",
+      descripcionLargaEng: "",
       tag: "WebApp",
       urlRepo: "https://github.com/nicolasgarin/Proyecto-JaP",
       urlDemo: "https://nicolasgarin.github.io/Proyecto-JaP/",
@@ -40,23 +43,28 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
       id: "4",
       nombre: "Flashcard App",
       anio: 2023,
-      portada: "imgFlashcard",
+      portada: "flashcard-game",
       galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
       tecnologias: ["react", "sass", "bootstrap"],
       tag: "WebApp",
       descripcionCorta: "Juego de preguntas y respuestas",
-      descripcionLarga: "Juego de preguntas y respuestas con elección de categorías y modalidad de juego, sección de estadísticas y tema claro/oscuro. Creado con React, Sass, Bootstrap.",
+      descripcionCortaEng: "Question and answer game",
+      descripcionLarga:
+        "Juego de preguntas y respuestas con elección de categorías y modalidad de juego, sección de estadísticas y tema claro/oscuro. Creado con React, Sass, Bootstrap.",
+      descripcionLargaEng: "",
       urlRepo: "https://github.com/nicolasgarin/flashcard-app",
     },
     {
       id: "5",
       nombre: "Hangman App",
       anio: 2023,
-      portada: "imgHangman",
+      portada: "flashcard-game",
       galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
       tecnologias: ["react", "ts", "sass", "bootstrap"],
       descripcionCorta: "Juego del ahorcado",
+      descripcionCortaEng: "Hangman Game",
       descripcionLarga: "Pokedex",
+      descripcionLargaEng: "",
       tag: "WebApp",
       urlRepo: "https://github.com/NicolasGarin/pokedex",
       urlDemo: "https://nicolasgarin.github.io/pokedex/",
@@ -65,11 +73,14 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
       id: "6",
       nombre: "Project Tracker",
       anio: 2024,
-      portada: "imgProjectTracker",
+      portada: "poj-trac-1",
       galeria: ["poj-trac-1", "imgPokedex2", "imgPokedex3"],
       tecnologias: ["react", "ts", "sass", "bootstrap"],
       descripcionCorta: "Aplicación de seguimiento de proyectos",
-      descripcionLarga: "Aplicación de seguimiento y gestión de proyectos para logro de objetivos personales. Visualización gráfica de avance mensual, opciones de filtrado de proyectos, tema claro/oscuro y elección de lenguaje. Creado con Vite, React, Typescript, Sass, Bootstrap y Vitest.",
+      descripcionCortaEng: "Project Tracker",
+      descripcionLarga:
+        "Aplicación de seguimiento y gestión de proyectos para logro de objetivos personales. Visualización gráfica de avance mensual, opciones de filtrado de proyectos, tema claro/oscuro y elección de lenguaje. Creado con Vite, React, Typescript, Sass, Bootstrap y Vitest.",
+      descripcionLargaEng: "",
       tag: "WebApp",
       urlRepo: "https://github.com/nicolasgarin/project-tracker-ts-app",
       urlDemo: "https://nicolasgarin.github.io/project-tracker-ts-app/",
@@ -78,11 +89,14 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
       id: "7",
       nombre: "Project Tracker LP",
       anio: 2024,
-      portada: "imgProjectTrackerLP",
+      portada: "project-tracker-lp",
       galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
       tecnologias: ["html", "js", "sass", "tailwind"],
       descripcionCorta: "Landing page para Project Tracker",
-      descripcionLarga: "Landing page para Project Tracker app, creada con HTML, CSS, Tailwind y Javascript.",
+      descripcionCortaEng: "Project Tracker Landing Page",
+      descripcionLarga:
+        "Landing page para Project Tracker app, creada con HTML, CSS, Tailwind y Javascript.",
+      descripcionLargaEng: "",
       tag: "Landing Page",
       urlRepo: "https://github.com/nicolasgarin/project-tracker-lp",
       urlDemo: "https://nicolasgarin.github.io/project-tracker-lp/",
@@ -91,15 +105,18 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
       id: "8",
       nombre: "Minimalist Portfolio",
       anio: 2024,
-      portada: "imgProjectTrackerLP",
+      portada: "pokedex",
       galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
       tecnologias: ["astro", "typescript", "css"],
       descripcionCorta: "Portfolio minimalista configurable via JSON",
-      descripcionLarga: "Portfolio minimalista que toma toda la información a través de un JSON. Creado con Astro, Typescript, y Css.",
+      descripcionCortaEng: "Minimalist Portfolio",
+      descripcionLarga:
+        "Portfolio minimalista que toma toda la información a través de un JSON. Creado con Astro, Typescript, y Css.",
+      descripcionLargaEng: "",
       tag: "Portfolio",
       urlRepo: "https://github.com/nicolasgarin/minimalist-portfolio-json",
       urlDemo: "https://nicolasgarin.github.io/minimalist-portfolio-json/",
-    }
+    },
   ];
 
   const techs: ITechs = [
@@ -190,8 +207,10 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
       id: "react",
       name: "React",
       imgSrc: "react",
-      descrip: "Librería de Javascript para creación de interfaces de usuario y manejo de estados",
-      engDescrip: "Javascript library for user interfaces creation and state handling",
+      descrip:
+        "Librería de Javascript para creación de interfaces de usuario y manejo de estados",
+      engDescrip:
+        "Javascript library for user interfaces creation and state handling",
       exp: 100,
       knowledge: 100,
     },
@@ -209,7 +228,8 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
       id: "jq",
       name: "JQuery",
       imgSrc: "jquery",
-      descrip: "Librería de Javascript para el manejo de interacción con elementos HTML",
+      descrip:
+        "Librería de Javascript para el manejo de interacción con elementos HTML",
       engDescrip: "Javascript library for HTML elements interaction handling",
       exp: 100,
       knowledge: 100,
@@ -229,8 +249,10 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
       id: "clay",
       name: "Clay UI",
       imgSrc: "clay",
-      descrip: "Librería de componentes y estilos basado en Bootstrap, creado para Liferay",
-      engDescrip: "Library of components and styles based on Bootstrap, created for Liferay",
+      descrip:
+        "Librería de componentes y estilos basado en Bootstrap, creado para Liferay",
+      engDescrip:
+        "Library of components and styles based on Bootstrap, created for Liferay",
       exp: 100,
       knowledge: 100,
       hoverEffect: ["java", "bootst"],
@@ -319,7 +341,8 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
       id: "daisy",
       name: "DaisyUI",
       imgSrc: "daisyui",
-      descrip: "Librería de componentes de Tailwind para frameworks de Javascript",
+      descrip:
+        "Librería de componentes de Tailwind para frameworks de Javascript",
       engDescrip: "Tailwind based component library for Javascript frameworks",
       exp: 50,
       knowledge: 100,
@@ -339,19 +362,20 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
       id: "astro",
       name: "Astro",
       imgSrc: "astro",
-      descrip: "Framework de Javascript para creación de sitios estáticos optimizados",
+      descrip:
+        "Framework de Javascript para creación de sitios estáticos optimizados",
       engDescrip: "Javascript framework for optimized static websites",
       exp: 25,
       knowledge: 50,
       hoverEffect: ["js"],
-    }
+    },
   ];
-  
+
   return (
     <DataContext.Provider
       value={{
         projects,
-        techs
+        techs,
       }}
     >
       {children}
@@ -362,8 +386,6 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
 export default function useData() {
   const context = useContext(DataContext);
   if (!context)
-    throw Error(
-      "DataContext can only be used inside an DataProvider"
-    );
+    throw Error("DataContext can only be used inside an DataProvider");
   return context;
 }

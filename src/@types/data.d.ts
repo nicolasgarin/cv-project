@@ -6,13 +6,17 @@ export type IProyecto = {
   galeria: string[];
   tecnologias: string[];
   descripcionCorta: string;
+  descripcionCortaEng: string;
   descripcionLarga: string;
-  tag: string;
+  descripcionLargaEng: string;
+  tag: FilterOptions;
   urlRepo: string;
   urlDemo?: string;
 }
 
 export type IProyectos = IProyecto[]
+
+export type FilterOptions = "all" | "WebApp" | "Landing Page" | "Portfolio";
 
 export type ITech = {
   id: string;
