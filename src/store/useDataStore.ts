@@ -145,7 +145,7 @@ export const useDataStore = create<DataStore>()(() => ({
     {
       id: "10",
       nombre: "Loopstudios",
-      anio: 2024,
+      anio: 2023,
       portada: "pokedex",
       galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
       tecnologias: ["astro", "typescript", "css", "tailwind"],
@@ -160,7 +160,7 @@ export const useDataStore = create<DataStore>()(() => ({
     {
       id: "11",
       nombre: "Clipboard",
-      anio: 2024,
+      anio: 2023,
       portada: "pokedex",
       galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
       tecnologias: ["astro", "typescript", "css", "tailwind"],
@@ -172,6 +172,22 @@ export const useDataStore = create<DataStore>()(() => ({
       urlRepo: "https://github.com/nicolasgarin/clipboard",
       urlDemo: "https://nicolasgarin.github.io/clipboard/",
     },
+    {
+      id: "12",
+      nombre: "Buscaminas",
+      anio: 2024,
+      portada: "pokedex",
+      galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
+      tecnologias: ["react", "typescript", "tailwind"],
+      descripcionCorta: "",
+      descripcionCortaEng: "",
+      descripcionLarga: "",
+      descripcionLargaEng: "",
+      tag: "WebApp",
+      urlRepo: "https://github.com/nicolasgarin/buscaminas",
+      urlDemo: "https://nicolasgarin.github.io/buscaminas/",
+    },
+
   ],
   techs: [
     {
