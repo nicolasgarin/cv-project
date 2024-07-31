@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineContactPage } from "react-icons/md";
 import { MdMailOutline } from "react-icons/md";
-import useUserOptions from "../context/UserOptionsContext";
+import { useUserOptions } from "../store/useUserOptionsStore";
 export default function Sidebar() {
   const { lang } = useUserOptions();
 
@@ -11,8 +11,22 @@ export default function Sidebar() {
     <div id="sidebar" className="fixed h-screen w-96">
       <div className="info-container flex flex-col justify-center h-screen">
         <div className="info mb-28">
-          <h1 className="text-5xl"><span className="dark:text-sky-300 text-orange-600 font-bold">N</span>icolás <span className="dark:text-sky-300 text-orange-600 font-bold">G</span>arín</h1>
-          <h2 className="text-2xl mt-2">Desarrollador <span className="dark:text-sky-300 text-orange-600 font-bold">Front-end</span></h2>
+          <h1 className="text-5xl">
+            <span className="dark:text-sky-300 text-orange-600 font-bold">
+              N
+            </span>
+            icolás{" "}
+            <span className="dark:text-sky-300 text-orange-600 font-bold">
+              G
+            </span>
+            arín
+          </h1>
+          <h2 className="text-2xl mt-2">
+            Desarrollador{" "}
+            <span className="dark:text-sky-300 text-orange-600 font-bold">
+              Front-end
+            </span>
+          </h2>
           <div className="flex gap-10 mt-5">
             <a
               href="https://github.com/nicolasgarin"

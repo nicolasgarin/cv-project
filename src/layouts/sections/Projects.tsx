@@ -1,12 +1,13 @@
 import { ScrollArea, ScrollBar } from "../../components/ui/scroll-area";
-import useData from "../../context/DataContext";
-import useUserOptions from "../../context/UserOptionsContext";
+import { useData } from "../../store/useDataStore";
+import { useUserOptions } from "../../store/useUserOptionsStore";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import { useState } from "react";
 import { FilterOptions } from "../../@types/data";
+import { HiArrowsUpDown } from "react-icons/hi2";
 
 export default function Projects() {
-  const { projects } = useData();
+  const { projects, recent, toggleProjectsOrder } = useData();
   const { lang } = useUserOptions();
   const [filter, setFilter] = useState<FilterOptions>("all");
 
@@ -33,7 +34,9 @@ export default function Projects() {
             React.
           </p>
         )}
-        <div className="flex justify-end gap-5 mb-5">
+        <div className="flex justify-between gap-5 mb-5">
+          <button onClick={toggleProjectsOrder} className="btn py-2 px-3 bg-slate-200 dark:bg-slate-800 border-2 border-orange-600 dark:border-sky-300 text-orange-600 dark:text-sky-300"><HiArrowsUpDown className="fill-orange-600 dark:fill-sky-300 h-6 w-6" size={20} />{recent ? lang == "es" ? "Más recientes" : "Recent projects" : lang == "es" ? "Más antiguos" : "Older projects"}</button>
+          <div className="flex gap-5">
           <div className="flex items-center gap-2">
             <input
               type="radio"
@@ -101,6 +104,7 @@ export default function Projects() {
             >
               {lang == "es" ? "Portafolios" : "Portfolios"}
             </label>
+          </div>
           </div>
         </div>
         <ScrollArea id="scrollarea" className="whitespace-nowrap">

@@ -1,4 +1,4 @@
-import useUserOptions from "../../context/UserOptionsContext";
+import {useUserOptions} from "../../store/useUserOptionsStore";
 import esLogo from "../../assets/es.svg";
 import enLogo from "../../assets/en.svg";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";

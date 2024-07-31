@@ -6,17 +6,17 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../../components/ui/tooltip";
-import useData from "../../context/DataContext";
-import useUserOptions from "../../context/UserOptionsContext";
+import { useData } from "../../store/useDataStore";
+import { useUserOptions } from "../../store/useUserOptionsStore";
 
 function toggleHoverEffect(elements: string[] | undefined) {
   if (elements === undefined) {
     return;
   } else {
-  for (var e in elements) {
-    console.log(document.getElementById(elements[e])!.classList);
-    document.getElementById(elements[e])!.classList.toggle("effect");
-  }
+    for (var e in elements) {
+      console.log(document.getElementById(elements[e])!.classList);
+      document.getElementById(elements[e])!.classList.toggle("effect");
+    }
   }
 }
 
@@ -39,12 +39,8 @@ function Tech({
           <div
             id={id}
             className="ic flex flex-col"
-            onMouseEnter={() =>
-               toggleHoverEffect(hoverEffect)
-            }
-            onMouseLeave={() =>
-              toggleHoverEffect(hoverEffect)
-            }
+            onMouseEnter={() => toggleHoverEffect(hoverEffect)}
+            onMouseLeave={() => toggleHoverEffect(hoverEffect)}
           >
             <ReactSVG
               src={window.location.origin + `/cv-project/logos/${imgSrc}.svg`}
@@ -53,8 +49,12 @@ function Tech({
           </div>
         </TooltipTrigger>
         <TooltipContent className="flex flex-col items-center bg-slate-200 dark:bg-slate-800">
-          <h4 className="font-bold text-orange-600 dark:text-sky-300">{name}</h4>
-          <p className="mb-3 max-w-[12rem]">{lang == "es" ? descrip : engDescrip}</p>
+          <h4 className="font-bold text-orange-600 dark:text-sky-300">
+            {name}
+          </h4>
+          <p className="mb-3 max-w-[12rem]">
+            {lang == "es" ? descrip : engDescrip}
+          </p>
           <div className="flex gap-4">
             <div
               className="radial-progress text-orange-600 dark:text-sky-300 "
@@ -121,7 +121,7 @@ export default function Techs() {
             ))}
           </div>
           <div className="nivel-3 flex justify-around">
-          {techs.slice(14, 20).map((tech) => (
+            {techs.slice(14, 20).map((tech) => (
               <Tech
                 key={tech.id}
                 id={tech.id}
@@ -136,7 +136,7 @@ export default function Techs() {
             ))}
           </div>
           <div className="nivel-4 flex justify-around">
-          {techs.slice(20, 25).map((tech) => (
+            {techs.slice(20, 25).map((tech) => (
               <Tech
                 key={tech.id}
                 id={tech.id}

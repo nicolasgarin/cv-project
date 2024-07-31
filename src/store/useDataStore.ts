@@ -4,10 +4,11 @@ import { IProyectos, ITechs } from "../@types/data";
 interface DataStore {
   projects: IProyectos;
   techs: ITechs;
+  recent: boolean;
   toggleProjectsOrder: () => void;
 }
 
-export const useDataStore = create<DataStore>()(() => ({
+export const useDataStore = create<DataStore>()((set) => ({
   projects: [
     {
       id: "1",
@@ -440,14 +441,16 @@ export const useDataStore = create<DataStore>()(() => ({
       hoverEffect: ["js"],
     },
   ],
+  recent: true,
   toggleProjectsOrder: () =>
     set((state) => ({
       projects: [...state.projects].reverse(),
+      recent: !state.recent,
     })),
 }));
 
 // Hook para usar en los componentes
 export const useData = () => {
-  const { projects, techs, toggleProjectsOrder } = useDataStore();
-  return { projects, techs, toggleProjectsOrder };
+  const { projects, techs, recent, toggleProjectsOrder } = useDataStore();
+  return { projects, techs, recent, toggleProjectsOrder };
 };

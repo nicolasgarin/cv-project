@@ -1,5 +1,5 @@
 import foto from "../../assets/foto.jpg";
-import useUserOptions from "../../context/UserOptionsContext";
+import {useUserOptions} from "../../store/useUserOptionsStore";
 
 export default function About() {
   const { lang } = useUserOptions();

@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import useUserOptions from "../../context/UserOptionsContext";
+import { useUserOptions } from "../../store/useUserOptionsStore";
 
 export default function NavList() {
   const { lang } = useUserOptions();

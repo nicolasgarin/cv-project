@@ -9,7 +9,7 @@ import {
 } from "./../../components/ui/carousel";
 import { FaGithub } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
-import useUserOptions from "../../context/UserOptionsContext";
+import {useUserOptions} from "../../store/useUserOptionsStore";
 
 export default function ProjectCard({ proyecto }: { proyecto: IProyecto }) {
   const { lang } = useUserOptions();
