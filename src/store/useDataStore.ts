@@ -22,7 +22,7 @@ export const useDataStore = create<DataStore>()(() => ({
         "Aplicación de Pokedex para buscar y analizar cada Pokemón, sus estadísticas, evoluciones y ataques. Creada con React, Typescript, Sass y React-Query.",
       descripcionLargaEng: "",
       tag: "WebApp",
-      urlRepo: "https://github.com/NicolasGarin/pokedex",
+      urlRepo: "https://github.com/nicolasgarin/pokedex",
       urlDemo: "https://nicolasgarin.github.io/pokedex/",
     },
     {
@@ -68,7 +68,7 @@ export const useDataStore = create<DataStore>()(() => ({
       descripcionLarga: "Pokedex",
       descripcionLargaEng: "",
       tag: "WebApp",
-      urlRepo: "https://github.com/NicolasGarin/pokedex",
+      urlRepo: "https://github.com/nicolasgarin/pokedex",
       urlDemo: "https://nicolasgarin.github.io/pokedex/",
     },
     {
@@ -123,8 +123,8 @@ export const useDataStore = create<DataStore>()(() => ({
         "Portfolio de UX moderna que muestra principales hitos y conocimientos adquiridos. Creado con React Typescript, utiliza Tailwind, Shadcn y daisy ui para los componentes y estilos, y Zustand para el manejo de la información.",
       descripcionLargaEng: "",
       tag: "Portfolio",
-      urlRepo: "https://github.com/nicolasgarin/minimalist-portfolio-json",
-      urlDemo: "",
+      urlRepo: "https://github.com/nicolasgarin/cv-project",
+      urlDemo: "https://nicolasgarin.github.io/cv-project/",
     },
     {
       id: "9",
@@ -154,8 +154,8 @@ export const useDataStore = create<DataStore>()(() => ({
       descripcionLarga: "",
       descripcionLargaEng: "",
       tag: "Landing Page",
-      urlRepo: "",
-      urlDemo: "",
+      urlRepo: "https://github.com/nicolasgarin/loopstudios",
+      urlDemo: "https://nicolasgarin.github.io/loopstudios/",
     },
     {
       id: "11",
@@ -169,8 +169,8 @@ export const useDataStore = create<DataStore>()(() => ({
       descripcionLarga: "",
       descripcionLargaEng: "",
       tag: "Landing Page",
-      urlRepo: "",
-      urlDemo: "",
+      urlRepo: "https://github.com/nicolasgarin/clipboard",
+      urlDemo: "https://nicolasgarin.github.io/clipboard/",
     },
   ],
   techs: [
