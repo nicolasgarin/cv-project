@@ -22,7 +22,7 @@ export default function Sidebar() {
                   : "Github account link"
               }
             >
-              <FaGithub className="h-6 w-6 fill-gray" />
+              <FaGithub className="h-6 w-6 fill-gray hover:fill-orange-600 dark:hover:fill-sky-300" />
             </a>
             <a
               href="https://www.linkedin.com/in/nicol%C3%A1s-gar%C3%ADn-a90b55202/"
@@ -32,7 +32,7 @@ export default function Sidebar() {
                   : "Linkedin account link"
               }
             >
-              <FaLinkedin className="h-6 w-6 fill-gray" />
+              <FaLinkedin className="h-6 w-6 fill-gray hover:fill-orange-600 dark:hover:fill-sky-300" />
             </a>
             <a
               href="#"
@@ -42,7 +42,7 @@ export default function Sidebar() {
                   : "Download Curriculum Vitae"
               }
             >
-              <MdOutlineContactPage className="h-6 w-6 fill-gray" />
+              <MdOutlineContactPage className="h-6 w-6 fill-gray hover:fill-orange-600 dark:hover:fill-sky-300" />
             </a>
             <a
               href="mailto:nicolas.garin11@gmail.com"
@@ -52,7 +52,7 @@ export default function Sidebar() {
                   : "Download Curriculum Vitae"
               }
             >
-              <MdMailOutline className="h-6 w-6 fill-gray" />
+              <MdMailOutline className="h-6 w-6 fill-gray hover:fill-orange-600 dark:hover:fill-sky-300" />
             </a>
           </div>
         </div>
