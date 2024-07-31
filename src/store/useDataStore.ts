@@ -1,4 +1,4 @@
-import { create } from 'zustand'
+import { create } from "zustand";
 import { IProyectos, ITechs } from "../@types/data";
 
 interface DataStore {
@@ -105,6 +105,29 @@ export const useDataStore = create<DataStore>()(() => ({
     },
     {
       id: "8",
+      nombre: "CV Project",
+      anio: 2024,
+      portada: "pokedex",
+      galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
+      tecnologias: [
+        "react",
+        "typescript",
+        "tailwind",
+        "daisyui",
+        "shadcn",
+        "zustand",
+      ],
+      descripcionCorta: "Portfolio con UX moderna",
+      descripcionCortaEng: "",
+      descripcionLarga:
+        "Portfolio de UX moderna que muestra principales hitos y conocimientos adquiridos. Creado con React Typescript, utiliza Tailwind, Shadcn y daisy ui para los componentes y estilos, y Zustand para el manejo de la información.",
+      descripcionLargaEng: "",
+      tag: "Portfolio",
+      urlRepo: "https://github.com/nicolasgarin/minimalist-portfolio-json",
+      urlDemo: "",
+    },
+    {
+      id: "9",
       nombre: "Minimalist Portfolio",
       anio: 2024,
       portada: "pokedex",
@@ -118,6 +141,36 @@ export const useDataStore = create<DataStore>()(() => ({
       tag: "Portfolio",
       urlRepo: "https://github.com/nicolasgarin/minimalist-portfolio-json",
       urlDemo: "https://nicolasgarin.github.io/minimalist-portfolio-json/",
+    },
+    {
+      id: "10",
+      nombre: "Loopstudios",
+      anio: 2024,
+      portada: "pokedex",
+      galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
+      tecnologias: ["astro", "typescript", "css", "tailwind"],
+      descripcionCorta: "",
+      descripcionCortaEng: "",
+      descripcionLarga: "",
+      descripcionLargaEng: "",
+      tag: "Landing Page",
+      urlRepo: "",
+      urlDemo: "",
+    },
+    {
+      id: "11",
+      nombre: "Clipboard",
+      anio: 2024,
+      portada: "pokedex",
+      galeria: ["imgPokedex", "imgPokedex2", "imgPokedex3"],
+      tecnologias: ["astro", "typescript", "css", "tailwind"],
+      descripcionCorta: "",
+      descripcionCortaEng: "",
+      descripcionLarga: "",
+      descripcionLargaEng: "",
+      tag: "Landing Page",
+      urlRepo: "",
+      urlDemo: "",
     },
   ],
   techs: [
@@ -371,13 +424,14 @@ export const useDataStore = create<DataStore>()(() => ({
       hoverEffect: ["js"],
     },
   ],
-  toggleProjectsOrder: () => set((state) => ({ 
-    projects: [...state.projects].reverse() 
-  })),
-}))
+  toggleProjectsOrder: () =>
+    set((state) => ({
+      projects: [...state.projects].reverse(),
+    })),
+}));
 
 // Hook para usar en los componentes
 export const useData = () => {
-  const { projects, techs, toggleProjectsOrder } = useDataStore()
-  return { projects, techs, toggleProjectsOrder }
-}
+  const { projects, techs, toggleProjectsOrder } = useDataStore();
+  return { projects, techs, toggleProjectsOrder };
+};
