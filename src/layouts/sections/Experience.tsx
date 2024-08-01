@@ -1,10 +1,13 @@
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import { useUserOptions } from "../../store/useUserOptionsStore";
 
 export default function Experience() {
+  const { lang } = useUserOptions();
+
   return (
     <section id="experience">
       <h2 className="text-center text-3xl text-orange-600 dark:text-sky-300 font-bold">
-        Experiencia
+        {lang == "es" ? "Experiencia" : "Experience"}
       </h2>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical my-12">
         <li>
@@ -29,7 +32,17 @@ export default function Experience() {
             </time>
             <div className="text-lg font-black"></div>
             <ul>
-              <li>Feb - <a target="_blank" href="./certifications/meta_frontend_developer.pdf" className="text-orange-600 dark:text-sky-300 hover:underline">Meta Front End Developer Certification <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-orange-600 dark:fill-sky-300" /></a></li>
+              <li>
+                Feb -{" "}
+                <a
+                  target="_blank"
+                  href="./certifications/meta_frontend_developer.pdf"
+                  className="text-orange-600 dark:text-sky-300 hover:underline"
+                >
+                  Meta Front End Developer Certification{" "}
+                  <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-orange-600 dark:fill-sky-300" />
+                </a>
+              </li>
               <li>May - Project Tracker App</li>
               <li>Jul - Desarrollador Front End Semi Senior</li>
             </ul>
@@ -59,7 +72,17 @@ export default function Experience() {
             </time>
             <ul>
               <li>Mar - Flashcard App</li>
-              <li>Abr - <a target="_blank" href="./certifications/liferay_cloud.png" className="text-orange-600 dark:text-sky-300 hover:underline inline-flex items-center">Liferay Cloud Certification - Sao Paulo, Brasil <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-orange-600 dark:fill-sky-300" /> </a></li>
+              <li>
+                Abr -{" "}
+                <a
+                  target="_blank"
+                  href="./certifications/liferay_cloud.png"
+                  className="text-orange-600 dark:text-sky-300 hover:underline inline-flex items-center"
+                >
+                  Liferay Cloud Certification - Sao Paulo, Brasil{" "}
+                  <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-orange-600 dark:fill-sky-300" />{" "}
+                </a>
+              </li>
               <li>Oct - Proyectos Landing de Tailwind y Astro</li>
             </ul>
           </div>
@@ -145,11 +168,18 @@ export default function Experience() {
               2021
             </time>
             <div className="text-lg text-orange-600 dark:text-sky-300 font-bold">
-              <a href="./certifications/jap.pdf" target="_blank" className="text-orange-600 dark:text-sky-300 hover:underline">Jóvenes a programar</a>
+              <a
+                href="./certifications/jap.pdf"
+                target="_blank"
+                className="text-orange-600 dark:text-sky-300 hover:underline"
+              >
+                Jóvenes a programar
+              </a>
             </div>
-            Curso introductorio a la programación <br/>Frontend: HTML, CSS,
-            JavaScript, Bootstrap, Ruby, estructuras de datos y gestión de
-            versiones (GitHub). <br/>Backend: Node Js, protocolos HTTP.
+            Curso introductorio a la programación <br />
+            Frontend: HTML, CSS, JavaScript, Bootstrap, Ruby, estructuras de
+            datos y gestión de versiones (GitHub). <br />
+            Backend: Node Js, protocolos HTTP.
           </div>
           <hr />
         </li>
