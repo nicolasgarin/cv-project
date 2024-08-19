@@ -114,7 +114,6 @@ export default function Experience() {
               <li>Ene - Pokedex React App</li>
               <li>Feb - Junior Developer en Isa Software</li>
               <li>Jun - Entrada a proyecto Portal Antel</li>
-              <li>Oct - Hangman App</li>
             </ul>
           </div>
           <hr />

@@ -42,15 +42,13 @@ export default function About() {
           )}
           {lang == "es" ? (
             <p>
-              Tengo experiencia trabajando tanto en frontend como en backend, y
-              amplio conocimiento en los conceptos y aplicación de metodologías
-              ágiles, accesibilidad y diseño responsive que las web modernas necesitan.
+               Mi mayor valor es la capacidad de adaptación y aprendizaje de cualquier tecnología que sea necesaria
+               para potenciar mi desarrollo.
             </p>
           ) : (
             <p>
-              I have experiencia trabajando tanto en frontend como en backend, y
-              amplio conocimiento en los conceptos y aplicación de metodologías
-              ágiles, accesibilidad y diseño responsive.
+              My greatest value is the adaptation and learning of any technology
+              that is necessary to power my growth.
             </p>
           )}
         </div>

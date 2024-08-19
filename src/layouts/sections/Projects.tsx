@@ -14,24 +14,18 @@ export default function Projects() {
   return (
     <section id="projects" className="flex items-center">
       <div className="flex flex-col w-full">
-        <h2 className="text-center text-3xl text-orange-600 dark:text-sky-300 font-bold mb-10">
+        <h2 className="text-center text-3xl text-orange-600 dark:text-sky-300 font-bold mb-4">
           {lang == "es" ? "Proyectos" : "Projects"}
         </h2>
         {lang == "es" ? (
-          <p className="mb-10">
-            Paralelamente a mi crecimiento y desarrollo profesional de manera
-            privada, siempre he trabajado en aprender y adquirir conocimiento
-            sobre nuevas tecnologías y frameworks, enfocándome en generar
-            experiencia en la herramienta que más me gusta y anhelo trabajar de
-            manera profesional, React.
+          <p className="mb-10 text-center">
+            Paralelamente a mi crecimiento y desarrollo profesional, siempre me enfoqué en aprender y adquirir conocimiento
+            sobre nuevas tecnologías y tendencias, siendo estos algunos de los proyectos que realicé.
           </p>
         ) : (
-          <p className="mb-10">
-            Parallel to my professional growth and development, I have worked in
-            the private sector, always learning and acquiring knowledge about
-            new technologies and frameworks, focusing on generating experience
-            in the tool that I most enjoy and dream of working professionally,
-            React.
+          <p className="mb-10 text-center">
+            In addition to my professional growth, I always strive to learn and acquire knowledge about new
+            technologies and trends, which are some of the projects I have done.
           </p>
         )}
         <div className="flex justify-between gap-5 mb-5">

@@ -82,15 +82,15 @@ export default function Techs() {
   const { lang } = useUserOptions();
   return (
     <section id="techs" className="flex items-center">
-      <div className="flex flex-col justify-center w-full">
-        <h2 className="text-center text-3xl text-orange-600 dark:text-sky-300 font-bold mb-10">
+      <div className="flex flex-col justify-center w-full mb-24">
+        <h2 className="text-center text-3xl text-orange-600 dark:text-sky-300 font-bold mb-4">
           {lang == "es" ? "Tecnologías" : "Technologies"}
         </h2>
-        <p className="mb-10">
+        <p className="mb-10 text-center">
           {
             lang == "es"
-              ? "Diferentes tecnologías, frameworks y librerías que he utilizado o aprendido"
-              : "Different technologies, frameworks and libraries that I have used or learned"
+              ? "Algunas de las tecnologías, frameworks y librerías que he utilizado o aprendido"
+              : "Some of the technologies, frameworks and libraries that I have used or learned"
           }
         </p>
         <div className="flex flex-col gap-10">
