@@ -16,7 +16,7 @@ export type IProyecto = {
 
 export type IProyectos = IProyecto[]
 
-export type FilterOptions = "all" | "WebApp" | "Landing Page" | "Portfolio";
+export type FilterOptions = "all" | "WebApp" | "Landing Page" | "Portfolio" | "MobileApp";
 
 export type ITech = {
   id: string;

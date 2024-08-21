@@ -114,6 +114,23 @@ export default function Projects() {
                 {lang == "es" ? "Portafolios" : "Portfolios"}
               </label>
             </div>
+            <div className="flex items-center gap-2">
+              <input
+                type="radio"
+                className="radio radio-warning dark:radio-info"
+                id="mobileapp"
+                name="filter"
+                value="MobileApp"
+                checked={filter === "MobileApp"}
+                onChange={() => setFilter("MobileApp")}
+              />
+              <label
+                htmlFor="portfolio"
+                className="hover:cursor-pointer hover:text-orange-600 hover:dark:text-sky-300"
+              >
+                {lang == "es" ? "Portafolios" : "Portfolios"}
+              </label>
+            </div>
           </div>
         </div>
         <ScrollArea id="scrollarea" className="whitespace-nowrap">
@@ -137,6 +154,12 @@ export default function Projects() {
             {filter === "Portfolio" &&
               projects
                 .filter((proyecto) => proyecto.tag === "Portfolio")
+                .map((proyecto) => (
+                  <ProjectCard key={proyecto.id} proyecto={proyecto} />
+                ))}
+                {filter === "MobileApp" &&
+              projects
+                .filter((proyecto) => proyecto.tag === "MobileApp")
                 .map((proyecto) => (
                   <ProjectCard key={proyecto.id} proyecto={proyecto} />
                 ))}
