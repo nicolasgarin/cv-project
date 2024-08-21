@@ -125,10 +125,10 @@ export default function Projects() {
                 onChange={() => setFilter("MobileApp")}
               />
               <label
-                htmlFor="portfolio"
+                htmlFor="mobileapp"
                 className="hover:cursor-pointer hover:text-orange-600 hover:dark:text-sky-300"
               >
-                {lang == "es" ? "Portafolios" : "Portfolios"}
+                {lang == "es" ? "Aplicaciones Móviles" : "Mobile Apps"}
               </label>
             </div>
           </div>
