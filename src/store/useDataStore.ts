@@ -20,8 +20,8 @@ export const useDataStore = create<DataStore>()((set) => ({
       descripcionCorta: "Pokedex creada con React",
       descripcionCortaEng: "First React project",
       descripcionLarga:
-        "Aplicación de Pokedex para buscar y analizar cada Pokemón, sus estadísticas, evoluciones y ataques. Creada con React, Typescript, Sass y React-Query.",
-      descripcionLargaEng: "",
+        "Primer proyecto utilizando React. Aplicación de Pokedex para buscar y analizar cada Pokemón. Creada con React, Sass, Bootstrap y React-Query.",
+      descripcionLargaEng: "First React project. Pokedex app created to search and analize every pokemon. Created with React, Bootstrap, Sass and React-Query.",
       tag: "WebApp",
       urlRepo: "https://github.com/nicolasgarin/pokedex",
       urlDemo: "https://nicolasgarin.github.io/pokedex/",

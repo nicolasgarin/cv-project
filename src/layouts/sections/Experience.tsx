@@ -79,7 +79,7 @@ export default function Experience() {
                   href="./certifications/liferay_cloud.png"
                   className="text-orange-600 dark:text-sky-300 hover:underline inline-flex items-center"
                 >
-                  Liferay Cloud Certification - Sao Paulo, Brasil{" "}
+                  Liferay Cloud Certification - Sao Paulo, Brasil
                   <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-orange-600 dark:fill-sky-300" />{" "}
                 </a>
               </li>
