@@ -84,7 +84,7 @@ export const useDataStore = create<DataStore>()((set) => ({
       anio: 2024,
       portada: "project-tracker-lp-1",
       galeria: ["project-tracker-lp-1", "project-tracker-lp-2", "project-tracker-lp-3", "project-tracker-lp-4"],
-      tecnologias: ["html", "js", "sass", "tailwind"],
+      tecnologias: ["html-5", "javascript", "sass", "tailwind"],
       descripcionCorta: "Landing page para Project Tracker",
       descripcionCortaEng: "Project Tracker Landing Page",
       descripcionLarga:
@@ -100,7 +100,7 @@ export const useDataStore = create<DataStore>()((set) => ({
       anio: 2024,
       portada: "project-tracker-1",
       galeria: ["project-tracker-1", "project-tracker-2", "project-tracker-3", "project-tracker-4", "project-tracker-5", "project-tracker-6", "project-tracker-7"],
-      tecnologias: ["react", "ts", "sass", "bootstrap"],
+      tecnologias: ["react", "typescript", "sass", "bootstrap"],
       descripcionCorta: "Aplicación de seguimiento de proyectos",
       descripcionCortaEng: "Project Tracker",
       descripcionLarga:
