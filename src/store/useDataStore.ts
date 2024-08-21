@@ -125,8 +125,23 @@ export const useDataStore = create<DataStore>()((set) => ({
       urlRepo: "https://github.com/nicolasgarin/loopstudios",
       urlDemo: "https://nicolasgarin.github.io/loopstudios/",
     },
-    {
+      {
       id: "8",
+      nombre: "Shortly",
+      anio: 2023,
+      portada: "shortly",
+      galeria: ["loopstudios", "loopstudios-2"],
+      tecnologias: ["astro", "typescript", "css", "tailwind"],
+      descripcionCorta: "Landing page para empresa ficticia",
+      descripcionCortaEng: "Landing page for fictitious company",
+      descripcionLarga: "Landing page de sitio con servicio de acortamiento de enlaces realizada con Astro y Tailwind.",
+      descripcionLargaEng: "Landing page for a link shortening site made with Astro and Tailwind.",
+      tag: "Landing Page",
+      urlRepo: "https://github.com/nicolasgarin/shortly",
+      urlDemo: "https://nicolasgarin.github.io/shortly/",
+    },
+    {
+      id: "9",
       nombre: "Clipboard",
       anio: 2023,
       portada: "clipboard",
@@ -141,7 +156,7 @@ export const useDataStore = create<DataStore>()((set) => ({
       urlDemo: "https://nicolasgarin.github.io/clipboard/",
     },
     {
-      id: "9",
+      id: "10",
       nombre: "Flashcard App",
       anio: 2023,
       portada: "flashcard-game",
@@ -156,7 +171,7 @@ export const useDataStore = create<DataStore>()((set) => ({
       urlRepo: "https://github.com/nicolasgarin/flashcard-app",
     },
     {
-      id: "10",
+      id: "11",
       nombre: "Jap Ecommerce",
       anio: 2021,
       portada: "proyecto-jap-1",
@@ -172,7 +187,7 @@ export const useDataStore = create<DataStore>()((set) => ({
       urlDemo: "https://nicolasgarin.github.io/Proyecto-JaP/",
     },
     {
-      id: "11",
+      id: "12",
       nombre: "Pokedex",
       anio: 2021,
       portada: "pokedex",
