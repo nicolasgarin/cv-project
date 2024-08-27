@@ -15,7 +15,7 @@ export const useDataStore = create<DataStore>()((set) => ({
       nombre: "Mis Notas",
       anio: 2024,
       portada: "misnotas",
-      galeria: ["misnotas", "misnotas-2", "misnotas-3", "misnotas-4", "misnotas-5"],
+      galeria: ["mis-notas", "mis-notas-2", "mis-notas-3", "mis-notas-4", "mis-notas-5"],
       tecnologias: ["react"],
       descripcionCorta: "Aplicación móvil realizada con IA",
       descripcionCortaEng: "Mobile app made with AI",
