@@ -34,10 +34,10 @@ export default function About() {
             </p>
           ) : (
             <p className="mb-4">
-              Todey de hoy llevo más de 2 años trabajando profesionalmente como
-              desarrollador frontend y creando paralelamente proyectos
-              personales para aprender nuevas tecnologías y tendencias,
-              especilalizandome actualmente en el ecosistema de React.
+              At the date, I have been working professionally as a
+              frontend developer and parallel creating personal projects
+              to learn new technologies and trends,currently specializing
+              myself in the React ecosystem.
             </p>
           )}
           {lang == "es" ? (
