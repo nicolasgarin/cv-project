@@ -42,14 +42,12 @@ export default function About() {
           )}
           {lang == "es" ? (
             <p>
-               Mi mayor valor es la capacidad de adaptación y aprendizaje de cualquier tecnología que sea necesaria
-               para potenciar mi desarrollo.
+               Mis mayores capacidades son la facilidad de adaptación y aprendizaje de cualquier tecnología que sea necesaria para potenciar mi desarrollo, así como el desenvolvimiento en equipos de trabajo colavorativos
             </p>
           ) : (
             <p>
-              My greatest value is the adaptation and learning of any technology
-              that is necessary to power my growth.
-            </p>
+My greatest capabilities are the ease of adaptation and learning of any technology that is necessary to enhance my development, as well as development in collaborative work teams.
+</p>
           )}
         </div>
         <img className="rounded-full h-64" src={foto} />
