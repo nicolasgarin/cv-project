@@ -1,5 +1,5 @@
 import foto from "../../assets/foto.jpg";
-import {useUserOptions} from "../../store/useUserOptionsStore";
+import { useUserOptions } from "../../store/useUserOptionsStore";
 
 export default function About() {
   const { lang } = useUserOptions();
@@ -28,26 +28,31 @@ export default function About() {
           {lang == "es" ? (
             <p className="mb-4">
               Al día de hoy llevo más de 2 años trabajando profesionalmente como
-              desarrollador frontend y creando paralelamente proyectos personales
-              para aprender nuevas tecnologías y tendencias, especilalizandome
-              actualmente en el ecosistema de React.
+              desarrollador frontend y creando paralelamente proyectos
+              personales para aprender nuevas tecnologías y tendencias,
+              especilalizandome actualmente en el ecosistema de React.
             </p>
           ) : (
             <p className="mb-4">
-              At the date, I have been working professionally as a
-              frontend developer and parallel creating personal projects
-              to learn new technologies and trends,currently specializing
-              myself in the React ecosystem.
+              At the date, I have been working professionally as a frontend
+              developer and in parallel creating personal projects to learn new
+              technologies and trends,currently specializing myself in the React
+              ecosystem.
             </p>
           )}
           {lang == "es" ? (
             <p>
-               Mis mayores capacidades son la facilidad de adaptación y aprendizaje de cualquier tecnología que sea necesaria para potenciar mi desarrollo, así como el desenvolvimiento en equipos de trabajo colavorativos
+              Mis mayores capacidades son la facilidad de adaptación y
+              aprendizaje de cualquier tecnología que sea necesaria para
+              potenciar mi desarrollo, así como el desenvolvimiento en equipos
+              de trabajo colavorativos
             </p>
           ) : (
             <p>
-My greatest capabilities are the ease of adaptation and learning of any technology that is necessary to enhance my development, as well as development in collaborative work teams.
-</p>
+              My greatest capabilities are the ease of adaptation and learning
+              of any technology that is necessary to enhance my development, as
+              well as development in collaborative work teams.
+            </p>
           )}
         </div>
         <img className="rounded-full h-64" src={foto} />
