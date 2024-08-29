@@ -32,8 +32,10 @@ export default function Experience() {
             </time>
             <div className="text-lg font-black"></div>
             <ul>
+              <li>Jul - Desarrollador Front End Semi Senior</li>
+              <li>May - Project Tracker App</li>
               <li>
-                Feb -{" "}
+                Feb -
                 <a
                   target="_blank"
                   href="./certifications/meta_frontend_developer.pdf"
@@ -43,8 +45,6 @@ export default function Experience() {
                   <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-orange-600 dark:fill-sky-300" />
                 </a>
               </li>
-              <li>May - Project Tracker App</li>
-              <li>Jul - Desarrollador Front End Semi Senior</li>
             </ul>
           </div>
           <hr />
@@ -71,19 +71,19 @@ export default function Experience() {
               2023
             </time>
             <ul>
-              <li>Mar - Flashcard App</li>
-              <li>
-                Abr -{" "}
-                <a
-                  target="_blank"
-                  href="./certifications/liferay_cloud.png"
-                  className="text-orange-600 dark:text-sky-300 hover:underline inline-flex items-center"
-                >
-                  Liferay Cloud Certification - Sao Paulo, Brasil
-                  <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-orange-600 dark:fill-sky-300" />{" "}
-                </a>
-              </li>
               <li>Oct - Proyectos Landing de Tailwind y Astro</li>
+              <li>
+                  Abr -
+                  <a
+                    target="_blank"
+                    href="./certifications/liferay_cloud.png"
+                    className="text-orange-600 dark:text-sky-300 hover:underline inline-flex items-center"
+                  >
+                    Liferay Cloud Certification - Sao Paulo, Brasil
+                    <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-orange-600 dark:fill-sky-300" />
+                  </a>
+                </li>
+              <li>Mar - Flashcard App</li>
             </ul>
           </div>
           <hr />
@@ -111,9 +111,9 @@ export default function Experience() {
             </time>
             <div className="text-lg font-black"></div>
             <ul>
-              <li>Ene - Pokedex React App</li>
-              <li>Feb - Junior Developer en Isa Software</li>
               <li>Jun - Entrada a proyecto Portal Antel</li>
+              <li>Feb - Junior Developer en Isa Software</li>
+              <li>Ene - Pokedex React App</li>
             </ul>
           </div>
           <hr />
@@ -173,6 +173,7 @@ export default function Experience() {
                 className="text-orange-600 dark:text-sky-300 hover:underline"
               >
                 Jóvenes a programar
+                <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-orange-600 dark:fill-sky-300" />
               </a>
             </div>
             Curso introductorio a la programación <br />
@@ -204,14 +205,14 @@ export default function Experience() {
               2009 - 2022
             </time>
             <ul>
-              <li>2009 - 2011 Cadete - Nodum Software</li>
-              <li>
-                2012 - 2014 Supervisor sector cajas - Macromercado Mayorista
-              </li>
-              <li>2014 - 2016 Operador en casa cambiaria - Global Exchange</li>
               <li>
                 2018 - 2022 Subencargado en casa cambiaria - Avenida Servicios
                 Financieros
+              </li>
+              <li>2009 - 2011 Cadete - Nodum Software</li>
+              <li>2014 - 2016 Operador en casa cambiaria - Global Exchange</li>
+              <li>
+                2012 - 2014 Supervisor sector cajas - Macromercado Mayorista
               </li>
             </ul>
           </div>
