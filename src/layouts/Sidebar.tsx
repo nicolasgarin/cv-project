@@ -22,17 +22,9 @@ export default function Sidebar() {
             arín
           </h1>
           <h2 className="text-2xl mt-2">
-            {
-                lang == "es"
-                  ? "Desarrollador"
-                  : "Full Stack"
-              }
-            <span className="dark:text-sky-300 text-orange-600 font-bold">
-              {
-                lang == "es"
-                  ? "Full Stack"
-                  : "Developer"
-              }
+            {lang == "es" ? "Desarrollador " : "Full Stack "}
+            <span className="dark:text-sky-300 text-orange-600 font-extrabold">
+              {lang == "es" ? "Full Stack" : "Developer"}
             </span>
           </h2>
           <div className="flex gap-10 mt-5">

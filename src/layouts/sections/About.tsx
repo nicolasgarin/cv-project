@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section id="about" className="flex items-center justify-center">
       <div className="flex gap-10 items-center">
-        <div className="text flex flex-col gap-4 max-w-[470px]">
+        <div className="text text-balance flex flex-col gap-4 max-w-[470px]">
           {lang == "es" ? (
             <p className="mb-4">
               Tras 10 años trabajando en empleos donde desarrollé fuertes
@@ -18,11 +18,10 @@ export default function About() {
             </p>
           ) : (
             <p className="mb-4">
-              After 10 years trabajando en empleos donde desarrollé fuertes
-              sentidos de responsabilidad, trabajo en equipo y adaptación
-              constante, en 2020 encontré el campo donde mezclar estas
-              habilidades con mi pasión por el aprendizaje, la resolución
-              creativa de problemas y los idiomas.
+              After 10 years working in jobs where I developed a strong sense of
+              responsibility, teamwork and constant adaptation, in 2020 I found
+              the field where I could mix these skills with my passion for
+              learning and creative problem-solving.
             </p>
           )}
           {lang == "es" ? (

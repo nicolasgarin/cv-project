@@ -31,8 +31,12 @@ export default function Experience() {
               2024
             </time>
             <div className="text-lg font-black"></div>
-            <ul>
-              <li>Jul - Desarrollador Front End Semi Senior</li>
+            <ul className="text-balance">
+              <li>
+                {lang == "es"
+                  ? "Jul - Desarrollador Semi Senior"
+                  : "Jul - Semi Senior Developer"}
+              </li>
               <li>May - Project Tracker App</li>
               <li>
                 Feb -
@@ -70,19 +74,23 @@ export default function Experience() {
             <time className="font-mono italic text-orange-600 dark:text-sky-300 font-bold">
               2023
             </time>
-            <ul>
-              <li>Oct - Proyectos Landing de Tailwind y Astro</li>
+            <ul className="text-balance">
               <li>
-                  Abr -
-                  <a
-                    target="_blank"
-                    href="./certifications/liferay_cloud.png"
-                    className="text-orange-600 dark:text-sky-300 hover:underline inline-flex items-center"
-                  >
-                    Liferay Cloud Certification - Sao Paulo, Brasil
-                    <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-orange-600 dark:fill-sky-300" />
-                  </a>
-                </li>
+                {lang == "es"
+                  ? "Oct - Proyectos Landing de Tailwind y Astro"
+                  : "Oct - Tailwind and Astro Projects"}
+              </li>
+              <li>
+                {lang == "es" ? "Abr" : "Apr"} -
+                <a
+                  target="_blank"
+                  href="./certifications/liferay_cloud.png"
+                  className="text-orange-600 dark:text-sky-300 hover:underline inline-flex items-center"
+                >
+                  Liferay Cloud Certification - Sao Paulo, Brasil
+                  <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-orange-600 dark:fill-sky-300" />
+                </a>
+              </li>
               <li>Mar - Flashcard App</li>
             </ul>
           </div>
@@ -109,10 +117,18 @@ export default function Experience() {
             <time className="font-mono italic text-orange-600 dark:text-sky-300 font-bold">
               2022
             </time>
-            <div className="text-lg font-black"></div>
-            <ul>
-              <li>Jun - Entrada a proyecto Portal Antel</li>
-              <li>Feb - Junior Developer en Isa Software</li>
+            <ul className="text-balance">
+              <li className="text-lg text-orange-600 dark:text-sky-300 font-bold">
+                {lang == "es"
+                  ? "Jun - Entrada a proyecto de cliente"
+                  : "Jun - Client Project Entry"}
+              </li>
+              <li className="mb-2">
+                {lang == "es"
+                  ? "Proyecto de migración y mantenimiento de portal corporativo de importante empresa de telecomunicaciones en Uruguay"
+                  : "Corporate portal migration and maintenance project for important telecommunications company in Uruguay"}
+              </li>
+              <li>Feb - { lang == "es" ? "Desarrollador Junior en Isa Software" : "Junior Developer at Isa Software"}</li>
               <li>Ene - Pokedex React App</li>
             </ul>
           </div>
@@ -137,10 +153,10 @@ export default function Experience() {
           </div>
           <div className="timeline-end mb-5">
             <time className="font-mono italic text-orange-600 dark:text-sky-300 font-bold">
-              2022 - Actualidad
+              2022 - { lang == "es" ? "Actualidad" : "Present"}
             </time>
             <div className="text-lg text-orange-600 dark:text-sky-300 font-bold">
-              Frontend Developer - Isa Software
+              { lang == "es" ? "Desarrollador Frontend" : "Frontend Developer"} - Isa Software
             </div>
           </div>
           <hr />
@@ -176,10 +192,10 @@ export default function Experience() {
                 <BsBoxArrowUpRight className="inline h-4 w-4 ml-2 mb-1 fill-orange-600 dark:fill-sky-300" />
               </a>
             </div>
-            Curso introductorio a la programación <br />
-            Frontend: HTML, CSS, JavaScript, Bootstrap, Ruby, estructuras de
-            datos y gestión de versiones (GitHub). <br />
-            Backend: Node Js, protocolos HTTP.
+            <div className="text-balance">
+              { lang == "es" ? "Curso introductorio a la programación. Frontend: HTML, CSS, JavaScript, Bootstrap, Ruby, estructuras de datos y gestión de versiones (GitHub). Backend: Node Js, protocolos HTTP."
+              : "Introduction to programming. Frontend: HTML, CSS, JavaScript, Bootstrap, Ruby, data structures and version control (GitHub). Backend: Node Js, HTTP protocols."}
+            </div>
           </div>
           <hr />
         </li>
@@ -204,16 +220,16 @@ export default function Experience() {
             <time className="font-mono italic text-orange-600 dark:text-sky-300 font-bold">
               2009 - 2022
             </time>
-            <ul>
+            <ul className="text-balance">
               <li>
-                2018 - 2022 Subencargado en casa cambiaria - Avenida Servicios
+                2018 - 2022 { lang == "es" ? "Subencargado en casa cambiaria" : "Office supervisor in exchange house"} - Avenida Servicios
                 Financieros
               </li>
-              <li>2009 - 2011 Cadete - Nodum Software</li>
-              <li>2014 - 2016 Operador en casa cambiaria - Global Exchange</li>
+              <li>2014 - 2016 { lang == "es" ? "Operador en casa cambiaria" : "Office operator in exchange house"} - Global Exchange</li>
               <li>
-                2012 - 2014 Supervisor sector cajas - Macromercado Mayorista
+                2012 - 2014 {lang == "es" ? "Supervisor sector cajas" : "Cashier supervisor"} - Macromercado Mayorista
               </li>
+              <li>2009 - 2011 Cadete - Nodum Software</li>
             </ul>
           </div>
           <hr />
