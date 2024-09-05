@@ -22,9 +22,9 @@ export default function Sidebar() {
             arín
           </h1>
           <h2 className="text-2xl mt-2">
-            {lang == "es" ? "Desarrollador " : "Full Stack "}
+            {lang == "es" ? "Desarrollador " : "Frontend "}
             <span className="dark:text-sky-300 text-orange-600 font-extrabold">
-              {lang == "es" ? "Full Stack" : "Developer"}
+              {lang == "es" ? "Frontend" : "Developer"}
             </span>
           </h2>
           <div className="flex gap-10 mt-5">
