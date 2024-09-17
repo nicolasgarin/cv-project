@@ -8,22 +8,25 @@ export default function Sidebar() {
   const { lang } = useUserOptions();
 
   return (
-    <div id="sidebar" className="fixed h-screen w-96">
-      <div className="info-container flex flex-col justify-center h-screen">
-        <div className="info mb-28">
-          <h1 className="text-5xl">
-            <span className="dark:text-sky-300 text-orange-600 font-bold">
+    <div
+      id="sidebar"
+      className="md:fixed w-fulll md:w-96 h-[23rem] md:h-screen"
+    >
+      <div className="info-container flex flex-col pt-12 md:pt-0 md:justify-center h-[23rem] md:h-screen">
+        <div className="info mb-10 md:mb-28">
+          <h1 className="text-3xl md:text-5xl">
+            <span className="text-3xl md:text-5xl dark:text-sky-300 text-orange-600 font-bold">
               N
             </span>
             icolás{" "}
-            <span className="dark:text-sky-300 text-orange-600 font-bold">
+            <span className="text-3xl md:text-5xl dark:text-sky-300 text-orange-600 font-bold">
               G
             </span>
             arín
           </h1>
-          <h2 className="text-2xl mt-2">
+          <h2 className="text-xl md:text-2xl mt-2">
             {lang == "es" ? "Desarrollador " : "Frontend "}
-            <span className="dark:text-sky-300 text-orange-600 font-extrabold">
+            <span className="text-xl md:text-2xl dark:text-sky-300 text-orange-600 font-extrabold">
               {lang == "es" ? "Frontend" : "Developer"}
             </span>
           </h2>

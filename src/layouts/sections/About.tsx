@@ -6,8 +6,8 @@ export default function About() {
 
   return (
     <section id="about" className="flex items-center justify-center">
-      <div className="flex gap-10 items-center">
-        <div className="text text-balance flex flex-col gap-4 max-w-[470px]">
+      <div className="flex flex-col-reverse md:flex-row gap-10 items-center">
+        <div className="text text-balance flex flex-col md:gap-4 max-w-[470px]">
           {lang == "es" ? (
             <p className="mb-4">
               Tras 10 años trabajando en empleos donde desarrollé fuertes
@@ -54,7 +54,7 @@ export default function About() {
             </p>
           )}
         </div>
-        <img className="rounded-full h-64" src={foto} />
+        <img className="rounded-full h-44 md:h-64" src={foto} />
       </div>
     </section>
   );

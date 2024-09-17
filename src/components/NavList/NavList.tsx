@@ -5,7 +5,7 @@ export default function NavList() {
   const { lang } = useUserOptions();
 
   return (
-    <div className="nav-bar flex flex-col gap-3 pr-20">
+    <div className="nav-bar flex flex-col gap-3 md:pr-20">
       <Link
         className="nav-link hover:cursor-pointer"
         activeClass="active"

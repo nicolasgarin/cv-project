@@ -12,7 +12,7 @@ function App() {
       <div className="container">
       <UserOptions />
       <Sidebar />
-      <div className="main ml-96">
+      <div className="main md:ml-96">
         <About />
         <Experience />
         <Projects />
