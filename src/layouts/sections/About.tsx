@@ -6,8 +6,8 @@ export default function About() {
 
   return (
     <section id="about" className="flex items-center justify-center">
-      <div className="flex flex-col-reverse md:flex-row gap-10 items-center">
-        <div className="text text-balance flex flex-col md:gap-4 max-w-[470px]">
+      <div className="flex flex-col-reverse lg:flex-row gap-10 items-center">
+        <div className="text md:text-balance flex flex-col md:gap-4 max-w-[470px]">
           {lang == "es" ? (
             <p className="mb-4">
               Tras 10 años trabajando en empleos donde desarrollé fuertes

@@ -12,7 +12,7 @@ export default function Sidebar() {
       id="sidebar"
       className="md:fixed w-fulll md:w-96 h-[23rem] md:h-screen"
     >
-      <div className="info-container flex flex-col pt-12 md:pt-0 md:justify-center h-[23rem] md:h-screen">
+      <div className="info-container flex flex-col pt-6 md:pt-0 items-center md:items-start md:justify-center h-[23rem] md:h-screen">
         <div className="info mb-10 md:mb-28">
           <h1 className="text-3xl md:text-5xl">
             <span className="text-3xl md:text-5xl dark:text-sky-300 text-orange-600 font-bold">

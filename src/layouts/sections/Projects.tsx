@@ -28,7 +28,7 @@ export default function Projects() {
             technologies and trends, which are some of the projects I have done.
           </p>
         )}
-        <div className="flex justify-between gap-5 mb-5">
+        <div className="flex flex-wrap justify-center md:justify-between lg:flex-nowrap gap-5 mb-5">
           <button
             onClick={toggleProjectsOrder}
             className="btn py-2 px-3 bg-slate-200 dark:bg-slate-800 border-2 border-orange-600 dark:border-sky-300 text-orange-600 dark:text-sky-300"
@@ -45,7 +45,7 @@ export default function Projects() {
               ? "Más antiguos"
               : "Older projects"}
           </button>
-          <div className="flex gap-5">
+          <div className="flex flex-wrap justify-center md:justify-start lg:flex-nowrap gap-5">
             <div className="flex items-center gap-2">
               <input
                 type="radio"

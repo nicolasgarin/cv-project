@@ -38,7 +38,7 @@ function Tech({
         <TooltipTrigger>
           <div
             id={id}
-            className="ic flex flex-col"
+            className="ic flex flex-col mb-6 md:mb-0"
             onMouseEnter={() => toggleHoverEffect(hoverEffect)}
             onMouseLeave={() => toggleHoverEffect(hoverEffect)}
           >
@@ -93,8 +93,8 @@ export default function Techs() {
               : "Some of the technologies, frameworks and libraries that I have used or learned"
           }
         </p>
-        <div className="flex flex-col gap-10">
-          <div className="nivel-1 flex justify-around">
+        <div className="flex flex-col md:gap-10">
+          <div className="nivel-1 flex flex-wrap md:flex-nowrap justify-around gap-6 md:gap-0">
             {techs.slice(0, 6).map((tech) => (
               <Tech
                 key={tech.id}
@@ -109,7 +109,7 @@ export default function Techs() {
               />
             ))}
           </div>
-          <div className="nivel-2 flex justify-around">
+          <div className="nivel-2 flex flex-wrap md:flex-nowrap justify-around gap-6 md:gap-0">
             {techs.slice(6, 14).map((tech) => (
               <Tech
                 key={tech.id}
@@ -124,7 +124,7 @@ export default function Techs() {
               />
             ))}
           </div>
-          <div className="nivel-3 flex justify-around">
+          <div className="nivel-3 flex flex-wrap md:flex-nowrap justify-around gap-6 md:gap-0">
             {techs.slice(14, 20).map((tech) => (
               <Tech
                 key={tech.id}
@@ -139,7 +139,7 @@ export default function Techs() {
               />
             ))}
           </div>
-          <div className="nivel-4 flex justify-around">
+          <div className="nivel-4 flex flex-wrap md:flex-nowrap justify-around gap-6 md:gap-0">
             {techs.slice(20, 25).map((tech) => (
               <Tech
                 key={tech.id}
