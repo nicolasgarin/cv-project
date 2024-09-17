@@ -6,7 +6,7 @@ export default function Experience() {
 
   return (
     <section id="experience">
-      <h2 className="text-center text-3xl text-orange-600 dark:text-sky-300 font-bold">
+      <h2 className="mt-8 md:mt-0 text-center text-3xl text-orange-600 dark:text-sky-300 font-bold">
         {lang == "es" ? "Experiencia" : "Experience"}
       </h2>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical my-12">
